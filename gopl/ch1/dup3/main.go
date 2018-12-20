@@ -18,6 +18,7 @@ import (
 
 func main() {
 	counts := make(map[string]int)
+	fmt.Println("check")
 	for _, filename := range os.Args[1:] {
 		data, err := ioutil.ReadFile(filename)
 		if err != nil {
