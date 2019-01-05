@@ -1,0 +1,944 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr-FR" xml:lang="fr">
+<head id="head"><title>
+	Les ventes privées de grandes marques avec Showroomprive
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Showroomprive.com est un site internet de ventes privées qui organise pour ses membres des ventes exclusives de grandes marques. Vous trouverez un large choix de produits avec des réductions allant jusqu’à -70% sur le prêt-à-porter homme, femme, enfant."/>
+    <meta name="apple-itunes-app-sb" content="app-id=426414466" />
+    <meta name="google-play-app" content="app-id=com.holosfind.showroom&hl=fr-FR" />
+    <script type="text/javascript" src="/ruxitagentjs_ICA27SVfjqrtx_10157181213164340.js" data-dtconfig="rid=RID_2418|rpid=1754094454|domain=showroomprive.com|reportUrl=/rb_bf16440rul|srms=1,1,,,|uxrgcm=100,25,300,3;100,25,300,3|featureHash=ICA27SVfjqrtx|dpvc=1|srad=1|lastModification=1544801461089|dtVersion=10157181213164340|tp=500,50,0,1|rdnt=1|uxrgce=1|agentUri=/ruxitagentjs_ICA27SVfjqrtx_10157181213164340.js"></script><link rel="stylesheet" type="text/css" href="//static.cedex.it.showroomprive.com/v4/common/css/style_v4.css?ver=0-4-35" />
+    <link rel="stylesheet" type="text/css" href="//static.cedex.it.showroomprive.com/v4/0/_css/patch.css?ver=0-1-18" />
+    
+            <link rel="canonical" href="https://www.showroomprive.com/" />
+            <link rel="alternate" href="https://m.showroomprive.com/" media="only screen and (max-width: 640px)" />
+        
+        <link rel="alternate" hreflang="fr-FR" href="https://www.showroomprive.com/" />                       
+    
+        <link rel="alternate" hreflang="es-ES" href="https://www.showroomprive.es/" />                       
+    
+        <link rel="alternate" hreflang="en-GB" href="http://www.showroomprive.co.uk/" />                       
+    
+        <link rel="alternate" hreflang="it-IT" href="https://www.saldiprivati.com/" />                       
+    
+        <link rel="alternate" hreflang="nl-NL" href="https://www.showroomprive.nl/" />                       
+    
+        <link rel="alternate" hreflang="pt-PT" href="https://www.showroomprive.pt/" />                       
+    
+        <link rel="alternate" hreflang="fr-BE" href="https://www.fr.showroomprive.be/" />                       
+    
+        <link rel="alternate" hreflang="nl-BE" href="https://www.nl.showroomprive.be/" />                       
+    
+        <link rel="alternate" hreflang="pl-PL" href="https://www.vipsters.com/" />                       
+    
+        <link rel="alternate" hreflang="de-DE" href="https://www.vipsters.de/" />                       
+    
+        <link rel="alternate" hreflang="fr-MA" href="https://www.showroomprive.ma/accueilp.aspx" />                       
+    
+    <!--[if IE]>
+        <link id="FavIconIe" rel="shortcut icon" href="//static.cedex.it.showroomprive.com/v4/0/_img/favicon.ico" />
+     <![endif]-->
+    <link rel="icon" href="//static.cedex.it.showroomprive.com/v4/0/_img/favicon.png" />
+    <script type="text/javascript" src="//static.cedex.it.showroomprive.com/v4/js/Externals/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="//static.cedex.it.showroomprive.com/v4/js/Externals/jquery-ui-1.11.4.js"></script>
+    <script type="text/javascript" src="//static.cedex.it.showroomprive.com/v4/js/Externals/jquery.cookie.js"></script>
+    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=fr"></script>
+    <script type="text/javascript">
+        
+        var GlobalJsText = {
+            closeText : "Fermer",
+            continueText : "Continuer",
+            undefinedError : "Oups ! Une erreur est survenue.&lt;br/&gt; Retentez ult&#233;rieurement, tout devrait s’arranger !"
+        }
+    </script>
+    <script type="text/javascript" src="//static.cedex.it.showroomprive.com/v4/js/Common/srp_common.js?ver=1-1-13"></script>
+    <script type="text/javascript" src="//static.cedex.it.showroomprive.com/v4/js/Common/srp_overlay.js?ver=1-0-12"></script>
+    <!--____Script pour le bg en fondu ---->
+    <script type="text/javascript" src="//static.cedex.it.showroomprive.com/v4/js/Externals/jquery.backstretch.min.js"></script>
+
+    
+    <script type="text/JavaScript">
+        var FBStatut;
+        var FBToken;
+        $(document).ready(function () {
+            $.getScript('//connect.facebook.net/fr_FR/sdk.js', function () {
+            FB.init({
+                appId: '227587747269298',
+                version: 'v3.0'
+            });
+            FB.getLoginStatus(function (response) {
+                FBStatut = response.status;
+                FBToken = response.authResponse.accessToken;
+            });
+        });
+    });
+
+    function loginFB() {
+        //getLoginStatus permet de vérifier si le client est connecté à Facebook
+        if (FBStatut === 'connected') {
+            srpLogin();
+        }
+        else {
+            // login permet d'ouvrir l'iframe de connexion a Facebook si le client n'y est pas connecté.
+            // gère également les permissions avec le paramètre scope
+            FB.login(function (response) {
+                if (response.status === 'connected') {
+                    srpLogin();
+                    FBToken = response.authResponse.accessToken;
+                }
+            }, { scope: 'public_profile,email' });
+        }
+    }
+
+    //fonction d'appel ajax pour vérifier si le client est inscrit sur SRP
+    function srpLogin() {
+        FB.api('/me?fields=id,email,first_name,last_name,gender', function (response) {
+            if (response == undefined) {
+                displayMessage("erreur", "Une erreur est survenue");
+                return;
+            }
+            $.post('/Ajax/FbLogin.aspx', { tokenFB: FBToken }, function (data) {
+                if (data == 'inscriptionFB') {
+                    if ($("#Registration_tb_prenom") != null) {
+                        $("#Registration_tb_prenom").val(response.first_name);
+                        $("#Registration_tb_nom").val(response.last_name);
+                        $("#Registration_tb_email").val(response.email);
+                        $("#Registration_hf_facebookid").val(response.id);
+                        var civilite = response.gender == "male" ? "3" : "1";
+                        if (civilite == "1") {
+                            $("#Registration_rbl_Civilite_0").prop("checked", true);
+                        }
+                        else {
+                            $("#Registration_rbl_Civilite_1").prop("checked", true);
+                        }
+                        $("#Registration_tb_password").focus();
+                    }
+                }
+                else {
+                    document.location.href = data;
+                }
+            });
+        });
+    }
+    </script>
+    
+
+    <script type="text/javascript">//<![CDATA[
+        var tc_vars = {"env_country":"FR","env_device":"d","env_language":"FR","env_template":"default","env_work":"prod","order_global_array":[],"page_title":"","page_type":"Default","product_array":[],"promotion_array":[],"user_employee":"N","user_vip":"N"};
+        //]]></script>
+    <script type="text/javascript" src="//cdn.tagcommander.com/3160/tc_Showroomprive_1.js"></script>
+    
+    <script type="text/javascript" src="//try.abtasty.com/0c14375eb3766cfa2e5fa19e141d146f.js"></script>
+    </head>
+<body>
+    <script type="text/javascript" src="//static.cedex.it.showroomprive.com/v4/js/TC/events.js?ver=2-3-9" charset="utf-8"></script>
+    <input type="hidden" id="absolutepath" value="Default" />
+    <form method="post" action="./" id="ctl00">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ZRy+LlI+6YWw+Fhaux5cEIwz7v5GaBtUmnM6YYIqEVaH2txeCAMVljdLIH0bZSleVLO9DYBl5VzgqSFEo3ySK4y+JFA4JI5C+DuFkMZkQvfpOf4e3kAxFxop2Fw6mddi7M8865zW+BzuyH7aKom/galQAUTQyT8QvV5qbJDXSeJ+UpHEzXSZvtobuxa7phtiwoTT948652MD0MPlwdeDPovR3r75LwMdbxuEMy+AoXD6yQsmnSR/Z+tSKYcLzjHxa7x7m5DfVNbjcTgzuMbbdUSrbqfxkz79Ya/5FzlsbG4Cu/Annj2pa6h47j5I9LpxZ92DWOWwUaK3lzOr74fnEBsMOrZ2rs1oVUtga2OoKVOptrEoy8b0v5veeAuZ+yAbVZCqp+rx+Qud8jqqYYuXSkO9vyYGEZqYCIoek1/xMtIVACpGtgdIvZwsPM2EVMAZBRkbYfP2bQjQD4KYdW60SRFDFZsdc3JsWVh7cX944BTxTUEnWQIXSgZd3cvvyqSLGzWeTk8lqzdZvA2A0+MzB6SQ1KsNDwoIvTfKQpzfVRba2poyr26LqGsKXwUnnq3fGZ3Dynmh5soC4TPbQ2a7fxWKDxs2dL0fNxTu9qaMcpv5w/qXJvqpEOALyZgAB6rKKiGO45ysxbuQCSy1zz4HxmALl+Gj1qU8h6aVAzvv0IRc0eLugxpyBVcb7wkvWqfWMnsbvWmoloHGz9e02prdtMb6QE+jsy7O60vImzzL3/l2MAUIH+4cKON5bWBdguDJ0NKuJuKDpR++2wY3NNa8+X8oKWEyGOIgiRtMxgIm3Y/3Rbi+ZDyMY/jgHvdIw+ykpwT4iM7cRqsSHnqf4Ip0GQfgbk+Ry5HBZZYBhmbNuuKk04axX5leH/QRoTlA8fOuRmkCqA3BoRGuzcoBmLuP+175IPwTMPqnY7EyeFTNDmABbTBWuApQ1oZbR+VWH7gYbGm+Kj41ubEy2rtX+d3F4dX1EgnjXhN2aKJD9QK0vFFnAydqij4oFsDw7o9m0BPymFDBnT3DUo8BRW3rHg5qQeISt2Y0VZkiWYpvhquvLgNkip7gWZCdLvN4WKwWteySCpy7w4YhI29qFk33I7+s0zYSaQR4jkgmoAfPIishSGeOgfrDyBGVUNdJ91suEqtHiC/UEzjQ7g+A3TjOcDuI9JOYLEkERC9sJdUNDX9gy27erA+B28U/a3UO3MuEG6p327pwzkWYxiUqFejtB4pTWlXrKPzcOtXNZ02b5020vw7Cb2Usb3Z3PNjsfElIRdqofrFDGsl6drguXXid7Niyb0acwkeQQIFk4sWsMi9oZ7kd2eIp2sgEA3MdUF79Z5ZwuAb2JkyTNKRUiW0i+GXqLmzpgzYGU7FyMqxpaFkGfzD5Mjko4GJGqUiJLFvBl7MSyDXEVg==" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="WqGAMC74/smmZxM3QQlS0ra+rLqZv00QiLfyWT4d6+A6W/d4rwZFD7eVDU5NEcboBUmrujywq28swkstbtSYPYeA4zBih1cMGPnYzgdZZUsKWhVjxUO9/rZiL2lIMoXZf6N/hTtMxu+gUVmrqnZKr07FxZ+q8rHymUDBH/HpRaCcZcg20McXMokwLviQj/wKwdbZIViQdTNmCZ5vufP2BihxJYLZX/K4x6wNJvn49jg+xRrfW8+cjwgkbJ0Ku3i7SGer+8lpG6CYO3m3c6pcXt170HmtsjHIaBcnQZclKZTcd/B8A/U7LNTxUvYC87XNQuHsMgVcTOAJBdochfTIaeqbGBBqOzTkHLVgtfSGtWyOuF8Lje2vO2AqVXBTuJa0Lc9AkORNxH+W0QCcYPv/fZkVq2Sgwj2xHei86zv/ipAafiINDkp3QuEzFxQ42Kg5v7dmuw==" />
+        <div id="PanelLogin">
+	
+            
+
+
+<script type="text/javascript">
+
+    function objErreur(obj, args) {
+        args.IsValid = false;
+        obj.addClass("error");
+    }
+
+    function validationLogin(sender, e) {
+        $(".error").removeClass('error');
+
+        var obj = $("#Login_tbLogin");
+
+        //validation du login
+        if (obj.val() === '') { objErreur(obj, e); }
+
+        //validation du password
+        obj = $("#Login_tbPass");
+        if (obj.val() === '') objErreur(obj, e);
+        if (!e.IsValid) { $(".password").val(""); }
+    };
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // fonction d'ouverture de la popup d'oubli de mdp
+        function OpenWindowForgotPwd() {
+            var overlay = new SrpOverlay({
+                id: "srpOverlayPassPerdu",
+                loader: true,
+                closeButton: true,
+                closeText: 'Fermer',
+                mode: 'iframe',
+                fit: {
+                    auto: true,
+                    appendMargin: true,
+                    width: 580,
+                    minHeight: 255
+                }
+            });
+
+            overlay.show("/iframe/passperdu.aspx");      
+        }
+
+        $(".error").focusin(function () {
+            $(this).removeClass("error");
+        });
+
+        $("[placeholder]:password").focusin(function () {
+            $(this).val('');
+        });
+
+        $("input.tip").focusin(function () {
+            if ($(this).hasClass("tip")) {
+                $(this).removeClass("tip").val("");
+            }
+        });
+
+        $("input.tip").focusout(function () {
+            if ($(this).val() === '') {
+                $(this).addClass('tip');
+            }
+        });
+
+        $('.tip').each(function () {
+            if (!(($(this).val() == '') || ($(this).val() == $(this).attr('placeholder'))))
+                $(this).removeClass('tip');
+        });
+
+        $("#Login_tbLogin").prop('type', 'email');
+        $("#Registration_tb_email").prop('type', 'email');
+
+        //---------------- Mise en place du cookie CNIL pour ABTasty nom: abt valeur: 1
+        //click lien login
+        $('#Login_LienLogin').on("click", function () {
+            if ($.cookie('abt') == null) {
+                $.cookie('abt', '1');
+            }
+        });
+        
+        //Click - Mot de passe oublié
+        $('a.header__bloc_log__mdp_oubli').click(function() {
+            OpenWindowForgotPwd();
+        });
+
+        var value = SRP.GetParameterByName("forgotp");
+        if (value) {
+            OpenWindowForgotPwd();
+        }      
+    });
+</script>
+
+<script type="text/JavaScript">
+    var FBStatut;
+    var FBToken;
+    $(document).ready(function () {
+        $.getScript('//connect.facebook.net/fr_FR/sdk.js', function () {
+            FB.init({
+                appId: '227587747269298',
+                version: 'v3.0'
+            });
+            FB.getLoginStatus(function (response) {
+                FBStatut = response.status;
+                FBToken = response.authResponse.accessToken;
+            });
+        });
+    });
+
+    function loginFB() {
+        //getLoginStatus permet de vérifier si le client est connecté à Facebook
+        if (FBStatut === 'connected') {
+            srpLogin();
+        }
+        else {
+            // login permet d'ouvrir l'iframe de connexion a Facebook si le client n'y est pas connecté.
+            // gère également les permissions avec le paramètre scope
+            FB.login(function (response) {
+                if (response.status === 'connected') {
+                    srpLogin();
+                    FBToken = response.authResponse.accessToken;
+                }
+            }, { scope: 'public_profile,email' });
+        }
+    }
+
+    function loginFBTwoStep() {
+        //getLoginStatus permet de vérifier si le client est connecté à Facebook
+        if (FBStatut === 'connected') {
+            srpLoginTwoStep();
+        }
+        else {
+            // login permet d'ouvrir l'iframe de connexion a Facebook si le client n'y est pas connecté.
+            // gère également les permissions avec le paramètre scope
+            FB.login(function (response) {
+                if (response.status === 'connected') {
+                    srpLoginTwoStep();
+                    FBToken = response.authResponse.accessToken;
+                }
+            }, { scope: 'public_profile,email' });
+        }
+    }
+
+    //fonction d'appel ajax pour vérifier si le client est inscrit sur SRP
+    function srpLogin() {
+        FB.api('/me?fields=id,email,first_name,last_name,gender', function (response) {
+            $.post('/Ajax/FbLogin.aspx', { tokenFB: FBToken }, function (data) {
+                if (data.direction == 'inscriptionFB') {
+                    $("#Registration_tb_prenom").val(response.first_name);
+                    $("#Registration_tb_nom").val(response.last_name);
+                    $("#Registration_tb_email").val(response.email);
+                    $("#Registration_hf_facebookid").val(response.id);
+                    var civilite = response.gender == "male" ? "3" : "1";
+                    if (civilite == "1") {
+                        $("#Registration_rbl_Civilite_0").prop("checked", true);
+                    }
+                    else {
+                        $("#Registration_rbl_Civilite_1").prop("checked", true);
+                    }
+                }
+                else if (data.direction == "") {
+                    displayMessage("DisplayMessage", data.message, "", "false", "false", "");
+                }
+                else {
+                    document.location.href = data.direction;
+                }
+            });
+        });
+    }
+
+    function srpLoginTwoStep() {
+        FB.api('/me?fields=id,email,first_name,last_name,gender', function (response) {
+            $.post('/Ajax/FbLogin.aspx', { tokenFB: FBToken }, function (data) {
+                if (data.direction == 'inscriptionFB') {
+                    var civilite = response.gender == "male" ? "3" : "1";
+                    if (civilite == "1") {
+                        $("#srpInscription_rbl_Civilite_0").prop("checked", true);
+                    }
+                    else {
+                        $("#srpInscription_rbl_Civilite_1").prop("checked", true);
+                    }
+                    $("#srpInscription_tb_prenom").val(response.first_name);
+                    $("#srpInscription_tb_nom").val(response.last_name);
+                    $("#srpInscription_hf_facebookid").val(response.id);
+                    //$('#srpInscription_LienInscription').attr("onclick", 'javascript: WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("srpInscription_LienInscription", "", true, "inscription2", "", false, true))');
+                    //$('#srpInscription_LienInscription').click();
+                    $("#srpInscription_tb_email").val(response.email);
+                }
+                else if (data.direction == "") {
+                    displayMessage("DisplayMessage", data.message, "", "false", "false", "");
+                }
+                else {
+                    document.location.href = data.direction;
+                }
+            });
+        });
+    }
+</script>
+
+<header class="header_inscription">
+    <div>
+		
+        <div class="l-wrapper">
+            <div class="header__logo_srp-baseline">
+                <img src="//static.cedex.it.showroomprive.com/v4/0/_img/logo_srp_baseline.png" alt="" />
+            </div>
+            <div class="header__bloc_log textfield">
+                <a class="header__connexion_fb login_fb" href="javascript:void(0);" onclick="loginFB();"><span class="icon-log_fb"></span>Connexion avec Facebook</a>
+                <span class="header_deja_membre">Déjà membre ?</span>
+                <input name="Login$tbLogin" type="text" id="Login_tbLogin" class="tip tbLogin" autocomplete="on" Placeholder="Email" />
+                <input name="Login$tbPass" type="password" id="Login_tbPass" Placeholder="Mot de passe" />
+                <a id="Login_LienLogin" class="login_srp" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;Login$LienLogin&quot;, &quot;&quot;, true, &quot;login&quot;, &quot;&quot;, false, true))">Accéder aux ventes</a>
+                <div class="header__bloc_log__memoriser">
+                    <span class="memo"><input id="Login_cbkMemoriser" type="checkbox" name="Login$cbkMemoriser" /><label for="Login_cbkMemoriser">Mémoriser</label></span>
+                </div>
+                <a href="javascript:void(0);" class="header__bloc_log__mdp_oubli">Mot de passe oublié ?</a>
+            </div>
+
+            
+
+            
+            
+            
+            
+
+        </div>
+    
+	</div>
+</header>
+
+        
+</div>
+        <div class="separateur_ombre"></div>
+        <div class="incription_main_bloc">
+            <div class="l-wrapper">
+                
+                
+<div id="divHangs"></div>
+
+
+
+<script type="text/javascript">
+    var bgSeoContents = [{"bgText":"","bgPosition":"h1_position_middle","bgUrl":"//static.cedex.it.showroomprive.com/v4/0/_css/img/bg/web/crazy_days_janvier_2019.jpg"}];
+
+    /* Preloading images */
+    var preLoadImgs = [];
+    for (var i = 0; i < bgSeoContents.length; i++) {
+        var img = new Image();
+        img.src = bgSeoContents[i].bgUrl;
+        preLoadImgs.push(bgSeoContents[i].bgUrl);
+    }
+
+    /* Initialize Background Stretch */
+    var bgStretch = {};
+    bgStretch.start = function (selectorBg, selectorHangs) {
+
+        if (preLoadImgs.length > 0) {
+            var t = $(selectorBg).backstretch(preLoadImgs, {
+                fade: 750,
+                duration: 3000
+            });
+
+            $(selectorBg).on("backstretch.before", function (e, component, nextIndex) {
+                var divHangs = $(selectorHangs);
+                var nextContent = bgSeoContents[nextIndex];
+                divHangs.fadeOut(300)
+                    .promise()
+                    .done(function () {
+                        divHangs.prop("class", nextContent.bgPosition);
+                        divHangs.html(nextContent.bgText);
+                        divHangs.fadeIn(450);
+                    });
+            });
+        }
+    };
+
+    $(document).ready(function () {
+        bgStretch.start(".incription_main_bloc", '#divHangs');
+    });
+</script>
+
+                
+
+
+<script type="text/javascript">
+
+    function SubmitCaptcha() {
+        WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("Registration$LienInscription", "", true, "inscription", "", false, true));
+        $('#Registration_LienInscription').attr("onclick", 'javascript: WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("Registration$LienInscription", "", true, "inscription", "", false, true))');
+    }
+
+    function objErreur(obj, args) {
+        args.IsValid = false;
+        obj.addClass("error");
+    };
+
+    function validationInscription(sender, args) {
+
+        $(".error").removeClass('error');
+
+        var nbErreur = 0;
+        var messageErreur = sender.errormessage = "ATTENTION : le ou les champs signalés ne sont pas valides. Merci de les renseigner à nouveau.";
+
+        //validation pays inscription
+        obj = $('#' + sender.ddl_country);
+        if (obj.val() == "-1") {
+            nbErreur++;
+            objErreur(obj, args);
+        };
+
+        // validation Civilite inscription
+        var obj = $('#' + sender.rbl_Civilite);
+        if (obj.children('input').is(':checked') === false) {
+            nbErreur++;
+            objErreur(obj, args);
+            obj.children('label').addClass("error");
+        };
+
+        //validation Prenom inscription
+        obj = $('#' + sender.tb_prenom);
+        if (obj.val() === '') {
+            nbErreur++;
+            objErreur(obj, args);
+        };
+
+        //validation Nom inscription
+        obj = $('#' + sender.tb_nom);
+        if (obj.val() === '') {
+            nbErreur++;
+            objErreur(obj, args);
+        };
+
+        //validation Email inscription
+        obj = $('#' + sender.tb_email);
+        if (obj.val() === '') {
+            nbErreur++;
+            objErreur(obj, args);
+        }
+        else if (!obj.val().match("^[a-zA-Z0-9\\-._+]+@[a-zA-Z0-9]+([\\-.][a-zA-Z0-9]+)*(\\.[a-zA-Z]{2,4})$")) {
+            nbErreur++;
+            objErreur(obj, args);
+            messageErreur = "Votre email n'est pas valide.";
+        };
+
+        //validation MDP inscription
+    obj = $('#' + sender.tb_password);
+    if (obj.val() === '') {
+        nbErreur++;
+        objErreur(obj, args);
+    }
+    else if (obj.val().length < 8 || obj.val().length > 16) {
+        nbErreur++;
+        objErreur(obj, args);
+        messageErreur = "Votre mot de passe doit comprendre entre 8 et 16 caractères, dont au moins une lettre et un chiffre.";
+    }
+    else if (obj.val().match("['=]")) {
+        nbErreur++;
+        objErreur(obj, args);
+        messageErreur = "Votre mot de passe ne doit pas contenir les caractères spéciaux suivants : ' et =";
+    }
+    else if (!obj.val().match(/(?=.*\d)(?=.*[a-zA-Z])/)) {
+        nbErreur++;
+        objErreur(obj, args);
+        messageErreur = "Votre mot de passe doit comprendre entre 8 et 16 caractères, dont au moins une lettre et un chiffre";
+    }
+
+        // validation Parrain inscription
+    obj = $('#' + sender.tb_parrain);
+    var obj2 = $('#' + sender.tb_email);
+
+    if ($('#' + sender.cb_parr).is(':checked')) {
+        if (obj.val() === '') {
+            nbErreur++;
+            objErreur(obj, args);
+            objErreur($('#' + sender.cb_parr), args);
+        }
+        else if (obj.val() === obj2.val()) {
+            nbErreur++;
+            objErreur(obj, args);
+            objErreur($('#' + sender.cb_parr), args);
+            messageErreur = "Le parrain n'est pas inscrit.";
+        }
+        else if (obj.val().length !== 8) {
+            if (!obj.val()
+                .match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+                nbErreur++;
+                objErreur(obj, args);
+                objErreur($('#' + sender.cb_parr), args);
+                messageErreur = "Le parrain n'existe pas.";
+            };
+        };
+};
+
+        // validation CGV
+    obj = $('#' + sender.cb_CGV);
+    if (!obj.is(':checked')) {
+        nbErreur++;
+        objErreur(obj.parent().children('label'), args);
+        messageErreur = "Merci de valider les conditions générales de vente.";
+    };
+
+    if (nbErreur === 1) {
+        sender.errormessage = messageErreur;
+    };
+};// fin validation
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $(".error").focusin(function () {
+            $(this).removeClass("error");
+        });
+
+        $("#Registration_tb_parrain").focusin(function () {
+            $("#Registration_cb_parr").parent().removeClass("error");
+        });
+
+        $("[placeholder]:password").focusin(function () {
+            $(this).val('');
+        });
+
+        $("input.tip").focusin(function () {
+            if ($(this).hasClass("tip")) {
+                $(this).removeClass("tip").val("");
+            }
+        });
+
+        $("input.tip").focusout(function () {
+            if ($(this).val() === '') {
+                $(this).addClass('tip');
+            }
+        });
+
+        $('.tip').each(function () {
+            if (!(($(this).val() === '') || ($(this).val() == $(this).attr('placeholder'))))
+                $(this).removeClass('tip');
+        });
+
+        $("#Registration_tb_parrain").hide();
+        $("#Registration_cb_parr").on('change', function () {
+
+            if ($(this).is(":checked")) {
+                $('.parrainage__cb').hide();
+                $('#Registration_tb_parrain').show();
+                $('#Registration_tb_parrain').focus();
+            }
+            else {
+                if ($("#Registration_tb_parrain").hasClass("tip")) {
+                }
+                else {
+                    $("#Registration_tb_parrain").addClass("tip");
+                }
+
+                $("#Registration_tb_parrain").animate({ opacity: 1 }, function () { }).queue(function () { $(this).removeClass("error").dequeue() });
+            }
+        });
+
+        $('#Registration_tb_parrain').on('focusout', function () {
+            if ($(this).val() == 0) {
+                $('.parrainage__cb').show();
+                $('#Registration_tb_parrain').hide();
+                $('#Registration_cb_parr').prop('checked', false);
+            }
+        });
+
+        $("#tblogin").prop('type', 'email');
+        $("#Registration_tb_email").prop('type', 'email');
+
+        //---------------- Mise en place du cookie CNIL pour ABTasty nom: abt valeur: 1
+        //click lien inscription
+        $('#Registration_LienInscription').on("click", function () {
+            if (!!$.cookie('abt')) {
+                $.cookie('abt', '1');
+            }
+        });
+        //---------------Fin mise en place cookie CNIL
+    });
+</script>
+
+<!--__________________ZONE PRINCIPALE _________________-->
+<div id="Registration_PanelRegistration">
+	
+    <div class="incription_bloc">
+        <div class="incription_bloc__titre1">
+            INSCRIVEZ-VOUS GRATUITEMENT
+        </div>
+        <div class="incription_bloc__titre2">Et commencez votre shopping!</div>
+        <div class="incription_formulaire">
+            
+            <div class="incription_formulaire__civilite">
+                <span id="Registration_rbl_Civilite"><input id="Registration_rbl_Civilite_0" type="radio" name="Registration$rbl_Civilite" value="rb_Mme" /><label for="Registration_rbl_Civilite_0">Femme</label><input id="Registration_rbl_Civilite_1" type="radio" name="Registration$rbl_Civilite" value="rb_Mr" /><label for="Registration_rbl_Civilite_1">Homme</label></span>
+            </div>
+            <input name="Registration$tb_prenom" type="text" maxlength="50" id="Registration_tb_prenom" class="incription_formulaire__prenom" placeholder="Prénom" />
+            <input name="Registration$tb_nom" type="text" maxlength="50" id="Registration_tb_nom" class="incription_formulaire__nom" placeholder="Nom" />
+            <input name="Registration$tb_email" type="text" maxlength="256" id="Registration_tb_email" class="incription_formulaire__email" placeholder="Email" />
+            <input name="Registration$tb_password" type="password" maxlength="16" id="Registration_tb_password" class="incription_formulaire__mdp" placeholder="Mot de passe" />
+            <p class="conditions_format_mdp">Votre mot de passe doit contenir au moins 8 caractères dont au moins un chiffre.</p>
+            <div class="incription_formulaire__parrainage">
+                <span class="parrainage__cb"><input id="Registration_cb_parr" type="checkbox" name="Registration$cb_parr" /></span>
+                <label for="Registration_cb_parr" class="parrainage__cb">Je suis parrainé</label>
+                <input name="Registration$tb_parrain" type="text" maxlength="256" id="Registration_tb_parrain" class="incription_formulaire__parrain" placeholder="Email ou Code de mon parrain" />
+            </div>
+            <div class="incription_formulaire__cgv">
+                <span><input id="Registration_cb_CGV" type="checkbox" name="Registration$cb_CGV" /><label for="Registration_cb_CGV">J'accepte sans réserve les <a href='/contratcgv.aspx' target='_blank'>conditions générales de vente</a>.</label></span>
+            </div>
+            
+            <div class="g-recaptcha" data-sitekey="6LcTdB4UAAAAAFQjV66-FGY8Hqihj3LeQdM68YxR"></div>
+            <input type="hidden" name="Registration$hf_facebookid" id="Registration_hf_facebookid" />
+            <div class="incription_formulaire_boutons">
+                <input type="submit" name="Registration$LienInscription" value="S&#39;inscrire et accéder aux ventes" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;Registration$LienInscription&quot;, &quot;&quot;, true, &quot;inscription&quot;, &quot;&quot;, false, false))" id="Registration_LienInscription" class="incription_formulaire_boutons-cta btn_rose btn inscription_srp" data-callback="SubmitCaptcha" />
+                ou
+                <a href="javascript:void(0)" id="Registration_facebook_connect" class="incription_formulaire_boutons-fb inscription_fb" onclick="loginFB()"><span class="icon-log_fb"></span></a>
+            </div>
+            <a class="incription_formulaire__acces_ventes" href="/accueilp.aspx">Découvrez nos ventes en cours</a>
+        </div>
+    </div>
+
+    
+
+    
+
+
+</div>
+
+<!--_______________FIN ZONE PRINCIPALE_________________-->
+
+                
+            </div>
+        </div>
+        <footer class="footer_inscription">
+            
+
+<div class="footer_inscription__reassurance">
+    <div class="l-wrapper">
+        <div class="footer_inscription__reassurance-item">
+	<div>
+		<img src="//static.cedex.it.showroomprive.com/v4/0/_img/logo-point.svg" />
+	</div><p>Shopping h24, 7/7,<br>avec nos applis mobiles</p>
+</div><div class="footer_inscription__reassurance-item">
+	<div>
+		<img src="//static.cedex.it.showroomprive.com/v4/0/_img/picto_reassu_fleches.png" />
+	</div><p>Livraison en 24h</p>
+</div><div class="footer_inscription__reassurance-item">
+	<div class="icon-quatorze_jours">
+
+	</div><p>Pour changer d’avis</p>
+</div><div class="footer_inscription__reassurance-item">
+	<div class="icon-cadenas">
+
+	</div><p>Achats 100% sécurisés</p>
+</div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="l-footer-reassurance">
+    <div class="l-wrapper">
+         
+
+<div class="l-wrapper">
+    
+
+<div class="footer-pays">
+    <div class="footer-titre-reassurance">Sélectionnez votre pays</div>
+    <div class="l-footer__select_pays">
+        <select name="BottomSEO$BottomContainer$ctl00$DDLCountry" id="BottomSEO_BottomContainer_ctl00_DDLCountry" class="l-footer__select_pays_flags select-country">
+	<option selected="selected" value="FR" data-class="fr">France</option>
+	<option value="ES" data-class="es">Espa&#241;a</option>
+	<option value="UK" data-class="uk">UK</option>
+	<option value="IT" data-class="it">Italia</option>
+	<option value="NL" data-class="nl">Nederland</option>
+	<option value="PT" data-class="pt">Portugal</option>
+	<option value="BE" data-class="be">Belgique</option>
+	<option value="PL" data-class="pl">Polska</option>
+	<option value="DE" data-class="de">Deutschland</option>
+	<option value="MA" data-class="ma">Maroc</option>
+</select>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(function () {
+                    $.widget("custom.iconselectmenu", $.ui.selectmenu, {
+                        _renderItem: function (ul, item) {
+                            var li = $("<li>", { text: item.label });
+
+                            if (item.disabled) {
+                                li.addClass("ui-state-disabled");
+                            }
+
+                            $("<span>", {
+                                style: item.element.attr("data-style"),
+                                "class": "ui-icon " + item.element.attr("data-class")
+                            })
+                              .appendTo(li);
+
+                            return li.appendTo(ul);
+                        }
+                    });
+
+                    $(".select-country")
+                      .iconselectmenu({
+                          change: function (event, data) {
+                              var fullUrl = window.location.href;
+                              var path = window.location.pathname;
+                              var urlWithParam = "";
+                              var parameters = "";
+                              if (~fullUrl.indexOf("?"))
+                                  parameters = fullUrl.substr(fullUrl.indexOf("?"))
+                              if (~path.indexOf("landing.aspx"))
+                                  urlWithParam = path + parameters;
+
+                              if (data.item.value == "FR") {
+                                  window.location.href = "https://www.showroomprive.com" + urlWithParam;
+                              } else if (data.item.value == "ES") {
+                                  window.location.href = "http://www.showroomprive.es" + urlWithParam;
+                              } else if (data.item.value == "UK") {
+                                  window.location.href = "http://www1.showroomprive.com";
+                              } else if (data.item.value == "IT") {
+                                  window.location.href = "http://www.saldiprivati.com" + urlWithParam;
+                              } else if (data.item.value == "NL") {
+                                  window.location.href = "http://www.showroomprive.nl" + urlWithParam;
+                              } else if (data.item.value == "PT") {
+                                  window.location.href = "http://www.showroomprive.pt" + urlWithParam;
+                              } else if (data.item.value == "BE") {
+                                  window.location.href = "http://www.showroomprive.be" + urlWithParam;
+                              } else if (data.item.value == "PL") {
+                                  window.location.href = "http://www.vipsters.com" + urlWithParam;
+                              } else if (data.item.value == "DE") {
+                                  window.location.href = "http://www.vipsters.de" + urlWithParam;
+                              } else if (data.item.value == "MA") {
+                                  window.location.href = "http://www.showroomprive.ma" + urlWithParam;
+                              }
+                          }
+                      })
+                      .iconselectmenu("menuWidget")
+                        .addClass("ui-menu-icons customicons ui-menu-country");
+                });
+            });
+        </script>
+    </div>
+</div>
+
+
+<div class="footer-secure">
+    <div class="footer-titre-reassurance">ACHAT 100% SECURISE</div>
+    <img src="//static.cedex.it.showroomprive.com/v4/0/_img/footer/logo_footer_paiement.png">
+</div>
+
+<div class="footer-avis">
+    <div class="footer-titre-reassurance">Avis Clients</div>
+    <img class="footer__logo_trustedshop" itemprop="itemReviewed" src="//static.cedex.it.showroomprive.com/v4/0/_img/footer/logo_trustedshop.png" alt="">
+    
+        <div class="footer-stars">
+
+            <a href="https://www.trustedshops.fr/evaluation/info_X9E5F2816C0E395DA80950236909BEBC1.html" class="info_avis" target="_blank">
+                <div itemscope="" itemtype="https://data-vocabulary.org/Review-aggregate">
+                    <span itemprop="rating" itemscope="" itemtype="https://data-vocabulary.org/rating">
+                        <span class="avis_note">4,09/5</span>sur
+                        <span class="nb_avis"><span itemprop="votes">2018421</span>&nbsp;avis</span>
+                    </span>
+                    <div class="avis_note_etoile">
+                        <div id="progressbarMark" class="avis_note_etoile progressbar">
+                            <div id="srpBottomSeo_BottomContainer_ctl02_Trustedshop_TrustedshopStars_indicatorFooter" class="indicator" style="width:82%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    
+
+</div>
+
+
+
+
+<div class="footer-social">
+    <div class="footer-titre-reassurance">Suivez-nous !</div>
+    <a href="http://www.facebook.com/showroomprivecom/" target="_blank" class="footer_share icon-facebook"></a>
+    <a href="http://twitter.com/ShowroompriveFR" target="_blank" class="footer_share icon-twitter"></a>
+    <a href="https://www.instagram.com/showroomprive/" target="_blank" class="footer_share icon-instagram"></a>
+    <a href="https://www.youtube.com/user/ShowroompriveCom" target="_blank" class="footer_share icon-youtube"></a>
+</div>
+
+</div>
+
+
+        <div class="clear"></div>
+    </div>
+</div>
+            
+
+<div class="l-footer-cgv">
+    <div class="l-wrapper">
+        <div class="footer-cgv__liens">
+            <div id="BottomLink_pnlDynamicLinksBottom">
+	<a href="/contratcgv.aspx">CGV</a><a href="/politique_confidentialite.aspx">Politique de confidentialité</a><a target="_blank" href="/ventes-privees/">Guide d'achat</a><a href="https://www.showroomprivegroup.com/professionnels">Espace Professionnel</a><a target="_blank" href="http://www.showroomprivegroup.com/">Showroomprive group</a><a target="_blank" href="http://www.showroomprivegroup.com/carrieres">Recrutement</a><a href="/nouscontacter/faq.aspx">Nous contacter</a><a target="_blank" href="http://blog.showroomprive.com/">Blog Kiss</a><a class="footer-cgv__liens--deafiline" href="/nouscontacter/deafiline.aspx">Deafiline&nbsp;<span class='icon-deafiline'></span></a>
+</div>
+        </div>
+    </div>
+</div>
+
+            
+
+<div class="l-footer-mentions"  >    
+    <div class="l-wrapper">
+        <div class="footer_mentions__liste_liens">
+            <span>&copy;&nbsp;Showroomprive.com&nbsp;2019</span>&nbsp;-&nbsp;<a href="/mentions_legales.aspx">Mentions légales</a>
+        </div>
+        
+        
+<div class="footer-fevad">
+    
+    <img src="//static.cedex.it.showroomprive.com/v4/0/_img/footer/logo_footer_red_herring.png" class="footer-fevad-red_herring">
+    
+    <a href="http://www.fevad.com" target="_blank">
+        <img src="//static.cedex.it.showroomprive.com/v4/0/_img/footer/logo_footer_fevad.png">
+        <p>Showroomprive adhère au Code<br>déontologique de la FEVAD</p>
+    </a>
+</div>
+
+
+        
+            
+    </div>
+</div>
+
+            <div class="l-footer-bloc_seo">
+                <div class="mentionsCNIL">
+                    Les informations collectées vous concernant font l’objet d’un traitement informatique par Showroomprive.com, et sont notamment nécessaires à la gestion de vos commandes, ou pourront être utilisées dans le cadre de notre système de lutte contre la fraude à la carte bancaire. Conformément à la réglementation en vigueur sur la protection des données personnelles, vous disposez d’un droit d’accès, de rectification et d’opposition de vos données. Vous pouvez exercer ces droits en envoyant votre demande via <a href="/nouscontacter/mail.aspx?theme=266&question=1692">ce formulaire</a>.
+                </div>
+                <div class="l-wrapper">
+                    <p>Showroomprive.com est un site internet de ventes privées qui organise pour ses membres des ventes exclusives de grandes marques.
+Chez showroomprive.com, vous trouverez un large choix de produits avec des réductions allant jusqu’à -70% sur le prêt-à-porter homme, femme, enfant
+( vestes, pantalons jeans, t-shirts, robes , vêtements de grossesse etc.).
+Vous profiterez aussi de ventes accessoires avec une sélection de ceintures, cravates, gants, bonnets, écharpes, foulards, sacs, chapeaux,
+lunettes de soleil, portefeuilles et sacoches.
+Ce n’est pas tout ! Pour rester tendance, le site vous propose des collections de bijoux (bracelets, colliers, boucles d’oreilles, bagues, chaines en argent ou en or, montres de luxe) et la crème des chaussures : bottes, ballerines, escarpins, bottines, chaussures de running, baskets, chaussons et mocassins.
+Enfin, Showroomprive vous offre également de la lingerie (soutien-gorge, collants, bas, caleçons, maillots de bain, etc…) de la décoration de maison (bougies, couvertures, cadres, draps, etc..), et de l’électroménager (aspirateurs, cafetières, ..). Le tout à petits prix !</p>
+                </div>
+            </div>
+        </footer>
+
+        
+
+<div id="cookie_parent">
+    <div id="cookies">
+        En poursuivant votre navigation sur le site, vous acceptez l’utilisation de cookies pour vous proposer des services et offres adaptés à vos centres d’intérêts et pour sécuriser les transactions sur le site.				<a href="politique_confidentialite.aspx">Pour en savoir plus et gérer vos données.</a>
+    </div>
+</div>
+
+    </form>
+    
+<link rel="stylesheet" href="//static.cedex.it.showroomprive.com/v4/mobile/smartbanner/_css/jquery.smartbanner.css" type="text/css" media="screen">
+<script type="text/javascript" src="//static.cedex.it.showroomprive.com/v4/mobile/smartbanner/_js/jquery.smartbanner.js"></script>
+<script type="text/javascript">
+    var page = "Default";
+    $(document).on('click', '.sb-close', function () {
+        try {
+            tc_events_3(this, "click_standard", { "category": page, "action": "Smartbanner", "label": "Fermer" });
+        } catch (e) {
+            if (srpComponent.options.debug == true) {
+                console.log(e);
+            }
+        }
+    });
+    $(document).on('touchstart', '.sb-icon', function () {
+        try {
+            tc_events_3(this, "click_standard", { "category": page, "action": "Smartbanner", "label": "Ouvrir" });
+        } catch (e) {
+            if (srpComponent.options.debug == true) {
+                console.log(e);
+            }
+        }
+    });
+    $(document).on('touchstart', '.sb-info', function () {
+        try {
+            tc_events_3(this, "click_standard", { "category": page, "action": "Smartbanner", "label": "Ouvrir" });
+        } catch (e) {
+            if (srpComponent.options.debug == true) {
+                console.log(e);
+            }
+        }
+    });
+    $(document).on('touchstart', '.sb-button', function () {
+        try {
+            tc_events_3(this, "click_standard", { "category": page, "action": "Smartbanner", "label": "Ouvrir" });
+        } catch (e) {
+            if (srpComponent.options.debug == true) {
+                console.log(e);
+            }
+        }
+    });
+</script>
+
+
+</body>
+</html>

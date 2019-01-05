@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png?v=m2dYjxzro8" /><link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png?v=m2dYjxzro8" sizes="32x32" /><link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png?v=m2dYjxzro8" sizes="16x16" /><link rel="manifest" href="manifest.json?v=m2dYjxzro8" /><link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg?v=m2dYjxzro8" color="#dc0032" /><link rel="shortcut icon" href="images/favicon/favicon.ico?v=m2dYjxzro8" /><meta name="msapplication-TileColor" content="#dc0032" /><meta name="msapplication-TileImage" content="~/images/favicon/mstile-144x144.png?v=m2dYjxzro8" /><meta name="theme-color" content="#dc0032" /><meta name="format-detection" content="telephone=no" /><title>
+	Pakete versenden, empfangen und retournieren » DPD Paket Navigator
+</title>
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js?ver=3.600"></script>
+    <script src="js/DPDDefault.js?ver=3.600"></script>
+
+    <link rel="stylesheet" href="Less/StyleSheet.less?ver=3.600" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (document.getElementById("map-canvas") !== null) {
+                initialize('map-canvas');
+                setMarker();
+                initClock();
+            }
+
+            initSlider();
+            $('.slideControll').click(function () {
+                rotateSlider($(this).attr('data-index'));
+            });
+        });
+
+        var SliderID;
+        function initSlider() {
+            var myImagesList = $(".sliderImageContainer").children();
+            var myControllerList = $(".sliderImageControll").children();
+
+            myImagesList.each(function (index) {
+                if (index !== 0) {
+                    $(myImagesList[index]).hide()
+                }
+            });
+            myControllerList.each(function (index) {
+                $(myControllerList[index]).attr("data-index",index)
+                if (index === 0) {
+                    $(myControllerList[index]).addClass("cur");
+                }
+            });
+
+            if (myImagesList.length > 1){
+                clearInterval(SliderID);
+                SliderID = setInterval(function () {
+                    rotateSlider();
+                }, 12000)
+            }
+        }
+
+        function rotateSlider(slideTo) {
+            var myImagesList = $(".sliderImageContainer").children();
+            var myControllerList = $(".sliderImageControll").children();
+            var myNextCur = 0;
+
+            myControllerList.each(function (index) {
+                if ($(myControllerList[index]).hasClass("cur")) {
+                    if (typeof (slideTo) !== "undefined") {
+                        myNextCur = slideTo;
+                        clearInterval(SliderID);
+                    } else {
+                        myNextCur = index + 1;
+                    }
+                    $(myControllerList[index]).removeClass("cur")
+                    $(myImagesList[index]).fadeOut(200); //ToDo: Fehler prüfung
+                    if (myNextCur > myControllerList.length - 1) {
+                        myNextCur = 0;
+                    }
+                }
+            })
+            $(myControllerList[myNextCur]).addClass("cur");
+            $(myImagesList[myNextCur]).fadeIn(200); //ToDo: Fehler prüfung
+        }
+    </script>
+
+<!-- Google Tag Manager -->
+    <script>(function(w, d, s, l, i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j = d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T477P9K');</script>
+<!-- End Google Tag Manager -->
+<meta name="description" content="Mit dem DPD Paket Navigator nutzen Sie alle Vorteile bequem online! Sendungsverfolgung via Live-Tracking, Abstell-Okay und Retouren jetzt per Klick steuern." /></head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T477P9K" id="iFrameGoogleTagManager" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <form name="form1" method="post" action="./home.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTMwOTcwNzE2MQ8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBFgJmD2QWBgIBD2QWAgISDxYCHgRUZXh0BegCPHNjcmlwdD4oZnVuY3Rpb24odywgZCwgcywgbCwgaSl7d1tsXT13W2xdfHxbXTt3W2xdLnB1c2goeydndG0uc3RhcnQnOm5ldyBEYXRlKCkuZ2V0VGltZSgpLGV2ZW50OidndG0uanMnfSk7dmFyIGY9ZC5nZXRFbGVtZW50c0J5VGFnTmFtZShzKVswXSxqID0gZC5jcmVhdGVFbGVtZW50KHMpLGRsPWwhPSdkYXRhTGF5ZXInPycmbD0nK2w6Jyc7ai5hc3luYz10cnVlO2ouc3JjPSdodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbS9ndG0uanM/aWQ9JytpK2RsO2YucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUoaixmKTt9KSh3aW5kb3csZG9jdW1lbnQsJ3NjcmlwdCcsJ2RhdGFMYXllcicsJ0dUTS1UNDc3UDlLJyk7PC9zY3JpcHQ+ZAIDDxYCHgNzcmMFN2h0dHBzOi8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tL25zLmh0bWw/aWQ9R1RNLVQ0NzdQOUtkAgUPZBZKAgMPDxYCHgdWaXNpYmxlZ2QWBAIBDw8WAh8BBagBRGllc2UgV2Vic2l0ZSB2ZXJ3ZW5kZXQgQ29va2llcywgdW0gSWhuZW4gZGVuIGJlc3Rtw7ZnbGljaGVuIFNlcnZpY2UgenUgZ2V3w6RocmxlaXN0ZW4uIER1cmNoIGRlbiBCZXN1Y2ggdW5kIGRpZSBOdXR6dW5nIGRpZXNlciBTZWl0ZSBzdGltbWVuIFNpZSBkZXIgQ29va2llLU51dHp1bmcgenUuZGQCAw8PFgQeC05hdmlnYXRlVXJsBTVodHRwczovL3d3dy5kcGQuY29tL2RlL3NpdGV1dGlsaXRpZXMvZGF0ZW5zY2h1dHojOTYxNx8BBQpNZWhyIEluZm9zZGQCBQ8PFgQfBAUuaHR0cHM6Ly93d3cuZHBkLmNvbS9kZV9wcml2YXRrdW5kZW4vKG1vYmlsZSkvMB8BBQxQcml2YXRrdW5kZW5kZAIHDw8WBB8EBRZodHRwczovL3d3dy5kcGQuY29tL2RlHwEFEEdlc2Now6RmdHNrdW5kZW5kZAIJDw8WBB8EBSxodHRwczovL2Vzb2x1dGlvbnMuZHBkLmNvbS9ob21lLmFzcHg/bG5nPWRldR8BBQplU29sdXRpb25zZGQCCw8PFgQfBAUuaHR0cHM6Ly93d3cuZHBkLmNvbS9kZS91bnRlcm5laG1lbi91bnRlcm5laG1lbh8BBQtVbnRlcm5laG1lbmRkAg0PDxYEHwQFL2h0dHBzOi8vd3d3LnBha2V0bmF2aWdhdG9yLmRlL2hvbWUuYXNweD9sbmc9ZGV1HwEFB0RldXRzY2hkZAIPDw8WBB8EBS9odHRwczovL3d3dy5wYWtldG5hdmlnYXRvci5kZS9ob21lLmFzcHg/bG5nPWVuZx8BBQhFbmdsaXNjaGRkAhEPFgIfA2gWAgIBDw8WAh8BBQhBYm1lbGRlbmRkAhUPDxYEHwEFFVlvdXIgZGVsaXZlcnkgZXhwZXJ0cx8DZ2RkAhcPDxYCHwNoZBYCAgMPDxYCHwEFC1Bha2V0bnVtbWVyZGQCGQ8PFgIfAQUFTWVuw7xkZAIbDw8WAh8BBRdBbm1lbGRlbiAvIFJlZ2lzdHJpZXJlbmRkAh0PDxYGHghDc3NDbGFzcwUMYWN0aXZlIGJsaW5lHwEFBEhvbWUeBF8hU0ICAmRkAh8PDxYCHwEFDE1laW5lIFBha2V0ZWRkAiEPDxYCHwEFD1Bha2V0IHZlcnNlbmRlbmRkAiMPDxYCHwEFEVBpY2t1cCBQYWtldHNob3BzZGQCJQ8PFgIfAQUTTGllZmVyLVByw6RmZXJlbnplbmRkAicPDxYCHwEFBlByb2ZpbGRkAikPDxYEHwQFI34vaGVscGNvbnRhY3QuYXNweD9LZXl3b3JkPXRvcHRvcGljHwEFD0hpbGZlIC8gS29udGFrdGRkAisPDxYCHwEFBcOcYmVyZGQCLQ8PFgIfAQUFw5xiZXJkZAIvDw8WAh8BBRN6dXIgRGVza3RvcCBXZWJzaXRlZGQCMQ8PFgIfAQUJSW1wcmVzc3VtZGQCMw8PFgIfAQULRGF0ZW5zY2h1dHpkZAI1Dw8WAh8BBQNBR0JkZAI3Dw8WBB8BBQhBYm1lbGRlbh8DaGRkAjkPZBYCZg9kFgYCAQ8PFgQfBQUdZW1wdHkgYnRuTWFpbk5hdmlOb3RpZmljYXRpb24fBgICZBYCZg8PFgQfAQUBMB8DaGRkAgMPDxYEHwUFE2J0bk1haW5OYXZpQ3VzdG9tZXIfBgICZGQCBQ9kFgJmD2QWAgIBDxYCHgtfIUl0ZW1Db3VudGYWAmYPZBYCAgEPDxYCHwEFFEFrdHVlbGxlIE5hY2hyaWNodGVuZGQCOw9kFgICAQ8QZGQWAGQCPw9kFgwCAQ8QZGQWAGQCAw9kFgQCAQ9kFgQCAQ8PFgIfAQUSV2lsbGtvbW1lbiBiZWkgRFBEZGQCAw8PFgIfAQUSSmV0enQgcmVnaXN0cmllcmVuZGQCAw9kFgQCAQ8PFgIfAQUSV28gaXN0IG1laW4gUGFrZXQ/ZGQCBQ8PFgIfAQULUGFrZXRudW1tZXJkZAIFD2QWAgIDDw8WAh8BBQtQYWtldG51bW1lcmRkAgcPZBYEAgEPDxYCHwEFEldpbGxrb21tZW4genVyw7xja2RkAgMPDxYCHwEFEkpldHp0IHJlZ2lzdHJpZXJlbmRkAgkPDxYCHwNoZBYCAgEPDxYCHwFlZGQCCw9kFhwCBw9kFg5mDw8WAh8BBQxNZWluZSBQYWtldGVkZAICDw8WAh8BBQdFbXBmYW5nZGQCAw8PFgIfAQUBMGRkAgUPDxYCHwEFB1ZlcnNhbmRkZAIGDw8WAh8BBQEwZGQCCA8PFgIfAQUHUmV0b3VyZWRkAgkPDxYCHwEFATBkZAIJD2QWAmYPDxYCHwEFD1Bha2V0IHZlcnNlbmRlbmRkAgsPZBYCZg8PFgIfAQUXQW5tZWxkZW4gLyBSZWdpc3RyaWVyZW5kZAIND2QWAmYPDxYCHwEFE0xpZWZlci1QcsOkZmVyZW56ZW5kZAIPD2QWAmYPDxYCHwEFEFBpY2t1cCBQYWtldHNob3BkZAIRD2QWBAIBDw8WAh8BBRBQaWNrdXAgUGFrZXRzaG9wZGQCAw8PZBYCHgtwbGFjZWhvbGRlcgURUExaLCBPcnQsIEFkcmVzc2VkAhMPZBYCZg8PFgIfAQUPSGlsZmUgLyBLb250YWt0ZGQCFQ8PFgIfA2hkFgRmDw8WAh8BBSZKZXR6dCBhbGxlIEZ1bmt0aW9uZW48YnI+a2VubmVubGVybmVuLmRkAgEPDxYCHwEFKUpldHp0IGFsbGU8YnI+RnVua3Rpb25lbjxicj5rZW5uZW5sZXJuZW4uZGQCFw8PFgIfA2dkFgRmDw8WAh8BBRxGcmV1ZGUgdmVyc2VuZGVuPGJyPm1pdCBEUEQuZGQCAQ8PFgIfAQUfRnJldWRlPGJyPnZlcnNlbmRlbjxicj5taXQgRFBELmRkAhkPDxYCHwNoZBYEZg8PFgIfAQUiTmllIHdpZWRlciBlaW48YnI+UGFrZXQgdmVycGFzc2VuLmRkAgEPDxYCHwEFJU5pZSB3aWVkZXI8YnI+ZWluIFBha2V0PGJyPnZlcnBhc3Nlbi5kZAIbDw8WBB8EBRpodHRwOi8vd3d3LmRwZC5kZS9kcGRza2lsbB8DaGQWBGYPDxYCHwEFHEFsZXhhLCB3byBpc3Q8YnI+bWVpbiBQYWtldD9kZAIBDw8WAh8BBR9BbGV4YSwgd288YnI+aXN0IG1laW48YnI+UGFrZXQ/ZGQCHQ8PFgQfBAUfaHR0cHM6Ly93d3cuZHBkLmRlL2Fic3RlbGwtb2theR8DaGQWCGYPDxYCHwEFI1dhcnRlbiBTaWUgbmljaHQgYXVmIFBha2V0ZS4gPGJyIC8+ZGQCAQ8PFgIfAQUkSmV0enQgQWJzdGVsbC1Pa2F5IGdlYmVuICYgZ2V3aW5uZW4hZGQCAg8PFgIfAQUjV2FydGVuIFNpZSBuaWNodCBhdWYgUGFrZXRlLiA8YnIgLz5kZAIDDw8WAh8BBSRKZXR6dCBBYnN0ZWxsLU9rYXkgZ2ViZW4gJiBnZXdpbm5lbiFkZAIfDw8WBB8EBStodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUNYNHVFajZCd0JNHwNoZBYEZg8PFgIfAQVFRnJvaGUgV2VpaG5hY2h0ZW4gdW5kIGVpbjxicj5nbMO8Y2tsaWNoZXMgbmV1ZXMgSmFocjxicj53w7xuc2NodCBEUEQuZGQCAQ8PFgIfAWVkZAIhDw8WBB8EBSBodHRwczovL3d3dy5rb21tLWlucy1kcGQtdGVhbS5kZR8DaGQWBGYPDxYCHwEFKktvbW0gaW5zIFRlYW0hPGJyPkpldHp0IFN0ZWxsZW48YnI+ZmluZGVuLmRkAgEPDxYCHwEFEUtvbW0gaW5zPGJyPlRlYW0hZGQCQQ8PFgIfBGVkZAJDDw8WAh8BBQ8mY29weTsgMjAxOSBEUERkZAJFDw8WAh8EBSlodHRwczovL3d3dy5mYWNlYm9vay5jb20vZHBkaW5kZXV0c2NobGFuZGRkAkcPDxYCHwQFGmh0dHBzOi8vdHdpdHRlci5jb20vZHBkX2RlZGQCSQ8PFgIfBAUtaHR0cHM6Ly93d3cueW91dHViZS5jb20vdXNlci9kcGRpbmRldXRzY2hsYW5kZGQCSw8PFgQfBAUoaHR0cHM6Ly93d3cuZHBkLmNvbS9kZS9zaXRldXRpbGl0aWVzL2FnYh8BBQNBR0JkZAJNDw8WBB8EBUpodHRwczovL3d3dy5kcGQuY29tL2RlL3NpdGV1dGlsaXRpZXMvbGVnYWxfYW5kX2NvcHlyaWdodF9ub3RpY2VfZGlzY2xhaW1lch8BBQlJbXByZXNzdW1kZAJPDw8WBB8EBTRodHRwczovL3d3dy5kcGQuY29tL2RlL3NpdGV1dGlsaXRpZXMvZGF0YV9wcm90ZWN0aW9uHwEFC0RhdGVuc2NodXR6ZGRktL0Lb91Swx+HH3UCxc9SNzQu8U8=" />
+
+
+<script src="/ScriptResource.axd?d=VsOkmAQYS7ZrXAKI-Cyzc_qOXh41dpZpsuszqNtCJGUYlZn5FLT5QSiONqP5JBigVXNjHofzoTWLIIs_DGYXeHu7TkjtpJOSg9eKMKtJdchqpTJcSOJ9uLdEUkI6FEAVxmOAfrmsPTpQANRB7MxUT1dwjg81&amp;t=ffffffff999c3159" type="text/javascript"></script>
+<script src="js/ajax_script.js?ver=3.600" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8D0E13E6" />
+<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="obINN56rcWHy7N7nYXQG5u1aEUXyBtcXvt2OOyzKrlBVLxPxT2_5jcXBELSeCI4aAZOzjwC3ey2xe2WrjLS2qgdhQi41" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABbUWOcyGBq151sb0mE4ICJ/qECyNVZinqSOMiiUmP6cZXI5Jl8YpN/KSps5b8CJV1pceOG4uytq8KD+Wirqa3HLxC3/4y6NJ2KmFYo3EOdCw1NGAc4mnUhNMI3cNcB4Y3066ZYj+hmXwH6/q987HCLDU9ladEYCRKLONX1NftPpmd7BL3SIXq5VgkG3FuF6gpooY6/onbHmNIRugjoNHwMfjn8dsFMT0oseSbSAY4zvvxLacgDCKiTsDkW7hyegQwqTWErvE7k14F2nlxhXIirvAjKkaqh1zZGAVzKwdSwOCYfjUUbS+HfuEGrcePNff3z8tDxNfHHEuOf4+Pfnmo5Z1IH4DTOfLD3N8+6fipo4Kw/ovwEEyN/1SSXWjZ8tbFqtd2WMKcPEBKp3KXhqyTzYYjMc3bgJeygnNDJTitnNsiDiHKAJ3VM2V1hZI6IbaU8L5K4y0LykfwwpnRMURyRoP7T4QUdhl7zrJsTdI6z/0UgdBgE=" />
+        
+        
+
+                <div id="panCookieRequest" class="cookies">
+	
+                    <div>
+                        <div class="cookiesMessage">
+                            <span id="labCookie">Diese Website verwendet Cookies, um Ihnen den bestmöglichen Service zu gewährleisten. Durch den Besuch und die Nutzung dieser Seite stimmen Sie der Cookie-Nutzung zu.</span>
+                            <a id="hplCookieMoreInfo" href="https://www.dpd.com/de/siteutilities/datenschutz#9617" target="_blank">Mehr Infos</a>
+                        </div>
+                        <a id="btnCookieOK" class="cookiesOkButton" href="javascript:__doPostBack(&#39;ctl00$btnCookieOK&#39;,&#39;&#39;)"></a>
+                    </div>
+                
+</div>
+
+        <div>
+            <div class="topNavi">
+                <ul class="topNaviLinkList">
+                    <li>
+                        <a id="hplTopNaviPrivateCustomer" href="https://www.dpd.com/de_privatkunden/(mobile)/0" target="_blank">Privatkunden</a>
+                    </li>
+                    <li>
+                        <a id="hplTopNaviBusinessCustomer" href="https://www.dpd.com/de" target="_blank">Geschäftskunden</a>
+                    </li>
+                    <li>
+                        <a id="hpleSolutions" href="https://esolutions.dpd.com/home.aspx?lng=deu" target="_blank">eSolutions</a>
+                    </li>
+                    <li>
+                        <a id="hplAboutDPD" href="https://www.dpd.com/de/unternehmen/unternehmen" target="_blank">Unternehmen</a>
+                    </li>
+                    <li style="width: 91px;">
+                        <div class="sub_links">
+                            <div>
+                                <a id="hplTopNaviLang1" class="smallArrowDown" href="https://www.paketnavigator.de/home.aspx?lng=deu">Deutsch</a>
+                            </div>
+                            <div>
+                                <a id="hplTopNaviLang2" href="https://www.paketnavigator.de/home.aspx?lng=eng">Englisch</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="companyClaim">
+                <a id="hplHomeLogo" class="panDPDLogo" href="Home.aspx"></a>
+                <div class="panClaim">
+                    <span id="labClaim" class="labSub20">Your delivery experts</span>
+                    
+                </div>
+            </div>
+            <div class="mainNavi">
+                <div>
+                    <div class="burgerNavi" onclick="openBurgerNavi();"></div>
+                    <div class="mainNaviLinkList">
+                        <div class="panMainNaviHead">
+                            <div style="height: 40px; width: 40px; float:left;" onclick="closeBurgerNavi();">
+                                <img src="images/x_black.svg" width="20" height="20" style="margin: 10px 10px"/>
+                            </div>
+                            <span id="labMainNaviHead" class="labSub20">Menü</span>
+                        </div>
+                        <nav>
+                            <a id="btnMainNaviLogin" class="tdd" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnMainNaviLogin&quot;, &quot;&quot;, false, &quot;&quot;, &quot;register/myLogin.aspx&quot;, false, true))">Anmelden / Registrieren</a>
+                            <a id="btnMainNaviHome" class="active bline" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnMainNaviHome&quot;, &quot;&quot;, false, &quot;&quot;, &quot;Home.aspx&quot;, false, true))">Home</a>
+                            <a id="btnMainNaviMyParcel" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnMainNaviMyParcel&quot;, &quot;&quot;, false, &quot;&quot;, &quot;myParcel.aspx&quot;, false, true))">Meine Pakete</a>
+                            <a id="btnMainNaviSendAparcel" class="tdm tdt" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnMainNaviSendAparcel&quot;, &quot;&quot;, false, &quot;&quot;, &quot;sending/sendparcel.aspx&quot;, false, true))">Paket versenden</a>
+                            <a id="btnMainNaviFindAPickup" class="bline" href="shopfinder.aspx">Pickup Paketshops</a>
+                            <a id="btnMainNaviPreferences" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnMainNaviPreferences&quot;, &quot;&quot;, false, &quot;&quot;, &quot;myPreferences.aspx&quot;, false, true))">Liefer-Präferenzen</a>
+                            <a id="btnMainNaviProfile" class="bline" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnMainNaviProfile&quot;, &quot;&quot;, false, &quot;&quot;, &quot;myProfile.aspx&quot;, false, true))">Profil</a>
+                            <a id="btnMainNaviService" PostBackUrl="~/helpcontact.aspx" href="helpcontact.aspx?Keyword=toptopic" target="_blank">Hilfe / Kontakt</a>
+                            <a id="btnMainNaviAbout" class="tdm tdt" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnMainNaviAbout&quot;, &quot;&quot;, false, &quot;&quot;, &quot;about.aspx&quot;, false, true))">Über</a>
+                            <a id="btnMainNaviAboutMobil" class="tdd" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnMainNaviAboutMobil&quot;, &quot;&quot;, false, &quot;&quot;, &quot;about.aspx&quot;, false, true))">Über</a>
+                            <a id="hplMainNaviDesktop" class="tdd" href="https://www.dpd.com/de_privatkunden/(mobile)/0">zur Desktop Website</a>
+                            <a id="hplMainNaviImprint" class="tdd" href="https://www.dpd.com/de/siteutilities/legal_and_copyright_notice_disclaimer">Impressum</a>
+                            <a id="hplMainNaviPrivacy" class="tdd" href="https://www.dpd.com/de/siteutilities/data_protection">Datenschutz</a>
+                            <a id="hplMainNaviCopyright" class="tdd" href="https://www.dpd.com/de/siteutilities/agb">AGB</a>
+                            
+                        </nav>
+                    </div>
+                    <div id="ctl16">
+	
+                            <div class="mainNaviIconList">
+                                
+                                <a id="btnMainNaviCustomer" class="btnMainNaviCustomer" href="javascript:__doPostBack(&#39;ctl00$btnMainNaviCustomer&#39;,&#39;&#39;)"></a>
+                            </div>
+                            
+                            
+                        
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="panContentPlaceHolder">
+            
+            <input type="hidden" name="ctl00$hidThemeName" id="hidThemeName" value="default" />
+            
+    <section>
+        <div class="panHomeError">
+            
+        </div>
+        <div id="ContentPlaceHolder1_panSlider" class="panSlider">
+	
+           <div class="sliderImageContainer">
+                <div id="ContentPlaceHolder1_hplSliderImage1" class="sliderImage">
+		
+                    <div>
+                        <img src="images/Headermotiv_1208x323_01.png" alt="HeaderImg" />
+                        <div style="position:relative;z-index: 8; width: 370px;height: 128px; margin: -110px 0 0 34px;">
+                            <div>
+                                <span id="ContentPlaceHolder1_labImageHeadLine" class="labSub30" style="color:white">Willkommen bei DPD</span>
+                            </div>
+                            <div>
+                                <a id="ContentPlaceHolder1_hplImageSubline" class="labSub18 defaultTXTLink2" href="register/myLogin.aspx?regist=">Jetzt registrieren</a>
+                            </div>
+                        </div>
+                    </div>
+                
+	</div>   
+           </div>
+           <div class="sliderImageControll" style="display:none;">
+               <div id="panSliderControll1" class="slideControll"></div>
+
+           </div>
+            <div id="ContentPlaceHolder1_panHomeParcelTrack" class="panHomeParcelTrack">
+		
+                <div>
+                    <div>
+                        <span id="ContentPlaceHolder1_labParcelTrackHead" class="labSub30" style="margin-left: 20px;">Wo ist mein Paket?</span>
+                    </div>
+                    <div style="display:inline-block; margin-left:20px;">
+                        <div style="float:left; width: 268px">
+                            <input name="ctl00$ContentPlaceHolder1$txtHomeTrackYourParcel" type="text" maxlength="25" id="ContentPlaceHolder1_txtHomeTrackYourParcel" class="lightTextbox" required="true" />
+                            <label for="txtHomeTrackYourParcel"><span id="ContentPlaceHolder1_labHomeTrackYourParcel">Paketnummer</span></label>
+                            <a href="#" class="clearBtn" tabindex="-1">X</a>
+                        </div>
+                        <a id="ContentPlaceHolder1_btnHomeTrackYourParcel" class="DPDShortGlassBtn" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$btnHomeTrackYourParcel&#39;,&#39;&#39;)" style=""></a>
+                    </div>
+                </div>
+                <div class="panHomeParcelTrackOverlay"></div>
+            
+	</div>
+        
+</div>
+        <div id="ContentPlaceHolder1_panParcelTrackingMobil" class="panParcelTrackingMobil">
+	
+            <div style="float:left; width: calc(100% - 30px); margin: 15px;">
+                <input name="ctl00$ContentPlaceHolder1$txtHomeTrackYourParcelMobil" type="text" maxlength="25" id="ContentPlaceHolder1_txtHomeTrackYourParcelMobil" class="lightTextbox" required="true" />
+                <label for="txtHomeTrackYourParcelMobil"><span id="ContentPlaceHolder1_labHomeTrackYourParcelMobil">Paketnummer</span></label>
+            </div>
+            <a id="ContentPlaceHolder1_btnHomeTrackYourParcelMobil" class="DPDShortGlassBtn2" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$btnHomeTrackYourParcelMobil&#39;,&#39;&#39;)" style="float: right; margin: -61px 15px 0 0;"></a>
+        
+</div>
+        <div>
+            <div id="ContentPlaceHolder1_panGreeting" class="panGreeting">
+	
+                <span id="ContentPlaceHolder1_labGreeting" class="labSub30" style="display:block">Willkommen zurück</span>
+                <a id="ContentPlaceHolder1_btnGoToRegister" class="defaultTXTLink" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$btnGoToRegister&#39;,&#39;&#39;)">Jetzt registrieren</a>
+            
+</div>
+            
+        </div>
+    </section>
+    <section>
+        <div class="panHomeSquares">
+            <div id="ContentPlaceHolder1_panHomeSquares" style="display:inline-block; width: 100%;">
+	
+                <div class="panHomeTracking">
+                   <input type="hidden" name="ctl00$ContentPlaceHolder1$hidParcelNo" id="ContentPlaceHolder1_hidParcelNo" />
+                   
+                   <div id="ContentPlaceHolder1_panNoLiveTracking" style="height:100%;">
+		
+                       <img src="images/Kachelmotiv_751x296_01.png" alt="TileImage" style="object-fit:cover; width:100%;height:100%;" />
+                   
+	</div>
+                </div>
+                <a id="ContentPlaceHolder1_btnHomeMyParcel" class="btnHomeMyParcel" href="myParcel.aspx"><span id="ContentPlaceHolder1_labHomeMyParcel" class="labSub18">Meine Pakete</span><br />
+                    <div style="display:inline-block; margin: 10px 0 0 0;">
+                        <div style="display:inline-block; width: 100%; margin-right: 10px">
+                            <span id="ContentPlaceHolder1_labHomeIncoming" class="labSub13" style="float:left;width: 100px;line-height: 20px;">Empfang</span><span id="ContentPlaceHolder1_labHomeIncomingCounter" class="labSub13" style="float: left;background-color: #fff;color: #414042;border-radius: 20px;padding: 2px;display:block;width: 16px;text-align: center;">0</span>
+                        </div>
+                        <div style="display:inline-block; width: 100%; margin-right: 10px">
+                            <span id="ContentPlaceHolder1_labHomeSending" class="labSub13" style="float:left;line-height: 20px;width: 100px">Versand</span><span id="ContentPlaceHolder1_labHomeSendingCounter" class="labSub13" style="float: left;background-color: #fff;color: #414042;border-radius: 20px;padding: 2px;display:block;width:16px;text-align: center;">0</span>
+                        </div>
+                        <div style="display:inline-block; width: 100%; margin-right: 10px">
+                            <span id="ContentPlaceHolder1_labHomeReturning" class="labSub13" style="float:left;line-height: 20px;width: 100px">Retoure</span><span id="ContentPlaceHolder1_labHomeReturningCounter" class="labSub13" style="float: left;background-color: #fff;color: #414042;border-radius: 20px;padding: 2px;display:block;width:16px;text-align: center;">0</span>
+                        </div>
+                    </div>                    
+                </a>
+                <a id="ContentPlaceHolder1_btnHomeSendParcel" class="btnHomeSendParcel" href="sending/sendparcel.aspx"><span id="ContentPlaceHolder1_labHomeSendParcel" class="labSub18">Paket versenden</span></a>
+                <a id="ContentPlaceHolder1_btnHomeLogin" class="btnHomeLogin" href="register/myLogin.aspx"><span id="ContentPlaceHolder1_labHomeLogin" class="labSub18">Anmelden / Registrieren</span></a>
+                
+                <a id="ContentPlaceHolder1_btnHomeShopFinderMobil" class="tdd tdt btnHomeShopFinder" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$btnHomeShopFinderMobil&#39;,&#39;&#39;)"><span id="ContentPlaceHolder1_labHomeShopFinderMobil" class="labSub18">Pickup Paketshop</span></a>
+                <div id="ContentPlaceHolder1_btnHomeShopFinder" class="btnHomeShopFinder tdm">
+		
+                    <span id="ContentPlaceHolder1_labHomeShopFinder" class="labSub18">Pickup Paketshop</span>
+
+                    <div class="tdm" style="margin: 10px 0 0;">
+                        <input name="ctl00$ContentPlaceHolder1$txtPickupPoint" type="text" id="ContentPlaceHolder1_txtPickupPoint" class="TxtPickupSearch" placeholder="PLZ, Ort, Adresse" />
+                        <a id="ContentPlaceHolder1_btnPickupPointSearch" class="DPDShortArrowBtn" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$btnPickupPointSearch&#39;,&#39;&#39;)"></a>
+                    </div>
+                
+	</div>
+                <a id="ContentPlaceHolder1_btnHomeSupport" class="btnHomeSupport" href="helpcontact.aspx?Keyword=toptopic"><span id="ContentPlaceHolder1_labHomeSupport" class="labSub18">Hilfe / Kontakt</span></a>
+                
+                <a id="ContentPlaceHolder1_btnHomeMarketing2" class="PictureSquare2" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$btnHomeMarketing2&#39;,&#39;&#39;)"><span id="ContentPlaceHolder1_labHomeWatchVideo2desktop" class="labSub18 tdm">Freude versenden<br>mit DPD.</span><span id="ContentPlaceHolder1_labHomeWatchVideo2mobil" class="labSub18 tdd tdt">Freude<br>versenden<br>mit DPD.</span></a>
+                
+                
+                
+                
+                
+            
+</div>
+        </div>
+    </section>
+
+        </div>
+        <div class="footer">
+            <div class="botDisclaimer">
+                <div style="display:inline-block; width: 100%;">
+                    <div class="panDPDgroupLogo">
+                        <a id="hplGroupLogo" target="_blank" style="float:left;"><img src="../images/DPDG_logo_redgrad_rgb.svg" width="75" height="29" /></a>
+                        
+                        <span id="labCopyRight" class="labSub11 labMidGrey" style="float:left;  margin: 9px 0 0 13px;">&copy; 2019 DPD</span>
+                    </div>
+                    <div class="socialMediaIcon">
+                        <a id="hplSocialFB" href="https://www.facebook.com/dpdindeutschland" target="_blank"></a>
+                        <a id="hplSocialTW" href="https://twitter.com/dpd_de" target="_blank"></a>
+                        <a id="hplSocialYT" href="https://www.youtube.com/user/dpdindeutschland" target="_blank"></a>
+                    </div>
+                </div>
+                <div class="disclaimerLinkList">
+                    <a id="hplCopyright" href="https://www.dpd.com/de/siteutilities/agb" target="_blank">AGB</a>
+                    <a id="hplimprint" href="https://www.dpd.com/de/siteutilities/legal_and_copyright_notice_disclaimer" target="_blank">Impressum</a>
+                    <a id="hplPrivacy" href="https://www.dpd.com/de/siteutilities/data_protection" target="_blank">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+        <div class="overlayerBurger"></div>
+    </form>
+</body>
+</html>

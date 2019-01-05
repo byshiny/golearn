@@ -1,0 +1,3341 @@
+<!DOCTYPE html>
+<html class="no-touch" lang="en"
+      dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e166f1a66f","applicationID":"57841919","transactionName":"egxYEkVcCAhSR0ldEVwORUleXQABTw==","queueTime":1,"applicationTime":1017,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="theme-color" content="#c52626">
+
+    <link rel="preconnect" href="https://img-hws.y8.com">
+    <link rel="preconnect" href="https://img-cf.y8.com">
+    <link rel="preconnect" href="https://cdn.y8.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://account.y8.com">
+
+    <link rel="manifest" href="/manifest_files/y8.json">
+
+    <link rel="canonical" href="https://www.y8.com/" />
+    <meta name="X-Current-Skin-Name" content="y8.com" />
+<meta name="X-Current-Skin-Shortname" content="y8" />
+<meta name="X-Current-Skin-Domain" content="y8.com" />
+<meta name="X-Current-Kind-Name" content="game" />
+
+
+    <title>Y8 Games : Play free online games at Y8.com</title>
+    <meta name="description" content="At Y8 Games, there are over 70,000 games and videos available to play online. We are leading in the latest Unity3D car and dress up games. Y8.COM a leader in online games for over 10 years." />
+    <meta name="keywords" content="game,games,y8,online games, free online games,y8.com,free games,play free games, play online games, play game, y8y8, 8y" />
+      <meta property="og:title" content="Y8 Games : Play free online games at Y8.com">
+<meta property="og:type" content="website" >
+<meta property="og:url" content="https://www.y8.com/">
+<meta property="og:image" content="https://img-cf.y8.com/assets/y8/logo-social-cf97ac18d0f17783227a0143836c41341754e3ccc28f9a71d4f8a9ace42089aa.png">
+<meta property="og:image:width" content="500">
+<meta property="og:image:height" content="500">
+<meta property="og:site_name" content="Y8.Com">
+<meta property="og:description" content="At Y8 Games, there are over 70,000 games and videos available to play online. We are leading in the latest Unity3D car and dress up games. Y8.COM a leader in online games for over 10 years.">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@y8_com">
+<meta name="twitter:url" content="https://www.y8.com/">
+<meta name="twitter:title" content="Y8 Games : Play free online games at Y8.com">
+<meta name="twitter:description" content="At Y8 Games, there are over 70,000 games and videos available to play online. We are leading in the latest Unity3D car and dress up games. Y8.COM a leader in online games for over 10 years.">
+<meta name="twitter:image" content="https://img-cf.y8.com/assets/y8/logo-social-cf97ac18d0f17783227a0143836c41341754e3ccc28f9a71d4f8a9ace42089aa.png">
+
+  
+<link rel="next" href="https://www.y8.com/?page=2" />
+
+
+    
+    <link rel="shortcut icon" type="image/x-icon" href="https://img-cf.y8.com/assets/y8/favicon-bbe12bfef74c2df2549976cea58ab563413321d756246b64c4ba941d55118b56.ico" />
+    <link rel="alternate" type="application/rss+xml" title="y8.com RSS" href="https://www.y8.com/feed" />
+    <link rel='alternate' href='https://www.y8.com/' hreflang='en' /><link rel='alternate' href='https://ru.y8.com/' hreflang='ru' /><link rel='alternate' href='https://fr.y8.com/' hreflang='fr' /><link rel='alternate' href='https://de.y8.com/' hreflang='de' /><link rel='alternate' href='https://it.y8.com/' hreflang='it' /><link rel='alternate' href='https://el.y8.com/' hreflang='el' /><link rel='alternate' href='https://he.y8.com/' hreflang='he' /><link rel='alternate' href='https://hi.y8.com/' hreflang='hi' /><link rel='alternate' href='https://ro.y8.com/' hreflang='ro' /><link rel='alternate' href='https://es.y8.com/' hreflang='es' /><link rel='alternate' href='https://tl.y8.com/' hreflang='tl' /><link rel='alternate' href='https://th.y8.com/' hreflang='th' /><link rel='alternate' href='https://zh.y8.com/' hreflang='zh' /><link rel='alternate' href='https://nl.y8.com/' hreflang='nl' /><link rel='alternate' href='https://vi.y8.com/' hreflang='vi' /><link rel='alternate' href='https://tr.y8.com/' hreflang='tr' /><link rel='alternate' href='https://pt.y8.com/' hreflang='pt' /><link rel='alternate' href='https://pl.y8.com/' hreflang='pl' /><link rel='alternate' href='https://ko.y8.com/' hreflang='ko' /><link rel='alternate' href='https://ja.y8.com/' hreflang='ja' /><link rel='alternate' href='https://id.y8.com/' hreflang='id' /><link rel='alternate' href='https://ar.y8.com/' hreflang='ar' />
+
+    <link rel="stylesheet" media="screen" href="https://img-cf.y8.com/assets/bootstrap-bd1292dd3fd085f31a24b837576e41ab39e6559dbca8185d40a035b3d97b5a60.css" />
+      <link rel="stylesheet" media="screen" href="https://img-cf.y8.com/assets/y8.com/latin-6bd3e62826396b00cbd13c3c70818f2ccaa7d76ab85928415f353179fc7393d3.css" />
+
+    <!--[if IE 8]>
+      <link rel="stylesheet" media="screen" href="https://img-cf.y8.com/assets/y8.com/ie/ie8-be66574864f71dc9092fbea72721194059cf07c0c9eb11cbaa6e578b538b26d3.css" />
+    <![endif]-->
+
+    <!--[if IE 9]>
+      <link rel="stylesheet" media="screen" href="https://img-cf.y8.com/assets/y8.com/ie/ie9-acb9d41d6ee2166eda04c48be2b346fe77a509243dea3ed9ebb7d291602eadeb.css" />
+    <![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--
+      Respond.js runs via proxy as a hack for old IEs:
+      https://github.com/scottjehl/Respond/tree/master/cross-domain
+    -->
+    <!--[if lt IE 9]>
+      <script src="https://img-cf.y8.com/assets/html5shiv.min-2089f696ace9590c47ae9e863e5ac3844ee253fb047c1e615dc8711b42080ea7.js"></script>
+      <script src="https://img-cf.y8.com/assets/respond.min-25a7b779f44f98682af0fc6f3811268a995b1fb91a7cd6cabb577c1dbdd9597d.js"></script>
+      <link href="https://img-cf.y8.com/assets/respond-proxy-01a9062d1871d9d3494628b0c4341018d4787a1ab26835bfbe8cfae4d2656e7b.html" id="respond-proxy" rel="respond-proxy" />
+      <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+      <script src="/respond.proxy.js"></script>
+    <![endif]-->
+
+    <script src="https://img-cf.y8.com/assets/ads_block-9e6b3c011a0337e74cb80bc679b2cc05022dc215aea49597ae7e599ead824784.js" defer="defer"></script>
+    <script src="https://img-cf.y8.com/assets/y8-03adbb3b5b6bf8c944a6c04822e1e50577070ecda12306448c74bbe04cfc9542.js"></script>
+
+      <script>
+//<![CDATA[
+
+    window.Settings = window.Settings || {};
+    Settings.ga_account = "UA-18828733-1";
+    Settings.ga_domain = ".y8.com";
+    Settings.ga_sample_rate = 10;
+    window.google_analytics_uacct = "UA-18828733-1";
+    window.google_analytics_domain_name = ".y8.com";
+
+//]]>
+</script>
+    <script>
+//<![CDATA[
+
+  // initialize google analytics
+  $(document).ready(function() {
+    window._gaq = window._gaq || [];
+    _gaq.push(['_setAccount', Settings.ga_account]);
+
+    if (Settings.ga_domain) {
+      _gaq.push(['_setDomainName', Settings.ga_domain]);
+    }
+
+    _gaq.push(['_setSampleRate', window.Settings.ga_sample_rate]);
+    _gaq.push(['_trackPageview']);
+
+      // insert google analytics lib
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == window.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+  });
+
+//]]>
+</script>
+
+    
+    
+  </head>
+
+  <body  class="items index games-active" data-controller="Items" data-action="index" data-filter-compatibility-games="true" data-auth-success-path="/auth/idnet/callback" itemscope itemtype="https://schema.org/WebPage">
+      <!-- Yandex.Metrika counter -->
+<script>
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter = new Ya.Metrika({
+                    id:45364173,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    trackHash:true
+                });
+
+                var sessionParams = {
+                    user_status: Cookies.get('logged_in') ? 'member' : 'guest',
+                    os64bit: OSDetector.bit64.toString(),
+                    metamask: (typeof web3 !== 'undefined'),
+                    ad_block_ext: window.adBlockDetected === undefined,
+                    
+                };
+
+                w.yaCounter.params(sessionParams);
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/45364173" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+    <div class="features-overlay" onclick="location.href='/admin/features';"></div>
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="y8-navbar-left">
+          <div class="logo">
+            <a class="event" href="https://www.y8.com/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 45">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#000" d="M36 0h9v18h-9V0zm-9 18h9v9h-9v-9zM9 18h9v9H9v-9zm9 9h9v18h-9V27zM0 0h9v18H0V0z"/>
+    <path fill="#E81919" d="M62 0h29v9H62V0zm29 9h9v9h-9V9zM53 9h9v9h-9V9zm0 18h9v9h-9v-9zm9-9h29v9H62v-9zm0 18h29v9H62v-9zm29-9h9v9h-9v-9z"/>
+  </g>
+</svg>
+
+<img src="https://img-cf.y8.com/system/logos/500/original/Y8_NewLogoAnim_NewYear_English.gif?1546007032" alt="Y8 newlogoanim newyear english" />
+</a>
+            <span itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="url" content="https://www.y8.com/" />
+  <meta itemprop="logo" content="https://img-cf.y8.com/assets/y8/logo-social-cf97ac18d0f17783227a0143836c41341754e3ccc28f9a71d4f8a9ace42089aa.png" />
+  <meta itemprop="sameAs" content="https://twitter.com/y8_com" />
+  <meta itemprop="sameAs" content="https://www.facebook.com/Y8-Games-225100494185683/" />
+  <meta itemprop="sameAs" content="https://www.linkedin.com/company-beta/5043213" />
+  <meta itemprop="sameAs" content="https://play.google.com/store/apps/dev?id=7287118900067551434" />
+  <meta itemprop="sameAs" content="https://itunes.apple.com/us/developer/y8/id1124042257" />
+  <meta itemprop="foundingDate" content="2006-08-30T14:39:48-06:00" />
+</span>
+
+          </div><!--
+          --><ul class="fake-button games-videos-switch">
+            <li><a class="selected" href="https://www.y8.com/">games</a></li>
+            <li><a href="https://www.y8.com/anim">videos</a></li>
+          </ul>
+        </div><!--
+
+        --><form id="items-search-form" class="navbar-form" itemprop="potentialAction" itemscope="itemscope" itemtype="https://schema.org/SearchAction" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+          <meta content="https://www.y8.com/search?q={q}" itemprop="target" />
+          <input type="hidden" name="kind" id="kind" value="game" />
+          <input type="text" name="q" id="q" placeholder="Search games" class="form-control query fake-button" itemprop="query-input" />
+          <button type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </form><!--
+
+        --><div class="y8-navbar-right">
+
+          <a class="fake-button js-top-menu two-lines btn-header-actions new-games" data-menu="newgames" href="#">
+              New Games
+            <span class="shevron"></span>
+            <span class="sub-title">
+                Next in&nbsp;
+              <span class="release-countdown">xx:xx</span>
+            </span>
+          </a><!--
+
+          --><div class="newgames-menu sub-menu">
+            <div class="newgames-container">
+  <ul>
+    <li>
+      <a class="new_games" href="https://www.y8.com/new/games">
+        <div class="name">
+            By Date
+        </div>
+        <div id="new-items-count" class="number">
+          Next addition in
+          <span class="release-countdown">xx:xx</span>
+        </div>
+</a>    </li>
+    <li class="hr" />
+    <li>
+      <a class="best_new_games" href="https://www.y8.com/best">
+        <div class="name">
+            Most Liked
+        </div>
+        <div id="new-items-count" class="number">
+            Best games from last 2 months
+        </div>
+</a>    </li>
+  </ul>
+</div>
+
+          </div><!--
+
+          --><a class="fake-button js-top-menu two-lines btn-header-actions browse" data-menu="browse" href="#">
+            Categories
+            <span class="shevron"></span>
+            <span class="sub-title">
+              &amp; more
+            </span>
+            <div class="with-notification"></div>
+          </a><!--
+
+          --><div class="browse-menu sub-menu">
+              <div class="browse-container">
+  <div id="notification-manager" class="notification-manager">
+  <div class="icon">
+    <svg width="36" height="36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M26 19l-7 6v-6h-2c-1.65685 0-3-1.34315-3-3V6c0-1.65685 1.34315-3 3-3h16c1.65685 0 3 1.34315 3 3v10c0 1.65685-1.34315 3-3 3h-7z" id="b"/><filter x="-29.5%" y="-11.4%" width="159.1%" height="163.6%" filterUnits="objectBoundingBox" id="a"><feMorphology radius="2" in="SourceAlpha" result="shadowSpreadOuter1"/><feOffset dy="5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/><feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.299054574 0" in="shadowBlurOuter1"/></filter><path d="M8.61538 32.25H2.84615C1.82655 32.25 1 31.41053 1 30.375v-7.5C1 21.83947 1.82655 21 2.84615 21h11.3077C15.17345 21 16 21.83947 16 22.875v7.5c0 1.03553-.82655 1.875-1.84615 1.875h-1.23077V36l-4.3077-3.75z" id="d"/><filter x="-43.3%" y="-16.7%" width="186.7%" height="186.7%" filterUnits="objectBoundingBox" id="c"><feMorphology radius="1.5" in="SourceAlpha" result="shadowSpreadOuter1"/><feOffset dy="4" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/><feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.253368433 0" in="shadowBlurOuter1"/></filter></defs><g fill="none" fill-rule="evenodd"><g fill-rule="nonzero"><use fill="#000" filter="url(#a)" xlink:href="#b"/><use fill="#FFF" xlink:href="#b"/></g><path d="M7 10h1c.55228 0 1 .44772 1 1s-.44772 1-1 1H7v1c0 .55228-.44772 1-1 1s-1-.44772-1-1v-1H4c-.55228 0-1-.44772-1-1s.44772-1 1-1h1V9c0-.55228.44772-1 1-1s1 .44772 1 1v1z" fill-opacity=".7496" fill="#FFF" fill-rule="nonzero"/><path d="M10.2071 16.5l.35356-.35355c.19526-.19527.51184-.19527.7071 0 .19527.19526.19527.51184 0 .7071l-.35355.35356.35356.35355c.19526.19526.19526.51184 0 .7071-.19527.19527-.51185.19527-.70711 0l-.35355-.35355-.35356.35356c-.19526.19526-.51184.19526-.7071 0-.19527-.19527-.19527-.51185 0-.70711L9.5 17.20711l-.35355-.35356c-.19527-.19526-.19527-.51184 0-.7071.19526-.19527.51184-.19527.7071 0l.35356.35355z" fill-opacity=".49907" fill="#FFF" fill-rule="nonzero"/><path d="M22.281 9.16272c0-.22211.08539-.40238.25619-.5408.1708-.13842.38476-.20763.64187-.20763.2608 0 .47659.06921.64739.20763.1708.13842.2562.31869.2562.5408 0 .2189-.08449.39675-.25345.53356-.16896.13681-.38567.20522-.65014.20522-.26079 0-.47566-.0684-.64462-.20522-.16897-.1368-.25345-.31466-.25345-.53356zm.55096 6.4027L22 15.18398l.19835-.31386c.2461-.39273.37282-.78384.38016-1.17335v-1.0816h1.34436l-.00551.96572c-.00368.35732-.10652.71785-.30854 1.0816-.20203.36376-.46098.66474-.77686.90295zM28 11.05553c0 .72752-.11937 1.42766-.35813 2.10044-.23875.67279-.58218 1.2667-1.0303 1.78175-.44812.51505-.92745.86915-1.43802 1.06229l-.30854-.73877c.52159-.34444.93297-.87558 1.23416-1.59344.3012-.71785.4573-1.54353.46832-2.47706v-.25592c0-.9625-.14967-1.81071-.44903-2.54466-.29936-.73395-.71717-1.2844-1.25345-1.65138L25.17355 6c.49955.18993.97062.53436 1.41323 1.03332.4426.49895.78604 1.07999 1.0303 1.74312.24426.66313.3719 1.35039.38292 2.0618v.21729z" fill="#F26565"/><g fill-rule="nonzero"><use fill="#000" filter="url(#c)" xlink:href="#d"/><use fill="#FFA300" xlink:href="#d"/></g><path d="M5 28.28697c0-.20246.07027-.36678.21082-.49296.14054-.12617.3166-.18926.52817-.18926.2146 0 .39216.06309.5327.18926.14055.12618.21082.2905.21082.49296 0 .19953-.06951.36165-.20855.48636-.13903.1247-.31735.18706-.53497.18706-.2146 0-.3914-.06236-.53044-.18706C5.06952 28.64862 5 28.4865 5 28.28697zm0-3.60475c0-.20247.07027-.36679.21082-.49296.14054-.12617.3166-.18926.52817-.18926.2146 0 .39216.06309.5327.18926.14055.12617.21082.2905.21082.49296 0 .19953-.06951.36165-.20855.48635-.13903.12471-.31735.18706-.53497.18706-.2146 0-.3914-.06235-.53044-.18706C5.06952 25.04387 5 24.88175 5 24.68222zm2.35298 1.80458c0-.47242.0937-.89349.28109-1.2632.18739-.36973.45714-.65582.80926-.85828.35212-.20247.7609-.3037 1.22636-.3037.66192 0 1.20218.1966 1.62079.58979.41861.3932.6521.92723.70045 1.60211l.00907.3257c0 .73064-.21006 1.31676-.63018 1.75837-.42012.4416-.9838.66241-1.69106.66241s-1.2717-.22007-1.69333-.66021c-.42164-.44014-.63245-1.03873-.63245-1.79578v-.05721zm1.31023.09243c0 .45188.08765.79738.26296 1.03653.1753.23914.42616.35871.75259.35871.31736 0 .5652-.1181.74352-.35431.17833-.23621.26749-.614.26749-1.13336 0-.44308-.08916-.78639-.26749-1.02993-.17833-.24355-.42919-.36532-.7526-.36532-.32037 0-.56821.12104-.74351.36312-.1753.24207-.26296.61692-.26296 1.12456z" fill="#FFF"/><path d="M21.2071 28.5l.35356-.35355c.19526-.19527.51184-.19527.7071 0 .19527.19526.19527.51184 0 .7071l-.35355.35356.35356.35355c.19526.19526.19526.51184 0 .7071-.19527.19527-.51185.19527-.70711 0l-.35355-.35355-.35356.35356c-.19526.19526-.51184.19526-.7071 0-.19527-.19527-.19527-.51185 0-.70711l.35355-.35355-.35355-.35356c-.19527-.19526-.19527-.51184 0-.7071.19526-.19527.51184-.19527.7071 0l.35356.35355z" fill="#FFA300" fill-rule="nonzero" opacity=".49944"/><path d="M31 27h1c.55228 0 1 .44772 1 1s-.44772 1-1 1h-1v1c0 .55228-.44772 1-1 1s-1-.44772-1-1v-1h-1c-.55228 0-1-.44772-1-1s.44772-1 1-1h1v-1c0-.55228.44772-1 1-1s1 .44772 1 1v1z" fill="#FFA300" fill-rule="nonzero" opacity=".74721"/></g></svg>
+
+  </div>
+
+  <div class="text">
+    <div class="title">
+      Hi there! Did you know there is a Y8 Forum?
+    </div>
+
+    <div class="hint">
+      Join other players talking about games. <a href="https://forum.y8.com">Visit the Y8 Forum</a>
+    </div>
+  </div>
+
+  <div class="actions">
+    <a class="btn-sm btn btn-white" href="https://forum.y8.com">Go to Forum</a>
+    <a class="hide-notification btn-sm btn btn-wire-white" href="">Hide</a>
+  </div>
+</div>
+
+
+  <div class="label-uppercase">
+    LIBRARY
+  </div>
+
+  <ul>
+    <li>
+      <a class="new_games" href="https://www.y8.com/new/games">
+        <div class="name">
+            New Games
+        </div>
+        <div id="new-items-count" class="number">
+          Next in
+          <span class="release-countdown">xx:xx</span>
+        </div>
+</a>    </li>
+
+    <li>
+      <a class="best_new_games" href="https://www.y8.com/best">
+        <div class="name">
+            Best of new games
+        </div>
+        <div id="new-items-count" class="number">
+          985
+          games
+        </div>
+</a>    </li>
+
+    <li>
+      <a class="popular_games" href="https://www.y8.com/popular/games">
+        <div class="name">
+            Most Popular Games
+        </div>
+        <div id="new-items-count" class="number">
+          18474
+          games
+        </div>
+</a>    </li>
+
+    <li>
+      <a class="played_games visited_items" style="text-decoration:none;" href="https://www.y8.com/profile/played_games">
+        <div class="name">Played Games</div>
+        <div id="visited-items-count" class="number"></div>
+</a>    </li>
+
+    <li>
+      <a class="liked_games liked_items" style="text-decoration:none;" href="https://www.y8.com/profile/liked_games">
+        <div class="name">Liked Games</div>
+        <div id="liked-items-count" class="number"></div>
+</a>    </li>
+
+      <li>
+        <a class="recommended_games recommended_items" style="text-decoration:none;" href="https://www.y8.com/profile/recommended_games">
+          <div class="name">Recommended Games</div>
+          <div id="recommended-items-count" class="number"></div>
+</a>      </li>
+  </ul>
+
+  <hr>
+
+  <div class="label-uppercase">
+    CATEGORIES
+  </div>
+
+  <ul>
+  <!-- DO NOT CHANGE THIS : -->
+    <li class="inactive girls li-category">
+      <a class="girls" title="Games for girls" href="https://www.y8.com/categories/girls"><span class="name">Games for girls</span>
+<span class="number">23,621 games</span>
+</a>
+</li>    <li class="inactive driving_racing li-category">
+      <a class="driving_racing" title="Driving &amp; Racing Games" href="https://www.y8.com/categories/driving_racing"><span class="name">Driving &amp; Racing Games</span>
+<span class="number">6,735 games</span>
+</a>
+</li>    <li class="inactive strategy li-category">
+      <a class="strategy" title="Strategy &amp; RPG Games" href="https://www.y8.com/categories/strategy"><span class="name">Strategy &amp; RPG Games</span>
+<span class="number">2,405 games</span>
+</a>
+</li>    <li class="inactive management li-category">
+      <a class="management" title="Management Games" href="https://www.y8.com/categories/management"><span class="name">Management Games</span>
+<span class="number">3,635 games</span>
+</a>
+</li>    <li class="inactive thinking li-category">
+      <a class="thinking" title="Thinking Games" href="https://www.y8.com/categories/thinking"><span class="name">Thinking Games</span>
+<span class="number">11,897 games</span>
+</a>
+</li>    <li class="inactive action_adventure li-category">
+      <a class="action_adventure" title="Action &amp; Adventure Games" href="https://www.y8.com/categories/action_adventure"><span class="name">Action &amp; Adventure Games</span>
+<span class="number">15,903 games</span>
+</a>
+</li>    <li class="inactive sports li-category">
+      <a class="sports" title="Sports Games" href="https://www.y8.com/categories/sports"><span class="name">Sports Games</span>
+<span class="number">2,151 games</span>
+</a>
+</li>    <li class="inactive shooting li-category">
+      <a class="shooting" title="Shooting Games" href="https://www.y8.com/categories/shooting"><span class="name">Shooting Games</span>
+<span class="number">8,370 games</span>
+</a>
+</li>    <li class="inactive fighting li-category">
+      <a class="fighting" title="Fighting Games" href="https://www.y8.com/categories/fighting"><span class="name">Fighting Games</span>
+<span class="number">2,090 games</span>
+</a>
+</li>    <li class="inactive skill li-category">
+      <a class="skill" title="Skill Games" href="https://www.y8.com/categories/skill"><span class="name">Skill Games</span>
+<span class="number">10,711 games</span>
+</a>
+</li>    <li class="inactive arcade_classic li-category">
+      <a class="arcade_classic" title="Arcade &amp; Classic Games" href="https://www.y8.com/categories/arcade_classic"><span class="name">Arcade &amp; Classic Games</span>
+<span class="number">12,695 games</span>
+</a>
+</li>    <li class="inactive fun li-category">
+      <a class="fun" title="Fun &amp; Crazy Games" href="https://www.y8.com/categories/fun"><span class="name">Fun &amp; Crazy Games</span>
+<span class="number">2,483 games</span>
+</a>
+</li>  <!-- END OF : DO NOT CHANGE THIS -->
+  </ul>
+
+</div>
+
+
+<div class="sub-menu-footer sub-menu-footer-grey">
+  <!-- DO NOT CHANGE THIS, NEITHER IT'S CONTENT -->
+    <div class="stats">
+  <div class="text-uppercase">
+    Play with friends <br />
+    Powered by Y8 Account
+  </div>
+
+  <div class="stat">
+    <a href="https://www.y8.com/tags/y8_account/multiplayer">
+      <div class="number">
+        135
+      </div>
+      <div class="description">
+        Y8 Multiplayer
+      </div>
+      <div>
+        Games
+      </div>
+</a>  </div>
+
+  <div class="stat">
+    <a href="https://www.y8.com/tags/y8_highscore">
+      <div class="number">
+        1,792
+      </div>
+      <div class="description">
+        Y8 High Score
+      </div>
+      <div>
+        Games
+      </div>
+</a>  </div>
+
+  <div class="stat">
+    <a href="https://www.y8.com/tags/y8_achievements">
+      <div class="number">
+        1,094
+      </div>
+      <div class="description">
+        Y8 Achievements
+      </div>
+      <div>
+        Games
+      </div>
+</a>  </div>
+
+  <div class="stat">
+    <a href="https://www.y8.com/tags/y8_screenshot">
+      <div class="number">
+        796
+      </div>
+      <div class="description">
+        Y8 Screenshots
+      </div>
+      <div>
+        Games
+      </div>
+</a>  </div>
+
+  <div class="stat">
+    <a href="https://www.y8.com/tags/y8_save">
+      <div class="number">
+        1,378
+      </div>
+      <div class="description">
+        Y8 Online Save
+      </div>
+      <div>
+        Games
+      </div>
+</a>  </div>
+
+  <div class="stat">
+    <a href="https://www.y8.com/tags/y8_account">
+      <div class="number">
+        2,815
+      </div>
+      <div class="description">
+        All Y8 Games
+      </div>
+      <div>
+        Games
+      </div>
+</a>  </div>
+</div>
+
+      <div class="last-highscore">
+    <div class="text-uppercase" style="padding:0;">Last Highscore:</div>
+    <div class="author-points">
+      <p>
+        <a target="_blank" href="/users/58f23264d55930bbb2dd61c9/GUKAK_769">
+          <img alt="GUKAK_769 avatar" src="https://cdn.y8.com/profile_pictures/58f2b2bbe694aa51b80b1e37-large.jpg" />
+</a>        <b>45</b>
+        points on
+        <a target="_blank" href="https://www.y8.com/games/masked_forces">Masked Forces</a>
+        by
+        <a target="_blank" href="/users/58f23264d55930bbb2dd61c9/GUKAK_769">GUKAK_769</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-links-box"><div class="social-link-box">
+  <div class="help-us-improve-box">
+    <div class="label-uppercase" >
+      Help us improve
+    </div>
+    <a class="translate-report" href="https://www.y8.com/contact/new">Bad translation?</a>
+  </div>
+
+  <div class="label-uppercase" >
+    Social
+  </div>
+
+  <div class="addthis_default_style">
+    <!-- AddThis Button BEGIN -->
+<a class="addthis_counter addthis_pill_style" addthis:url="https://www.y8.com" addthis:title="Y8 Games : Play free online games at Y8.com"></a>
+
+<div class="social-widget" data-target-class="add-this-widget" data-html-tag="script" data-src="https://s7.addthis.com/js/300/addthis_widget.js#domready=1&pubid=addy8" width="30" height="30">
+  <svg width="68px" height="28px" viewBox="0 0 68 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Artboard">
+      <rect id="background" fill="#FF613E" x="0" y="0" width="28" height="28" rx="5"></rect>
+      <path d="M15,13 L15,11 L13,11 L13,13 L11,13 L11,15 L13,15 L13,17 L15,17 L15,15 L17,15 L17,13 L15,13 Z M9.97704962,9 L18.0229504,9 C18.5703125,9 19,9.43744001 19,9.97704962 L19,18.0229504 C19,18.5703125 18.56256,19 18.0229504,19 L9.97704962,19 C9.4296875,19 9,18.56256 9,18.0229504 L9,9.97704962 C9,9.4296875 9.43744001,9 9.97704962,9 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+    </g>
+  </g>
+</svg>
+
+</div>
+
+<!-- AddThis Button END -->
+
+  </div>
+
+  <div class="facebook-widget">
+  <div class="social-widget" data-target-class="facebook-widget" data-html-tag="iframe" data-src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FY8-Games-225100494185683%2F&width=95&layout=button_count&action=like&size=large&show_faces=false&share=false&height=21&appId=267266673296925" width="180" height="30" data-style="border:none;overflow:hidden" data-scrolling="no" data-frameborder="0" data-allowTransparency="true">
+    <svg width="96px" height="28px" viewBox="0 0 96 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Artboard">
+      <g id="Group">
+        <rect id="background" fill="#FF613E" x="0" y="0" width="28" height="28" rx="5"></rect>
+        <path d="M15,13 L15,11 L13,11 L13,13 L11,13 L11,15 L13,15 L13,17 L15,17 L15,15 L17,15 L17,13 L15,13 Z M9.97704962,9 L18.0229504,9 C18.5703125,9 19,9.43744001 19,9.97704962 L19,18.0229504 C19,18.5703125 18.56256,19 18.0229504,19 L9.97704962,19 C9.4296875,19 9,18.56256 9,18.0229504 L9,9.97704962 C9,9.4296875 9.43744001,9 9.97704962,9 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+      </g>
+      <rect id="background" stroke="#4267B2" stroke-width="0.5" fill="#4465B8" x="0.25" y="0.25" width="30.5" height="27.5" rx="5"></rect>
+      <path d="M14,13.1571909 L15.80023,11.0931632 L16.8015414,9.24372206 L16.8015414,8 C17.5976134,7.87883258 18.1553507,7.99611587 18.4747532,8.35184985 C18.953857,8.88545083 18.8397217,9.52202189 18.8397217,10.2700195 C18.8397217,10.7686846 18.7180655,11.2618667 18.4747532,11.7495658 L18.028979,12.2838312 L21.810054,12.2838312 L22,13.1571909 L20.5142896,18.4909276 C18.9951919,18.5320096 17.8214542,18.5320096 16.9930764,18.4909276 C16.1646987,18.4498456 15.1670065,18.3421572 14,18.1678624 L14,13.1571909 Z M10,13.2608696 L13,13.2608696 L13,19 L10,19 L10,13.2608696 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+  </g>
+</svg>
+
+  </div>
+</div>
+
+</div>
+
+<ul class="nav nav-sidebar others">
+  <li><a id="contact_form_link" href="https://www.y8.com/contact/new">Contact Form</a></li>
+  <li><a href="https://www.y8.com/upload">Submit a Game or Video</a></li>
+  <li><a href="https://www.y8.com/games_for_your_website">Games for Your Website</a></li>
+  <li><a href="https://www.y8.com/privacy">Privacy Policy</a></li>
+  <li><a href="https://www.y8.com/cookie-policy">Cookie Policy</a></li>
+  <li><a href="https://www.y8.com/terms">Terms of Use</a></li>
+  <li style="background-image: none;"><a href="https://forum.y8.com">Forum</a><div class="link-with-icon"></div></li>
+</ul>
+</div>
+  <!-- END OF :  DO NOT CHANGE THIS, NEITHER IT'S CONTENT -->
+</div>
+
+          </div><!--
+
+          --><div class="waiting-idnet">
+
+              <div id="user_not_logged_in" style="display:none;">
+                <button type="button" class="fake-button fake-button-red idnet-fast-register-link">
+                  Register
+                </button><!--
+                --><button type="button" class="fake-button idnet-fast-login-link">
+                  Log in
+                </button>
+              </div>
+
+              <div id="user_logged_in" style="display:none;">
+                <a class="fake-button js-top-menu user-toggle" data-menu="account" href="#">
+                  <img class="avatar" src="https://img-cf.y8.com/assets/y8/default_avatar-b95766a9a753f0006659f8cc583a705d09e260787fccdc47bfdabca911b80666.png" alt="Default avatar" />
+</a>
+                <div class="links-container-container">
+                  <div class="links-container sub-menu" style="display:none;">
+                    <div class="sub-menu-header">
+                      <span class="username username_box">
+                        My Profile
+                      </span>
+                      <span class="js-user-idnet-points"></span>
+                      <span class="points">points</span>
+                    </div>
+                    <ul>
+                      <li><a class="account-menu-link" id="account-menu-link-profile" href="#">My Profile</a></li>
+                      <li>
+                        <a target="blank" class="account-menu-link" id="account-menu-link-edit-profile" href="#">Edit Profile</a>
+                      </li>
+                      <li>
+                        <a class="account-menu-link" id="account-menu-link-games" href="#">
+                          My games
+                          (<span class="js-favorites-count"></span>)
+</a>                      </li>
+                    </ul>
+                    <div class="sub-menu-footer">
+                      <ul>
+                        <li>
+                          <a class="account-menu-link" style="margin:0;" href="https://www.y8.com/logout">Log out</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div><!--
+
+          --><div class="fake-button parental-control">
+            <a class="js-top-menu parental-control-link" data-menu="parental" href="#"></a>
+            <a class="parental-control-link-hidden" data-remote="true" href="/parental_filters/new"></a>
+          </div><!--
+          --><div id="parental-filter-form" class="parental-filter-form sub-menu"></div><!--
+
+          --><div id="locale-selector-dropdown" class='locale-selector-dropdown fake-button'>
+              <li>
+  <a class="en locale-chooser js-top-menu" data-menu="locale" href="https://www.y8.com">
+      <div class="flag en">&nbsp;</div>
+    <div class="locale-name">English</div>
+</a></li>
+
+  <div class="locales-container-container locales-container sub-menu">
+    <ul>
+      <li>
+  <a class="en locale-link" href="https://www.y8.com">
+      <div class="flag en">&nbsp;</div>
+    <div class="locale-name">English</div>
+</a></li>
+<li>
+  <a class="ru locale-link" href="https://ru.y8.com">
+      <div class="flag ru">&nbsp;</div>
+    <div class="locale-name">Руcский</div>
+</a></li>
+<li>
+  <a class="fr locale-link" href="https://fr.y8.com">
+      <div class="flag fr">&nbsp;</div>
+    <div class="locale-name">Français</div>
+</a></li>
+<li>
+  <a class="de locale-link" href="https://de.y8.com">
+      <div class="flag de">&nbsp;</div>
+    <div class="locale-name">Deutsch</div>
+</a></li>
+<li>
+  <a class="it locale-link" href="https://it.y8.com">
+      <div class="flag it">&nbsp;</div>
+    <div class="locale-name">Italiano</div>
+</a></li>
+<li>
+  <a class="el locale-link" href="https://el.y8.com">
+      <div class="flag el">&nbsp;</div>
+    <div class="locale-name">Ελληνικά</div>
+</a></li>
+<li>
+  <a class="he locale-link" href="https://he.y8.com">
+      <div class="flag he">&nbsp;</div>
+    <div class="locale-name">עברית</div>
+</a></li>
+<li>
+  <a class="hi locale-link" href="https://hi.y8.com">
+      <div class="flag hi">&nbsp;</div>
+    <div class="locale-name">हिंदी</div>
+</a></li>
+<li>
+  <a class="ro locale-link" href="https://ro.y8.com">
+      <div class="flag ro">&nbsp;</div>
+    <div class="locale-name">Română</div>
+</a></li>
+<li>
+  <a class="es locale-link" href="https://es.y8.com">
+      <div class="flag es">&nbsp;</div>
+    <div class="locale-name">Español</div>
+</a></li>
+<li>
+  <a class="tl locale-link" href="https://tl.y8.com">
+      <div class="flag tl">&nbsp;</div>
+    <div class="locale-name">Tagalog</div>
+</a></li>
+<li>
+  <a class="th locale-link" href="https://th.y8.com">
+      <div class="flag th">&nbsp;</div>
+    <div class="locale-name">ไทย</div>
+</a></li>
+<li>
+  <a class="zh locale-link" href="https://zh.y8.com">
+      <div class="flag zh">&nbsp;</div>
+    <div class="locale-name">中文</div>
+</a></li>
+<li>
+  <a class="nl locale-link" href="https://nl.y8.com">
+      <div class="flag nl">&nbsp;</div>
+    <div class="locale-name">Nederlands</div>
+</a></li>
+<li>
+  <a class="vi locale-link" href="https://vi.y8.com">
+      <div class="flag vi">&nbsp;</div>
+    <div class="locale-name">Việt</div>
+</a></li>
+<li>
+  <a class="tr locale-link" href="https://tr.y8.com">
+      <div class="flag tr">&nbsp;</div>
+    <div class="locale-name">Türkçe</div>
+</a></li>
+<li>
+  <a class="pt locale-link" href="https://pt.y8.com">
+      <div class="flag pt">&nbsp;</div>
+    <div class="locale-name">Português</div>
+</a></li>
+<li>
+  <a class="pl locale-link" href="https://pl.y8.com">
+      <div class="flag pl">&nbsp;</div>
+    <div class="locale-name">Polski</div>
+</a></li>
+<li>
+  <a class="ko locale-link" href="https://ko.y8.com">
+      <div class="flag ko">&nbsp;</div>
+    <div class="locale-name">한국어</div>
+</a></li>
+<li>
+  <a class="ja locale-link" href="https://ja.y8.com">
+      <div class="flag ja">&nbsp;</div>
+    <div class="locale-name">日本語</div>
+</a></li>
+<li>
+  <a class="id locale-link" href="https://id.y8.com">
+      <div class="flag id">&nbsp;</div>
+    <div class="locale-name">Indonesia</div>
+</a></li>
+<li>
+  <a class="ar locale-link" href="https://ar.y8.com">
+      <div class="flag ar">&nbsp;</div>
+    <div class="locale-name">العربية</div>
+</a></li>
+
+    </ul>
+  </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div id="flash-messages-box" class="flash-messages-box">
+        <div class="flash-notice">
+  <div class="container">
+    <div id="flash-notice" class="flash"></div>
+    <div class="close">&#215;</div>
+  </div>
+</div>
+
+<div class="flash-alert">
+  <div class="container">
+    <div id="flash-alert" class="flash flash-alert"></div>
+    <div class="close">&#215;</div>
+  </div>
+</div>
+
+      </div>
+    </nav>
+
+    <div class="container">
+      
+  <div class="main">
+  <div class="box no-background top-categories">
+    <div class="row">
+        <li class="inactive girls li-category">
+          <a class="girls" title="Games for girls" href="https://www.y8.com/categories/girls"><span class="name">Games for girls</span>
+<span class="number">23,621 games</span>
+</a>
+</li>        <li class="inactive driving_racing li-category">
+          <a class="driving_racing" title="Driving &amp; Racing Games" href="https://www.y8.com/categories/driving_racing"><span class="name">Driving &amp; Racing Games</span>
+<span class="number">6,735 games</span>
+</a>
+</li>        <li class="inactive shooting li-category">
+          <a class="shooting" title="Shooting Games" href="https://www.y8.com/categories/shooting"><span class="name">Shooting Games</span>
+<span class="number">8,370 games</span>
+</a>
+</li>        <li class="inactive action_adventure li-category">
+          <a class="action_adventure" title="Action &amp; Adventure Games" href="https://www.y8.com/categories/action_adventure"><span class="name">Action &amp; Adventure Games</span>
+<span class="number">15,903 games</span>
+</a>
+</li>        <li class="inactive thinking li-category">
+          <a class="thinking" title="Thinking Games" href="https://www.y8.com/categories/thinking"><span class="name">Thinking Games</span>
+<span class="number">11,897 games</span>
+</a>
+</li>        <li class="inactive arcade_classic li-category">
+          <a class="arcade_classic" title="Arcade &amp; Classic Games" href="https://www.y8.com/categories/arcade_classic"><span class="name">Arcade &amp; Classic Games</span>
+<span class="number">12,695 games</span>
+</a>
+</li>        <li class="inactive management li-category">
+          <a class="management" title="Management Games" href="https://www.y8.com/categories/management"><span class="name">Management Games</span>
+<span class="number">3,635 games</span>
+</a>
+</li>        <li class="inactive fighting li-category">
+          <a class="fighting" title="Fighting Games" href="https://www.y8.com/categories/fighting"><span class="name">Fighting Games</span>
+<span class="number">2,090 games</span>
+</a>
+</li>      <li class="all-tags">
+        <a href"#" class="others category js-top-menu" data-menu="browse">
+          <span class="name">
+            View All Categories
+          </span>
+          <span class="number">12 categories</span>
+        </a>
+      </li>
+    </div>
+  </div>
+</div>
+
+  <div class="main cs-banner" style="display:none;">
+  <div class="box">
+    <a target="_blank" href="https://cryptoserval.io"></a>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    if (typeof web3 !== 'undefined') {
+      $('.cs-banner').show();
+    }
+  });
+</script>
+
+  <div class="main">
+  <div class="box top-tags">
+    <div class="row">
+      <div class="col-md-12">
+        <h5>Tags</h5>
+        <li class="more-tags" style="display:none;">
+          <a class="tag all-tags" href="https://www.y8.com/tags">
+            View All Tags<!--
+            --><span style>380</span>
+</a>        </li>
+          <li><a class="tag cat-girls" title="Dress Up" href="https://www.y8.com/tags/dress_up">Dress Up<span style="font-size:13px;">14,996</span></a></li>
+          <li><a class="tag cat-girls" title="Cooking" href="https://www.y8.com/tags/cooking">Cooking<span style="font-size:13px;">1,527</span></a></li>
+          <li><a class="tag" title="2 player" href="https://www.y8.com/tags/2_players">2 player<span style="font-size:13px;">1,081</span></a></li>
+          <li><a class="tag" title="Simulation" href="https://www.y8.com/tags/simulation">Simulation<span style="">801</span></a></li>
+          <li><a class="tag" title="Multiplayer" href="https://www.y8.com/tags/multiplayer">Multiplayer<span style="font-size:13px;">345</span></a></li>
+          <li><a class="tag cat-fighting" title="Street Fighting" href="https://www.y8.com/tags/street_fighting">Street Fighting<span style="font-size:13px;">106</span></a></li>
+          <li><a class="tag cat-sports" title="Basketball" href="https://www.y8.com/tags/basketball">Basketball<span style="font-size:13px;">231</span></a></li>
+          <li><a class="tag cat-driving_racing" title="Quad" href="https://www.y8.com/tags/quad">Quad<span style="">72</span></a></li>
+          <li><a class="tag cat-shooting" title="Gun" href="https://www.y8.com/tags/guns">Gun<span style="font-size:13px;">1,248</span></a></li>
+          <li><a class="tag cat-girls" title="Romance" href="https://www.y8.com/tags/romance">Romance<span style="">282</span></a></li>
+          <li><a class="tag cat-driving_racing" title="Car" href="https://www.y8.com/tags/car">Car<span style="font-size:13px;">2,394</span></a></li>
+          <li><a class="tag cat-management" title="Money" href="https://www.y8.com/tags/money">Money<span style="">329</span></a></li>
+          <li><a class="tag cat-thinking" title="Puzzle" href="https://www.y8.com/tags/puzzle">Puzzle<span style="font-size:13px;">7,361</span></a></li>
+          <li><a class="tag" title="Zodiac" href="https://www.y8.com/tags/zodiac">Zodiac<span style="">65</span></a></li>
+          <li><a class="tag" title="Series" href="https://www.y8.com/tags/series">Series<span style="">4,756</span></a></li>
+          <li><a class="tag cat-shooting" title="Sniper" href="https://www.y8.com/tags/sniper">Sniper<span style="font-size:13px;">339</span></a></li>
+          <li><a class="tag cat-fighting" title="Ninja" href="https://www.y8.com/tags/ninja">Ninja<span style="font-size:13px;">515</span></a></li>
+          <li><a class="tag" title="Machine" href="https://www.y8.com/tags/machine">Machine<span style="">52</span></a></li>
+          <li><a class="tag cat-management" title="Food" href="https://www.y8.com/tags/food">Food<span style="font-size:13px;">2,896</span></a></li>
+          <li><a class="tag" title="SNES" href="https://www.y8.com/tags/snes">SNES<span style="">0</span></a></li>
+          <li><a class="tag" title="Bananas" href="https://www.y8.com/tags/bananas">Bananas<span style="">82</span></a></li>
+          <li><a class="tag" title="Dog" href="https://www.y8.com/tags/dog">Dog<span style="font-size:13px;">728</span></a></li>
+          <li><a class="tag cat-fun" title="Scary" href="https://www.y8.com/tags/scary">Scary<span style="font-size:13px;">272</span></a></li>
+          <li><a class="tag cat-sports" title="Curling" href="https://www.y8.com/tags/curling">Curling<span style="">6</span></a></li>
+          <li><a class="tag cat-driving_racing" title="Truck" href="https://www.y8.com/tags/truck">Truck<span style="font-size:13px;">936</span></a></li>
+          <li><a class="tag cat-sports" title="Billiards" href="https://www.y8.com/tags/billiards">Billiards<span style="font-size:13px;">152</span></a></li>
+          <li><a class="tag cat-girls" title="Makeover / Make-up" href="https://www.y8.com/tags/makeover_make-up">Makeover / Make-up<span style="font-size:13px;">3,170</span></a></li>
+          <li><a class="tag" title="Zombies" href="https://www.y8.com/tags/zombies">Zombies<span style="font-size:13px;">1,567</span></a></li>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function() {
+    new ElementAtEndEnsurer('.top-tags', '.more-tags').enable();
+  });
+</script>
+
+  <div class="main js-search-trends" data-endpoint="/game/search_trends">
+  <div class="box search-trends-box">
+    <div class="row single-line">
+      <div class="col-md-12">
+        <h5>Popular Searches In</h5>
+        <div class="open-modal-btn">
+          <span class="c y8"></span>
+          <span class="shevron"></span>
+        </div>
+        <div class="search-trends"></div>
+        <img class="spinner" src="https://img-cf.y8.com/assets/spinner-4cc593e7307fd42aa01728c2977acee6e37704df544cccdf5e3318c0a957122e.gif" alt="Spinner" />
+      </div>
+    </div>
+  </div>
+  <script class="search-trends-tpl" type="text/x-handlebars-template">
+    <li class="more"><a class="control">Show more</a></li>
+    {{#each this}}
+      <li><a href="/search?q={{ this }}">{{ @key }}</a></li>
+    {{/each}}
+    <li class="less"><a class="control">Show less</a></li>
+  </script>
+  <script class="search-trends-countries-tpl" type="text/x-handlebars-template">
+    {{#each this}}
+      <h5>{{@key}}</h5>
+      <ul class="country-selection">
+      {{#each this}}
+        <li>
+          <span class="c {{@key}}"></span>
+          <div class="country-name">{{this}}</div>
+        </li>
+      {{/each}}
+      </ul>
+    {{/each}}
+  </script>
+  <script class="search-trends-search-results-tpl" type="text/x-handlebars-template">
+    <ul class="search-results">
+      {{#each this}}
+        <li>
+          <div>
+            <span class="c {{this.[0]}}"></span> {{this.[1]}}
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </script>
+</div>
+
+<div class="country-chooser-modal sub-menu">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>
+        Discover what people are searching in different countries
+      </h3>
+    </div>
+  </div>
+  <div class="row controls-1">
+    <div class="header-1 col-md-12">
+      <ul>
+        <li class="selected" style="display: none;">
+          <div class="wrapper">
+            <div class="cell">
+              <span class="c y8"></span>
+            </div>
+            <div class="cell">
+              <div class="country-name">All searches</div>
+              <div class="country-description">Current Selection</div>
+            </div>
+            <div class="cell">
+              <div class="tick"></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="navbar-form">
+        <i class="glyphicon glyphicon-search"></i>
+        <input
+          type="text"
+          placeholder="What country are you looking for?"
+          class="form-control search fake-button"
+          autocomplete="off" />
+        <i class="glyphicon glyphicon-remove" style="display: none;"></i>
+      </div>
+    </div>
+  </div>
+  <div class="row controls-2">
+    <div class="search-input-col col-md-12">
+    </div>
+  </div>
+  <div class="row content-1">
+    <div class="col-md-12 countries-container">
+      <div class="countries"></div>
+    </div>
+  </div>
+  <div class="row content-2">
+    <div class="search-results">
+    </div>
+  </div>
+</div>
+
+<div class="tint"></div>
+
+<script>
+  $(function() {
+    new SearchTrends().enable();
+  });
+</script>
+
+
+<div class="main">
+
+  <div class="box items-grid no-background">
+    <div class="row">
+      <div class="col-md-12">
+        <h5>
+          ALL GAMES<!--
+          --><!--
+            --><span class="number-with-dot"><!--
+              -->66,985
+              Free Games
+            </span>
+        </h5>
+
+      </div>
+    </div>
+
+    <ul class="navigator"><li class="head"> <div class='hidden'> 100 pages : </div> <span class='current medium-button'> 1</span> <a href="https://www.y8.com/?page=2">2</a> <a href="https://www.y8.com/?page=3">3</a> <a href="https://www.y8.com/?page=4">4</a> <a href="https://www.y8.com/?page=5">5</a> <a href="https://www.y8.com/?page=6">6</a> <a href="https://www.y8.com/?page=7">7</a> <a href="https://www.y8.com/?page=2">Next</a> <a href="https://www.y8.com/?page=50">Last</a></li></ul>
+
+    <div class="row" id="items_container" data-base-url="/" data-max-page="100" data-infinite-scrolling="true">
+      
+<div id="item_73391" class="item thumb videobox" data-item-id="73391" data-label-ids="Running Games,Collecting Games,1 Player,Free Game,3D,Series,Traps,Adrenaline" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4075/594d843631a51340ef7624783f198e9153e075c3.mp4?1461394161" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4075/0797fd8fa3e69216501d83f68dffe3ee724741d7.ogv?1461394161" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4075/80ffd2f996722403624f0e04dcc239f1ff5ad0c1.webm?1461394161" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4075/d6d4bc6de85fd44407ea318059993c2d542b291a.gif?1461394161&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4075/dc91ace4ebd92a32bff8a56af0672c5454404e42.gif?1461394161&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4075/42990fbf786f64f20ba1c25faf9adab58d5eeba3.gif?1461394161&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4075/8d13ef662e880b70914e08221cda90af72699fd9.gif?1461394161&quot;]">
+  <input type="hidden" name="for-girls-73391" id="for-girls-73391" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/run_2">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Run 2" src="https://img-cf.y8.com/cloud/y8-thumbs/57003/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/run_2">
+    <div class="infos">
+      <p class="title ltr">Run 2</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          80%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          3,355,578 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_63603" class="item thumb videobox" data-item-id="63603" data-label-ids="1 Player,Flash,Kids,Numbers,Hidden Object Games,Girls,Free Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/13540/642bd9e5e420b2ea984cd5b1f9b8351357fb8950.mp4?1461122058" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/13540/7cde0b52eadf0c9b936c163ed525ade86cebb3c0.ogv?1461122058" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/13540/8e925a6deb443685c1420d366488c3c2cd2c4524.webm?1461122058" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/13540/baac75b9687d3495e8a4d74b29ebe034a2fbe3af.gif?1461122058&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/13540/4aa3166a1a921b6dfa2439edad663a7c059fc563.gif?1461122058&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/13540/374139b4354847fa0c463dc993631b927ce92351.gif?1461122058&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/13540/27e65ae2821d3577c00e660d60d28cb2885c9632.gif?1461122058&quot;]">
+  <input type="hidden" name="for-girls-63603" id="for-girls-63603" value="true" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/hidden_numbers_illusions">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Hidden Numbers Illusions" src="https://img-cf.y8.com/cloud/y8-thumbs/50180/small.jpg" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/hidden_numbers_illusions">
+    <div class="infos">
+      <p class="title ltr">Hidden Numbers Illusions</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          66%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          170,763 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_125554" class="item thumb videobox" data-item-id="125554" data-label-ids="1 Player,Doctor,Girl,Girls,Educational" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/94339/779943c8a4098e2ae636f50a3daab6738862d632.mp4?1476083241" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/94339/286a6dd67f2ccbf8a3a05325d7f6c3b9e5ccb1a1.ogv?1476083241" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/94339/332dd0e0ecbbdf6358caf9719b283ffaa5e48cc7.webm?1476083241" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/94339/1f1693b7d16e7ac804edda5178ca1d745c48468a.gif?1476083241&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/94339/3662b8a7c485ff4bbde88e57e425bf394049a0f2.gif?1476083241&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/94339/f85b4798537dad22ff2c428628e539ef5c167728.gif?1476083241&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/94339/4f34533732bce3588f0e0811ad7a5959abdd956f.gif?1476083241&quot;]">
+  <input type="hidden" name="for-girls-125554" id="for-girls-125554" value="true" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/give_a_birth_to_your_daughter">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Give a Birth to Your Daughter" src="https://img-cf.y8.com/cloud/y8-thumbs/94080/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/give_a_birth_to_your_daughter">
+    <div class="infos">
+      <p class="title ltr">Give a Birth to Your Daughter</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          77%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          992,829 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_161458" class="item thumb videobox" data-item-id="161458" data-label-ids="3D,Free Game,Gun Games,Killing Games,Multiplayer,Shooting,Stealth,Y8 Account,Y8 Achievements,First Person Shooter,online,Real Time,Adrenaline,Fun" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;,&quot;unity_webgl_32_bit&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127510/aca7f6f7f929d06f0b65ab3ba61517aa6c0455b5.mp4?1544612961" data-ogv-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127510/21ecaf22cfcca2c38759c372d32379a26fca6ef5.ogv?1544612961" data-vp8-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127510/61cc9d4e7338c0d31156b14ae2a0a2020aaa048d.webm?1544612961" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127510/8d94e60add031b11c9d957c2ecad1c480bbd4828.gif?1544612961&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127510/bdf4aef38ad5055503db5cf25a8a11b3b98eacab.gif?1544612961&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127510/e47c5599b5a3630b4f3da25e8d16a75a4a2fe240.gif?1544612961&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127510/1aba79dc58eb6d1765054ec7238e54f730329e91.gif?1544612961&quot;]">
+  <input type="hidden" name="for-girls-161458" id="for-girls-161458" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/prop_busters">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Prop Busters Beta" src="https://img-cf.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/116726/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/prop_busters">
+    <div class="infos">
+      <p class="title ltr">Prop Busters Beta</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          86%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          784,747 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_162796" class="item thumb videobox" data-item-id="162796" data-label-ids="1 Player,Decorate,Dress Up,Free Game,Girl,HTML5,Bitent,Girls,Mobile,Touchscreen" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127755/ef3126d729a071f114aa9037d43357a56b3eca62.mp4?1545238972" data-ogv-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127755/5a2d5187742a48d0920e8b2af01c4edcbb040cff.ogv?1545238972" data-vp8-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127755/c716cb0890062a43037e08af2baf4a1089206fb8.webm?1545238972" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127755/30d76271021ed9ee1cd27cd70d326ac92861c006.gif?1545238972&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127755/bef25df5a8cd05d89c2064bdec721935f45a2297.gif?1545238972&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127755/49a8866606322a8c35c6c1a79d6234784ea3b277.gif?1545238972&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127755/00ae1aefe498a3253c9d53866eff5658df5136d1.gif?1545238972&quot;]">
+  <input type="hidden" name="for-girls-162796" id="for-girls-162796" value="true" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/sorority_girls_party_fun">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Sorority Girls Party Fun" src="https://img-cf.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/117999/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/sorority_girls_party_fun">
+    <div class="infos">
+      <p class="title ltr">Sorority Girls Party Fun</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          81%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          27,881 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_1684" class="item thumb videobox" data-item-id="1684" data-label-ids="1 Player,Gore,Series,Funny,Free Game,Violence,Blood,Point &amp; Click" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/394/b698ff8f6ed0d8261d12552df6a53bd62794b8ce.mp4?1458995185" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/394/ba4a5f5f0dd1d130e25da17200840471b6a1c462.ogv?1458995185" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/394/dbd9d0710adaa7dd8342e38f636e226f2bdb42c5.webm?1458995185" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/394/b56a21fb6187f7e63793b615341ade73b975bf14.gif?1458995185&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/394/84c84e92149549c734409505ae14229d8577048d.gif?1458995185&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/394/7b3669669848efac0afd3258138d2c23ab59de8f.gif?1458995185&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/394/0beeb55ee0250ff8b9cce69607facea57826467f.gif?1458995185&quot;]">
+  <input type="hidden" name="for-girls-1684" id="for-girls-1684" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/whack_your_boss">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Whack Your Boss" src="https://img-cf.y8.com/cloud/y8-thumbs/1429/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/whack_your_boss">
+    <div class="infos">
+      <p class="title ltr">Whack Your Boss</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          86%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          13,728,412 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_4351" class="item thumb videobox" data-item-id="4351" data-label-ids="1 Player,Kids,Drawing,Free Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/8160/d9a47fb3812687958430b7353aa9e673248852ff.mp4?1459093468" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/8160/5da1a8bf4b0ec8dad70722c088b438e2ebffde20.ogv?1459093468" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/8160/ab83691d987fd6c4878dc79954c9e5fc610d5a94.webm?1459093468" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/8160/51d1e54774624d553bd167e5a4586a21701033fd.gif?1459093468&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/8160/5afebd54b1b1df0d7e752ffdadb83b6a9ee1f504.gif?1459093468&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/8160/da2457dbb137178778d36b56de6f92d181935a03.gif?1459093468&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/8160/2786a3ac8ef22cb67c4c54d668eee5fa947a1b3d.gif?1459093468&quot;]">
+  <input type="hidden" name="for-girls-4351" id="for-girls-4351" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/draw">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Draw" src="https://img-cf.y8.com/cloud/y8-thumbs/3752/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/draw">
+    <div class="infos">
+      <p class="title ltr">Draw</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          79%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,827,692 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_8039" class="item thumb videobox" data-item-id="8039" data-label-ids="1 Player,Sports,Racing,Running Games,Free Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/2019/e99c17f1f974d8cf77e57182e2c2bb097eb95821.mp4?1459279207" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/2019/30f724b5f18ea9d95b54686dde8fa4bc6ecb5472.ogv?1459279207" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/2019/b5ac6584c46601360a27f6b58cc03c6365019295.webm?1459279207" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/2019/15587a771bec24ad622f5f96bdbf1b669ff84c73.gif?1459279207&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/2019/e77b7ee94451697944e9501e92f39e22be41f1c4.gif?1459279207&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/2019/6df9e6ec177246dbc6254ddcdc4a8438e5dbc777.gif?1459279207&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/2019/99c1518b19c1c876af88f63ed74ba5e95331e58b.gif?1459279207&quot;]">
+  <input type="hidden" name="for-girls-8039" id="for-girls-8039" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/sprinter">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Sprinter" src="https://img-cf.y8.com/cloud/y8-thumbs/7262/small.jpg" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/sprinter">
+    <div class="infos">
+      <p class="title ltr">Sprinter</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          81%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          18,408,491 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_12182" class="item thumb videobox" data-item-id="12182" data-label-ids="1 Player,Interactive Fiction,Girl,Dress Up,Girls,Free Game,Makeover / Make-up" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/443/1b8534de5c4f913e15ef08dc9ff4c1b7b1ab1a70.mp4?1459434210" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/443/d448c79836743a0b2278d43f8fa029067cbb008d.ogv?1459434210" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/443/6af235fa4d76dffcac76b511cc7ff86d9e197199.webm?1459434210" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/443/91e5b4562d019c6675b6362008cfd0e76086b794.gif?1459434210&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/443/f5f40cc7e48c0461015aa3a41785512f59853027.gif?1459434210&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/443/d9f4cce7c5dfd92b9c0320e8f75c967bc8894cfb.gif?1459434210&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/443/c794ddb2e4c9b8ff665fab62e4484673f43a5fa1.gif?1459434210&quot;]">
+  <input type="hidden" name="for-girls-12182" id="for-girls-12182" value="true" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/fashion_designer_new_york">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Fashion Designer New York" src="https://img-cf.y8.com/cloud/y8-thumbs/11179/small.png" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/fashion_designer_new_york">
+    <div class="infos">
+      <p class="title ltr">Fashion Designer New York</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          92%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          26,093,366 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_15347" class="item thumb videobox" data-item-id="15347" data-label-ids="1 Player,Escape,Free Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/5029/5b9d9f4ac46b49a9061c10e7a2c51ea5597f73a8.mp4?1459547890" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/5029/004b0b5f7e141ce5783783524ca60cf085f1c29d.ogv?1459547890" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/5029/4d0827a400705f860b8cfa7c4709e3bc531795be.webm?1459547890" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/5029/2534c8ef8a5e1caa509edeb78aa2137484cd90b3.gif?1459547890&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/5029/c0b87b73281dbccb038eee7cc2718900ee2be107.gif?1459547890&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/5029/7ca0c7f48699e3130efea9bc4fe4c19ccfa18ab2.gif?1459547890&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/5029/b7cbc7f7221b53161f64ca85701a7b0d56c5a764.gif?1459547890&quot;]">
+  <input type="hidden" name="for-girls-15347" id="for-girls-15347" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/escape_the_bathroom">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Escape: The Bathroom" src="https://img-cf.y8.com/cloud/y8-thumbs/14155/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/escape_the_bathroom">
+    <div class="infos">
+      <p class="title ltr">Escape: The Bathroom</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          79%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          634,040 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_21440" class="item thumb videobox" data-item-id="21440" data-label-ids="1 Player,Kids,Drawing,Free Game,Domino" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/3481/3ecb11c3f82f851abb9885697b196b3cf04d9911.mp4?1459824519" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/3481/6c0e703fc266a08690f1cf4f06850293eb7591cf.ogv?1459824519" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/3481/06a4fe1c33b7c291462d5b96f7abe96b70df61fe.webm?1459824519" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/3481/52feee8694044aa74c2ec5ccfe4435b1d63624b9.gif?1459824519&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/3481/56b4e0059d8511e3aa1ef7b63b3318d9c1fe71c2.gif?1459824519&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/3481/cf797413e1a54764c19410cbf3e7badea228dc60.gif?1459824519&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/3481/b6081f934d3dd3ba8ce62aac14dccd0600d6d999.gif?1459824519&quot;]">
+  <input type="hidden" name="for-girls-21440" id="for-girls-21440" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/domino_draw">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Domino Draw" src="https://img-cf.y8.com/cloud/y8-thumbs/19912/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/domino_draw">
+    <div class="infos">
+      <p class="title ltr">Domino Draw</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          82%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          2,934,710 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_24925" class="item thumb videobox" data-item-id="24925" data-label-ids="1 Player,Shooting,Blood,Killing Games,Violence,Free Game,HTML5,Cowboy,Gun Games,Mouse Skill,GameDistribution.com" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/300/d96b64aa47b379867b684e7472e94ae6ffd8c72b.mp4?1459950644" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/300/4b776bb30bddacd122d4bbca5944bb20b4b15180.ogv?1459950644" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/300/d56b982d712a9d5942df82a9c0c0c1137444363f.webm?1459950644" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/300/11efc4b007510e3fb7862e990f37ea3c978d328f.gif?1459950644&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/300/b79205215062d9e656fa51ec97ac39537ffb4462.gif?1459950644&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/300/1856cdbcc2f47ff82d36d8272e1eda91f9fa99a2.gif?1459950644&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/300/c9239cd6b6660ec8518b8d6f7d38a871b8052ac4.gif?1459950644&quot;]">
+  <input type="hidden" name="for-girls-24925" id="for-girls-24925" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/gunblood">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Gunblood" src="https://img-cf.y8.com/cloud/y8-thumbs/23073/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/gunblood">
+    <div class="infos">
+      <p class="title ltr">Gunblood</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          89%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          35,272,603 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_25094" class="item thumb videobox" data-item-id="25094" data-label-ids="1 Player,Girl,Series,Girls,Free Game,Grooming" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/932/3a2d12625e832a402cd6070304f320d8f6b39706.mp4?1459958009" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/932/d05f8538b3f36d75c5c0df4e3aa70c7321ef7c02.ogv?1459958009" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/932/98f9c9181164af5a78ba6ce85d247755d4e79736.webm?1459958009" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/932/ee6f9cca72a7ba15a45623c3b0ca60b68318c3c9.gif?1459958009&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/932/055cdc1019a49544e0a20bac2286d649f92a9e78.gif?1459958009&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/932/fd4545a8acba87e769d9fe3be46f3a561482ed77.gif?1459958009&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/932/6f3edb5585c45691b72df435e4c75e8ce3158b96.gif?1459958009&quot;]">
+  <input type="hidden" name="for-girls-25094" id="for-girls-25094" value="true" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/office_slacking_4">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Office Slacking 4" src="https://img-cf.y8.com/cloud/y8-thumbs/23219/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/office_slacking_4">
+    <div class="infos">
+      <p class="title ltr">Office Slacking 4</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          86%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          4,774,891 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_33923" class="item thumb videobox" data-item-id="33923" data-label-ids="1 Player,Flash,Free Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/6546/0e4ba057b9fec27732056aa67ce4fd33e41b227b.mp4?1460456214" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/6546/9bce112f474560e6bc66d73ed7fcdbe268c1ef48.ogv?1460456214" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/6546/c6b8fddd2d69c6f893f0a05b45a28da77a24abf7.webm?1460456214" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/6546/2de394ec1097b999abb1d36379c2e322fd84ed07.gif?1460456214&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/6546/f9c16a7e255a93b332b0ca4279977257d04309a9.gif?1460456214&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/6546/1c0992a299788ff1cbf5587ad0f83216b6e397f6.gif?1460456214&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/6546/f31159db7387eab446f9fe953a90ebd55aa15e9a.gif?1460456214&quot;]">
+  <input type="hidden" name="for-girls-33923" id="for-girls-33923" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/let_s_operate">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Let&#39;s Operate" src="https://img-cf.y8.com/cloud/y8-thumbs/29692/small.jpg" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/let_s_operate">
+    <div class="infos">
+      <p class="title ltr">Let&#39;s Operate</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          84%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          138,912 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_70814" class="item thumb videobox" data-item-id="70814" data-label-ids="Strategy,Multiplayer,3D,Free Game,Social" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/60384/bc6983d6d1c517ee4e4aa41dbdff9b57973318d8.mp4?1461330716" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/60384/84d9739c9ee2ff01f09f4597da223a729a355e7f.ogv?1461330716" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/60384/9e9a60a6f47926693840f252ac3dd0683f97d01a.webm?1461330716" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/60384/f5704c60187719b20dbb4d856e1ef716d064a756.gif?1461330716&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/60384/63335925edc6e75e51a162123b71f7f94d4880b9.gif?1461330716&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/60384/9acc83684d92758e65decc411da32be728c9afa9.gif?1461330716&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/60384/1b2bd7bfb70942b19c1cab213c92816093100c62.gif?1461330716&quot;]">
+  <input type="hidden" name="for-girls-70814" id="for-girls-70814" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/uno">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Uno" src="https://img-cf.y8.com/cloud/y8-thumbs/55529/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/uno">
+    <div class="infos">
+      <p class="title ltr">Uno</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          83%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          2,315,779 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_75813" class="item thumb videobox" data-item-id="75813" data-label-ids="1 Player,3D,Collecting Games,Free Game,Running Games,Series,Adrenaline" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/422/b05ed63cc8cb81cc009624346fca95814f3129b2.mp4?1461440496" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/422/9fda7f6dc56d6f8a2134f94783afab8f55fe0bdb.ogv?1461440496" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/422/482740db98b18d35a8ead6ed9fb8a7a7bbc5283f.webm?1461440496" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/422/c5e69993769dbec7558ec4926202eecd2307ab3f.gif?1461440496&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/422/7f1d20bf421b0d2bad48927cbcf54a592ac7724c.gif?1461440496&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/422/21f4d315940507ec8feba1df26c2544ee8fac8fb.gif?1461440496&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/422/a8fcb7cde0c0b2001de4f92c1f697f0f320edb32.gif?1461440496&quot;]">
+  <input type="hidden" name="for-girls-75813" id="for-girls-75813" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/run_3">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Run 3" src="https://img-cf.y8.com/cloud/y8-thumbs/61501/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/run_3">
+    <div class="infos">
+      <p class="title ltr">Run 3</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          90%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          21,156,291 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_82732" class="item thumb videobox" data-item-id="82732" data-label-ids="Free Game,Y8 Account,Multiplayer,online,Shooting,Space,Unity3D,Y8 Highscore,3D,Army Games,WebGL,Action,Adrenaline,Gun Games,Fun,Not on Kong,Rocket,Shotgun,Sniper,Third person shooter" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;,&quot;unity_webgl&quot;,&quot;unity_webgl_32_bit&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/105842/ac8fc9125eb76f3f1bca9c95580f73bf731e2217.mp4?1495012057" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/105842/e39488e6d2e239bb574b02b74079749b3d3baddf.ogv?1495012057" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/105842/4ef93e08ed79f9dc4b3eefbfdfa30313b1c01b7d.webm?1495012057" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/105842/c42ca07d37292fcae673ebf4484f51b76a3b476a.gif?1495012057&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/105842/b5f11b297d5f8468b24eda43cee3c7e3085572f3.gif?1495012057&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/105842/783f3bab3426f4c1b2208ef4732c49ec9adb5a88.gif?1495012057&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/105842/0c19237887ad385e67ab7a8b51b010f5a489f71d.gif?1495012057&quot;]">
+  <input type="hidden" name="for-girls-82732" id="for-girls-82732" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/freefall_tournament">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Freefall Tournament" src="https://img-cf.y8.com/cloud/y8-thumbs/63326/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/freefall_tournament">
+    <div class="infos">
+      <p class="title ltr">Freefall Tournament</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          92%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          21,891,110 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_80527" class="item thumb videobox" data-item-id="80527" data-label-ids="1 Player,3D,Ball,Unity3D,Y8 Account,Y8 Highscore,WebGL,Internal Games,Not on Kong,Adrenaline,Bounce,Free Game,Fun,Jumping,online,Platforms,Obstacle,Running Games" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;,&quot;unity_webgl_32_bit&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4735/23198db2dde9866170fc35cf88b43832ca9f5702.mp4?1461555012" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4735/15a9bf5880e7ef8acb32feda83aff788c6061232.ogv?1461555012" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4735/576091e6ad2cb3b71861aec397b33fe0a3e13519.webm?1461555012" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4735/47b9ccb229fc623c7b1dfcee54fc3974877d8dc3.gif?1461555012&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4735/81af440c22f0a5db4f8a6c5469a9b515d9d02b94.gif?1461555012&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4735/9db23fbb4c6ee826364435d9aee471cf2e28cb13.gif?1461555012&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4735/27d5f123c7cb247046b0236e2c34c9df9fa9d0cc.gif?1461555012&quot;]">
+  <input type="hidden" name="for-girls-80527" id="for-girls-80527" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/slope">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Slope" src="https://img-cf.y8.com/cloud/y8-thumbs-small-thumbnails-001/109946/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/slope">
+    <div class="infos">
+      <p class="title ltr">Slope</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          85%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          55,535,720 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_67240" class="item thumb videobox" data-item-id="67240" data-label-ids="Shooting,Action,Purchase Equipment Upgrades,Zombies,Christmas,Gun Games,Free Game,Series,Y8 Account,Y8 Highscore,Y8 Save,Survival Horror" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/2298/7fd65779945ae35d3ddafbde3020dd8b693560ac.mp4?1461210622" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/2298/b82eb11e2958febfc815c9b4adc5026002c4394d.ogv?1461210622" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/2298/b98f292ba9b16f43515cfbd29825298c92bad78d.webm?1461210622" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/2298/88ee1b89b152e7bfdb02b00126242a726d7b809d.gif?1461210622&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/2298/55c9bc473c9d0d86af96cf5f232faeefaa8fabb8.gif?1461210622&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/2298/42f1885ce4f74c2268b08642c6dad7e6b08696f6.gif?1461210622&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/2298/503414060fcbb8d238fe491e50ca9f3caa15976f.gif?1461210622&quot;]">
+  <input type="hidden" name="for-girls-67240" id="for-girls-67240" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/zombudoy_2">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Zombudoy 2" src="https://img-cf.y8.com/cloud/y8-thumbs/52749/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/zombudoy_2">
+    <div class="infos">
+      <p class="title ltr">Zombudoy 2</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          87%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          3,425,306 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_87966" class="item thumb videobox" data-item-id="87966" data-label-ids="1 Player,3D,Driving,Free Game,Y8 Account,Parking,Truck Games,Unity3D,Y8 Highscore,Y8 Save,WebGL" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_player&quot;,&quot;unity_webgl&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/60780/b460b2c0133730d4d25a998bebb9abf7cdf75403.mp4?1461771387" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/60780/420425876f271d79ba56c5182c40d6b9adaaf321.ogv?1461771387" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/60780/d97bdd95b47c3e7fa2df9facc4e45f15a99d9485.webm?1461771387" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/60780/ec1f9d7e1770df8bfda648c2d9e131b8b8702963.gif?1461771387&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/60780/af38178d7199d4b3e47894a302c8e8327d3f55f5.gif?1461771387&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/60780/1d2bc2b2be92a5a0b314e751aa3061499ebd75b7.gif?1461771387&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/60780/7b58bdc1245aef587c760a2a1404186fc0abb2d4.gif?1461771387&quot;]">
+  <input type="hidden" name="for-girls-87966" id="for-girls-87966" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/truck_parking">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Truck Parking" src="https://img-cf.y8.com/cloud/y8-thumbs/66346/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/truck_parking">
+    <div class="infos">
+      <p class="title ltr">Truck Parking</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          79%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          105,687 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_130909" class="item thumb videobox" data-item-id="130909" data-label-ids="1 Player,Christmas,Free Game,Y8 Account,Y8 Achievements,Y8 Highscore,Match 3,Matching Game,Puzzle,2 Player" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/99063/93e0adf1a8031c28b5b81936f8dc77f0ded4a801.mp4?1481564030" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/99063/4a0a419643d490d15a341627c5d67a3aa22a2a6d.ogv?1481564030" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/99063/8c2a30ac6f86aa6e3094d30b4005dfe258089c78.webm?1481564030" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/99063/84373be88d3c18beed384ed3ccf3c2ce24b29fd7.gif?1481564030&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/99063/fdfaff4240a8e6e355291db26a3f8ec9b3b0234e.gif?1481564030&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/99063/535c420ebb76055fc7d644972a4bd2ac3777d9c5.gif?1481564030&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/99063/347e3ef5e3ae543d043e67a4e18a3a6019324388.gif?1481564030&quot;]">
+  <input type="hidden" name="for-girls-130909" id="for-girls-130909" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/noughts_and_crosses_christmas">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Noughts and Crosses Christmas" src="https://img-cf.y8.com/cloud/y8-thumbs/95821/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/noughts_and_crosses_christmas">
+    <div class="infos">
+      <p class="title ltr">Noughts and Crosses Christmas</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          80%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,512,434 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_131324" class="item thumb videobox" data-item-id="131324" data-label-ids="3D,Action,Blood,First Person Shooter,Gun Games,Y8 Account,Y8 Achievements,Y8 Highscore,Y8 Save,Killing Games,Multiplayer,online,Purchase Equipment Upgrades,Shooting,Shotgun,Sniper,Unity3D,WebGL,1 Player" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_player&quot;,&quot;unity_webgl&quot;,&quot;unity_webgl_32_bit&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/99431/11e2dcc0a0cf67d60ea13c3643ba84527e792190.mp4?1482141317" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/99431/c29d4bdbc914dfa3a3b17197ff6f047112ecf45c.ogv?1482141317" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/99431/aa8df842df65dcddd68b0e64d30888f427bc5a38.webm?1482141317" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/99431/509d798fa994188de237821d19952312456fc262.gif?1482141317&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/99431/dfd1a722b1e180a4b66176773aad2d4e763b9b14.gif?1482141317&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/99431/68bf7489d7609da07937eea299e0122ac0fb0539.gif?1482141317&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/99431/48b57f6db25cfaa9c23f444ef8c4f4933ca0170d.gif?1482141317&quot;]">
+  <input type="hidden" name="for-girls-131324" id="for-girls-131324" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/masked_forces">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Masked Forces " src="https://img-cf.y8.com/cloud/y8-thumbs/96005/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/masked_forces">
+    <div class="infos">
+      <p class="title ltr">Masked Forces </p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          90%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          13,925,012 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_95340" class="item thumb videobox" data-item-id="95340" data-label-ids="Series,1 Player,Free Game,Y8 Account,Y8 Achievements,Y8 Save,Puzzle,Thinking,Christmas" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/65375/d00b125f7ba528141c83bac23d78ae8b6157fc02.mp4?1461987961" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/65375/428e8b7cb11e31a5a0e9edae5e9164e7147c0cb2.ogv?1461987961" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/65375/4af44b09c338faff647a28d298d2895420336b41.webm?1461987961" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/65375/422bbfb41e4ed29404eee28442ed33615937de84.gif?1461987961&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/65375/2d055a91f44d70d86239b6741426bd0fc0825fdc.gif?1461987961&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/65375/86f4bbb36d14f713e6a75c7db942a46b7e7a8033.gif?1461987961&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/65375/d888ea81a12559a8136b6230ff47b42762c0c00b.gif?1461987961&quot;]">
+  <input type="hidden" name="for-girls-95340" id="for-girls-95340" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/mr_splibox_the_christmas_story">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Mr. Splibox: The Christmas Story" src="https://img-cf.y8.com/cloud/y8-thumbs/71256/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/mr_splibox_the_christmas_story">
+    <div class="infos">
+      <p class="title ltr">Mr. Splibox: The Christmas Story</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          75%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          109,400 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_134437" class="item thumb videobox" data-item-id="134437" data-label-ids="1 Player,Free Game,Maze,Mouse Skill,Scary,Jumpscare" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/102154/9900e4ce3c4e488fd214c71f689afd12eeedf0f5.mp4?1486569684" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/102154/75006c78e2bbbc9c7294e8f85c3b738265550c8f.ogv?1486569684" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/102154/adb2d905ed4e9a9046f395d925684d9fc98194d7.webm?1486569684" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/102154/454a82959db80069f916bdbaee772e0f2ed384e6.gif?1486569684&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/102154/bfa16dfd3240c10fd95a26f2cd4ed42933b14064.gif?1486569684&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/102154/6fbe81e1ff0ee016ad01788c4173809108450b73.gif?1486569684&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/102154/59adce49f09374a44e09ae9484786d2c8be7eca3.gif?1486569684&quot;]">
+  <input type="hidden" name="for-girls-134437" id="for-girls-134437" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/scary_maze_game_dx">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Scary Maze Game DX" src="https://img-cf.y8.com/cloud/y8-thumbs/97310/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/scary_maze_game_dx">
+    <div class="infos">
+      <p class="title ltr">Scary Maze Game DX</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          63%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          2,960,165 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_139785" class="item thumb videobox" data-item-id="139785" data-label-ids="1 Player,3D,Adrenaline,Car Games,Y8 Account,Y8 Achievements,Y8 Highscore,Racing,Unity3D,WebGL" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;,&quot;unity_webgl&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/106732/55c39c08ebb7ce74cf9af7163c5fabf3dd7d440e.mp4?1497434045" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/106732/d2244d10b4a7edc1626a1eff16e43f6aa060f77e.ogv?1497434045" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/106732/4c1609d00a55b42f7e9cb0ea08710f7a93407afb.webm?1497434045" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/106732/db92a352d3b4d299a3193b575fa73bb85e80efac.gif?1497434045&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/106732/abe449dee3f5ecf0d3c820e077c94d8d5026cb6d.gif?1497434045&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/106732/4714d7791c32da2541b61c0cc6b3c3c1bd4023c1.gif?1497434045&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/106732/a3f7d10e9145addd241052f58d389dd96d09a726.gif?1497434045&quot;]">
+  <input type="hidden" name="for-girls-139785" id="for-girls-139785" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/maximum_acceleration">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Maximum Acceleration" src="https://img-cf.y8.com/cloud/y8-thumbs/100503/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/maximum_acceleration">
+    <div class="infos">
+      <p class="title ltr">Maximum Acceleration</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          75%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          3,839,211 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_141129" class="item thumb videobox" data-item-id="141129" data-label-ids="Arcade,Y8 Account,Y8 Highscore,Y8 Save,online,Purchase Equipment Upgrades,Snake,WebGL" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/107820/20f72294107330fe912339e26c457e8c35450513.mp4?1500012826" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/107820/764eb8a43386315dca2766741bb811d75b0fc370.ogv?1500012826" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/107820/053fd53a08e05c6fa21db4485682efe01c2cc4b9.webm?1500012826" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/107820/b3e47f96507a1b9f1bcb89652b1326ebb1652cd2.gif?1500012826&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/107820/cf2d14010c925244eade5466bd57829c8b2bdabc.gif?1500012826&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/107820/b639f531e4b93d47a4e0d1d47220207582db5b16.gif?1500012826&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/107820/af2f0d17b741c8c3e54bc81d5d00ad38f2479da4.gif?1500012826&quot;]">
+  <input type="hidden" name="for-girls-141129" id="for-girls-141129" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/paper_battle">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Paper Battle" src="https://img-cf.y8.com/cloud/y8-thumbs/101347/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/paper_battle">
+    <div class="infos">
+      <p class="title ltr">Paper Battle</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          80%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          96,626 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_95309" class="item thumb videobox" data-item-id="95309" data-label-ids="1 Player,Christmas,Free Game,Girl,Girls,Y8 Account,Y8 Achievements,Y8 Screenshot,Series,Dentist,Not on Kong" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/65335/1f18168249e974b9752029cd4dcc0d147b3afeff.mp4?1461986246" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/65335/1b69f7a521d37667b9c1aafa7954d602567f2085.ogv?1461986246" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/65335/3f987de11ad35a68ea2b7e0a96ffbae57f5cf2b6.webm?1461986246" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/65335/60ba5a005e078fcebb311fb2ffc586d5bc96d8dd.gif?1461986246&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/65335/5bbb536101e5dfd0d25ad36fcf99a17c86913e51.gif?1461986246&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/65335/3069e2f29f2b5265a4b622f237ad4710b181a429.gif?1461986246&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/65335/241a0075205a272242da9557bb38223f21e41cb7.gif?1461986246&quot;]">
+  <input type="hidden" name="for-girls-95309" id="for-girls-95309" value="true" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/christmas_dentist">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Christmas Dentist" src="https://img-cf.y8.com/cloud/y8-thumbs/71215/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/christmas_dentist">
+    <div class="infos">
+      <p class="title ltr">Christmas Dentist</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          83%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          6,157,539 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_144455" class="item thumb videobox" data-item-id="144455" data-label-ids="1 Player,Ball,Free Game,Y8 Account,Y8 Save,Mouse Skill,3D,Adrenaline,Evade,Fun,Y8 Highscore,Jumping,Not on Kong,Platforms,Running Games,Unity3D,WebGL" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;,&quot;unity_webgl&quot;,&quot;unity_webgl_32_bit&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/111043/fc2f7b993be5ac18304d64cbdaf720f0b75e3e97.mp4?1507086900" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/111043/e54ed8b71119bbb31ffb8efb0ac003647b106139.ogv?1507086900" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/111043/3ec2091149501ae9cfc21e8d1467e05dc0757223.webm?1507086900" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/111043/58cd90a7b4cbd7209fa9d1b1a8bff41376aa352d.gif?1507086900&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/111043/ce57a00ee60592f73870eca6e94ab38110734d47.gif?1507086900&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/111043/8ea789362de0dfa04a93e526d875295c14525705.gif?1507086900&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/111043/2571050e45eb78429443b2bb393a4afd483a61a9.gif?1507086900&quot;]">
+  <input type="hidden" name="for-girls-144455" id="for-girls-144455" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/rolling_sky_trip">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Rocking Sky Trip" src="https://img-cf.y8.com/cloud/y8-thumbs/103707/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/rolling_sky_trip">
+    <div class="infos">
+      <p class="title ltr">Rocking Sky Trip</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          76%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          7,925,317 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_146775" class="item thumb videobox" data-item-id="146775" data-label-ids="1 Player,Gun Games,Mouse Skill,Shooting,Timing Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/114073/526e165a9ebd2ae00841a20988781f8ef3a1358d.mp4?1514888049" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/114073/9355738b7f1092bd0b18c46b985ad338c8e06ad5.ogv?1514888049" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/114073/097fd9a11e0d04cfa3de6dce2a00894a2996f158.webm?1514888049" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/114073/f43db7dea9f1933d801931f883fe5cef2cbd6ccf.gif?1514888049&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/114073/f33feac30ab741567f454e65020f2f8d888e41f4.gif?1514888049&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/114073/8fe99a52cafb595e4dc0510ee01b57fe7eaf3cd9.gif?1514888049&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/114073/47ba14dcb94a30f654a4dca90ad67316f4996bf7.gif?1514888049&quot;]">
+  <input type="hidden" name="for-girls-146775" id="for-girls-146775" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/shooter_job-3">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Shooter Job-3" src="https://img-cf.y8.com/cloud/y8-thumbs-small-thumbnails-001/106231/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/shooter_job-3">
+    <div class="infos">
+      <p class="title ltr">Shooter Job-3</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          69%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          4,477,902 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_147632" class="item thumb videobox" data-item-id="147632" data-label-ids="1 Player,Caring,Doctor,Girl,HTML5,Y8 Account,Y8 Achievements,Mouse Skill,iPad,iPhone,Mobile,Touchscreen,Android game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/114052/b98db2a41f643a0bbb83fb1e7ed78c2c5910595f.mp4?1514653997" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/114052/b20d6d190a34480e26f4b2f92b30e9a8fa0fa1eb.ogv?1514653997" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/114052/28a351eb3da44ccab7ed54d8b5b56f9bd35d4f7c.webm?1514653997" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/114052/06338ab5ea456c3eb6ccaae8708d7c9c7ab4e36f.gif?1514653997&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/114052/6287faf77c8549ef8b64a1f929317eb6a9b9336f.gif?1514653997&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/114052/430b49977e469745d2817d4c08ca61858ff750e5.gif?1514653997&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/114052/b3b9a3e0238eaf03b08649e00837ce9661f3e312.gif?1514653997&quot;]">
+  <input type="hidden" name="for-girls-147632" id="for-girls-147632" value="true" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/fun_ear_doctor">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Fun Ear Doctor" src="https://img-cf.y8.com/cloud/y8-thumbs-small-thumbnails-001/106673/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/fun_ear_doctor">
+    <div class="infos">
+      <p class="title ltr">Fun Ear Doctor</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          67%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          4,373,876 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_158759" class="item thumb videobox" data-item-id="158759" data-label-ids="1 Player,HTML5,Puzzle,Thinking,Words" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/124002/49d788df38078d9e8dfb0dd4f7d0c861c22c755a.mp4?1536748922" data-ogv-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/124002/a75448d7c136938a1a57db90390c3a30eb4e459f.ogv?1536748922" data-vp8-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/124002/a0d08511d2fb8a20749450f2f1c5501db485f327.webm?1536748922" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/124002/3b5d55c5367cb20fdf907b2195f9c280edac7bd7.gif?1536748922&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/124002/838c6dae66beeb07adce859d9328541bdae26292.gif?1536748922&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/124002/e89b37da6e3ceca5a08e43d84b0ce1b507fc2818.gif?1536748922&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/124002/83ab528bdd543c2aa3f561a2b10254044706581a.gif?1536748922&quot;]">
+  <input type="hidden" name="for-girls-158759" id="for-girls-158759" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/wow_words">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Wow Words" src="https://img-cf.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/114938/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/wow_words">
+    <div class="infos">
+      <p class="title ltr">Wow Words</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          80%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,160,344 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_160142" class="item thumb videobox" data-item-id="160142" data-label-ids="1 Player,Free Game,Girls,HTML5,Makeover / Make-up,Touchscreen,iPad,iPhone,Mobile,Android game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/125170/0acbcea62ed2a1897cb5f5fdfb26469de097840b.mp4?1539066073" data-ogv-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/125170/220d1f43484d1de0d74311d9342284d9c7e636b3.ogv?1539066073" data-vp8-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/125170/c215128e1c0a52c22bbc17dbdcf98e4ae090dfe8.webm?1539066073" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/125170/c89ee8cffc5f3e0b14da60131177385aacb6f70e.gif?1539066073&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/125170/7f97a0f9579c1ebdd944e559b9db6182699a7158.gif?1539066073&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/125170/a17dd6269341a9fa4c6d069b8027605ac399676f.gif?1539066073&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/125170/e36cb88380d8f3405697ab74977e349709e1bff3.gif?1539066073&quot;]">
+  <input type="hidden" name="for-girls-160142" id="for-girls-160142" value="true" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/fabulous_back_2_school_hairstyles">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Fabulous Back 2 School Hairstyles" src="https://img-cf.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/115841/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/fabulous_back_2_school_hairstyles">
+    <div class="infos">
+      <p class="title ltr">Fabulous Back 2 School Hairstyles</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          75%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          105,451 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_161756" class="item thumb videobox" data-item-id="161756" data-label-ids="Collecting Games,Evade,GameDistribution.com,HTML5,Mouse Skill,Snake,Multiplayer,Android game,Touchscreen,.io Games,iPad,iPhone,Mobile,Orb" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/126967/31420f5f92ef20373d351bb4001e253acc36c72b.mp4?1542672781" data-ogv-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/126967/156908cd689b6f1828bc9436e74a13da2f279329.ogv?1542672781" data-vp8-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/126967/7d7463799c1e427d4e2ee0c28972dc28a5617d05.webm?1542672781" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/126967/9ab036088907a015b55c9a12384c6da6c891680d.gif?1542672781&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/126967/245f000eb0ba6d0ad0104035b7321c83c8897516.gif?1542672781&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/126967/e386d96f2324e93fc28957327dfe490cc524fe49.gif?1542672781&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/126967/e9ac91469a5fd7822d96bd53107890800cd98645.gif?1542672781&quot;]">
+  <input type="hidden" name="for-girls-161756" id="for-girls-161756" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/happy_snakes">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Happy Snakes" src="https://img-cf.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/117172/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/happy_snakes">
+    <div class="infos">
+      <p class="title ltr">Happy Snakes</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          85%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,945,839 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_162957" class="item thumb videobox" data-item-id="162957" data-label-ids="1 Player,HTML5,Pipe,Puzzle,Thinking" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127906/525455eb31f0477652aba8d2bb11fa5cb4ab66df.mp4?1545873063" data-ogv-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127906/d9e66fc626f8b56777c9d5275bb7022820595d2b.ogv?1545873063" data-vp8-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127906/049422674ceb13e1dd8eb97efe8711ccecdd30e6.webm?1545873063" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127906/aeea5b15cebe2b9d57652bd72ec2f918ee9e3ac7.gif?1545873063&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127906/429fcad5b2bd2bdeb7b8d3edcebddd76ce77d04d.gif?1545873063&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127906/3a5a6613d3502e7963b53aff55ea2c979fd18eb2.gif?1545873063&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127906/ca66a1592573a8d6bb6fb9d418a4a6f25b30f5ff.gif?1545873063&quot;]">
+  <input type="hidden" name="for-girls-162957" id="for-girls-162957" value="false" />
+  <span class="new-item-icon">New</span>
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/puzzle_pipe_challenge">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Puzzle Pipe Challenge" src="https://img-cf.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/118114/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/puzzle_pipe_challenge">
+    <div class="infos">
+      <p class="title ltr">Puzzle Pipe Challenge</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          83%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,709 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_775" class="item thumb videobox" data-item-id="775" data-label-ids="Puzzle,Arcade,1 Player,Free Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/659/b7339fedeac888f491d10b0f2010649708f8e9c5.mp4?1458962746" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/659/b901f474a23a1b481d4ff16666761c588e5b48f4.ogv?1458962746" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/659/cb75f5b08fa98196c049d4b6db6bb27fac707b3c.webm?1458962746" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/659/961e75d2aa4987aad52d66c015a4be894ba2f085.gif?1458962746&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/659/6b659358af551281b75a155a717747f7b4d45803.gif?1458962746&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/659/6da71c8c100ba52eb1077582e271af4963d02c97.gif?1458962746&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/659/332c46c8a9b71b4ea84bfe3b021b66fdfc968ba3.gif?1458962746&quot;]">
+  <input type="hidden" name="for-girls-775" id="for-girls-775" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/pac_xon">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Pac-Xon" src="https://img-cf.y8.com/cloud/y8-thumbs/719/small.jpg" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/pac_xon">
+    <div class="infos">
+      <p class="title ltr">Pac-Xon</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          85%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          29,690,145 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_17711" class="item thumb videobox" data-item-id="17711" data-label-ids="Fighting,1 Player,Action,Sports,Punch,Boxing Games,Free Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/7376/9228c35a6e33aa9a66f463bb12f0b5894003476d.mp4?1459651566" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/7376/d8f13cf8bd15c43722c5f3f250eae3f5dc08fd0f.ogv?1459651566" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/7376/e624c1d8974462c261bf063fda02ffe964aaab7e.webm?1459651566" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/7376/720b5d24b877e7d6059c1b014c32f3f420bcb905.gif?1459651566&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/7376/393b18c80751cbbd77d20419f2852d98c09658cb.gif?1459651566&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/7376/a6216ced93779937a4195a20dbc47dacec1aa05d.gif?1459651566&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/7376/d978a2d03bdee6a245ae9cf840f80a591497faab.gif?1459651566&quot;]">
+  <input type="hidden" name="for-girls-17711" id="for-girls-17711" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/celebrity_bash">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Celebrity Bash" src="https://img-cf.y8.com/cloud/y8-thumbs/16413/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/celebrity_bash">
+    <div class="infos">
+      <p class="title ltr">Celebrity Bash</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          80%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          4,241,315 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_20218" class="item thumb videobox" data-item-id="20218" data-label-ids="Puzzle,1 Player,Adventure,Escape,Free Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/12017/2421b36e4e2e0713a052022554df054ae7bbd8fe.mp4?1459776558" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/12017/fdb16b64d6dcf484ab301ba8c68dc0d1d9bb8c2e.ogv?1459776558" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/12017/8426a8c4992a9bbb57af56b86b9cfbcb7b37822c.webm?1459776558" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/12017/6156bef7557fef0557566c90943e026c5f7dbe92.gif?1459776558&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/12017/5aafd12d4f5eab95ae8c11c3a326bd5ef11a89a0.gif?1459776558&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/12017/19a06f3d80dccbfa4e3b905e892a74111f1fbc37.gif?1459776558&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/12017/5aace51c09b7e6dadba45c8c59351b0ac69c94ca.gif?1459776558&quot;]">
+  <input type="hidden" name="for-girls-20218" id="for-girls-20218" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/riddle_school_4">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Riddle School 4" src="https://img-cf.y8.com/cloud/y8-thumbs/18717/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/riddle_school_4">
+    <div class="infos">
+      <p class="title ltr">Riddle School 4</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          60%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          447,490 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_23263" class="item thumb videobox" data-item-id="23263" data-label-ids="1 Player,Flash,Dog,Mouse Skill,Girl,Animal,Bear,Cat,Rabbit,Girls,Free Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/1756/f2a05765e9be5eded96f1239305fd7c974a55bc2.mp4?1459892094" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/1756/2f0e7fd02fab18eeb0ba23cb8aebfc6609d67e52.ogv?1459892094" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/1756/f5162cc8dcbac30322e4401d6126e35ae825ede0.webm?1459892094" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/1756/a29f761d1986b76c98915026214055c2046996fa.gif?1459892094&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/1756/63b0f6240fa80d38eb708b3371c0551bb0be8bb1.gif?1459892094&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/1756/ffb4d60551344b23379c0607419c1dedad6f45d5.gif?1459892094&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/1756/1911c5110884471f37edef7316e1cf185d460820.gif?1459892094&quot;]">
+  <input type="hidden" name="for-girls-23263" id="for-girls-23263" value="true" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/teddy_textile">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Teddy Textile" src="https://img-cf.y8.com/cloud/y8-thumbs/21613/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/teddy_textile">
+    <div class="infos">
+      <p class="title ltr">Teddy Textile</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          83%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          530,753 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_42094" class="item thumb videobox" data-item-id="42094" data-label-ids="1 Player,Mouse Skill,Free Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/2156/0ec19ae94e749f73ee910c08a446d3362cce89f3.mp4?1460624536" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/2156/cf5f43b77d8bbb6af523ef5a180b5b64d749a752.ogv?1460624536" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/2156/e3fa1cfa1b377b2aa2bad6418ba1bbcd24391218.webm?1460624536" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/2156/d6174e6bdec9d309a1ff7c4199c4847308472b18.gif?1460624536&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/2156/e6cebd9a044323acaf245ff84a496b18d625c989.gif?1460624536&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/2156/6c242e6bcb6785bf944e1a83d0df6f8527e32883.gif?1460624536&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/2156/9328df2842d0f4e28afa9706fa6c1ac25389e95b.gif?1460624536&quot;]">
+  <input type="hidden" name="for-girls-42094" id="for-girls-42094" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/heart_surgery">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Heart Surgery" src="https://img-cf.y8.com/cloud/y8-thumbs/35414/small.jpg" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/heart_surgery">
+    <div class="infos">
+      <p class="title ltr">Heart Surgery</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          92%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          16,536,848 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_46364" class="item thumb videobox" data-item-id="46364" data-label-ids="Puzzle,1 Player,Action,Platforms,Ghost,Free Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4181/957840d68216a226047d40d16ec9d01bd66d41dc.mp4?1460691596" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4181/1a4a9f1078534bc65bcd24b490fbbd85ec2f738c.ogv?1460691596" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4181/eafe23e26ad61eec36a2859648c49cbdc28667ae.webm?1460691596" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4181/faaaa415264973be0dbe0292de0a9a73f3015f2b.gif?1460691596&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4181/5bfa614a6daaa288b39e833898cc6c02ad3baa5a.gif?1460691596&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4181/45fa76bf854dc1503417e769bfb6a62376d9dbdc.gif?1460691596&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4181/d2e9ca0eaf443383c536c92dbf03639f47fa2d54.gif?1460691596&quot;]">
+  <input type="hidden" name="for-girls-46364" id="for-girls-46364" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/pac_xon_deluxe">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Pac Xon Deluxe" src="https://img-cf.y8.com/cloud/y8-thumbs/38609/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/pac_xon_deluxe">
+    <div class="infos">
+      <p class="title ltr">Pac Xon Deluxe</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          83%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          920,756 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_47077" class="item thumb videobox" data-item-id="47077" data-label-ids="1 Player,Driving,Street,Car Games,Parking,Free Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/6291/cfab7a6d5a793dc42e796d9c8328ffc0b002d175.mp4?1460707082" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/6291/a30430d14a908da48e32684107bf6301c98ab32b.ogv?1460707082" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/6291/b0cf4e32e1eca861bf48e991ce686ae65df39f16.webm?1460707082" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/6291/c63254c206966168ef654c16400f415fc3257cb5.gif?1460707082&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/6291/0b970ce331ecacc0687eab25d6206c86380a81b1.gif?1460707082&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/6291/f81e6649aa8c385be748463f849c1574c90a23f8.gif?1460707082&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/6291/a3e46d649bf495c2bfe0fa4c60cd04a857e0c1dc.gif?1460707082&quot;]">
+  <input type="hidden" name="for-girls-47077" id="for-girls-47077" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/Stuck_in_traffic">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Stuck in traffic" src="https://img-cf.y8.com/cloud/y8-thumbs/39153/small.jpg" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/Stuck_in_traffic">
+    <div class="infos">
+      <p class="title ltr">Stuck in traffic</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          78%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          66,751 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_79019" class="item thumb videobox" data-item-id="79019" data-label-ids="1 Player,Action,Free Game,Stick,Platforms" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4808/a59aaa6f7e3fbd97f5679a1cd177c8d4f400eb90.mp4?1461510306" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4808/89969721288dd0db3099bc45d41d721e78d49f5d.ogv?1461510306" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4808/da92ec1aa0f5bc9dfbd353191fac976cd4496f20.webm?1461510306" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4808/fa615a80e79b7c6eb305232fbcb75715f32d897b.gif?1461510306&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4808/eafb92c59301f1de579fba74e73768c5948efa9e.gif?1461510306&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4808/0284e086ffc524c91772c0e227027061f078fa1f.gif?1461510306&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4808/d00749d98e05009eaa7bff05b29a29d7238bdbc7.gif?1461510306&quot;]">
+  <input type="hidden" name="for-girls-79019" id="for-girls-79019" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/vex">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Vex" src="https://img-cf.y8.com/cloud/y8-thumbs/60551/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/vex">
+    <div class="infos">
+      <p class="title ltr">Vex</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          83%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          8,260,005 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_102085" class="item thumb videobox" data-item-id="102085" data-label-ids="1 Player,3D,First Person Shooter,Gun Games,Purchase Equipment Upgrades,Shooting,Unity3D,Zombies,3D FPS,Y8 Account,Y8 Achievements,Y8 Highscore,Y8 Save,Killing Games,WebGL,Not on Kong,Survival Horror" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_player&quot;,&quot;unity_webgl&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/71608/ee7be7ed25412d26982f6ffd9ba86c2213a3f00e.mp4?1462340410" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/71608/68863cc2e164a45fa5672b28f1b3af9c2045749f.ogv?1462340410" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/71608/94ae5d3f6bdcb9d2b7aa9e5b97d1b21c63f7c036.webm?1462340410" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/71608/1023a1e417108206de7d320511844730eeb81460.gif?1462340410&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/71608/35cd12af6be574feb376ed451b17cb955450e2c3.gif?1462340410&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/71608/5ce375fd770a363c3557bbac08611ea4607cbf98.gif?1462340410&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/71608/d29344aed1e574f991eac72be9ddc7802cf5d270.gif?1462340410&quot;]">
+  <input type="hidden" name="for-girls-102085" id="for-girls-102085" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/call_of_zombies">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Call of Zombies" src="https://img-cf.y8.com/cloud/y8-thumbs/77750/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/call_of_zombies">
+    <div class="infos">
+      <p class="title ltr">Call of Zombies</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          84%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          5,223,681 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_130504" class="item thumb videobox" data-item-id="130504" data-label-ids="1 Player,3D,Blood,Driving,Fun,Y8 Account,Y8 Highscore,Y8 Save,Motorcycle Games,Not on Kong,Offroad,Street,Stunts,Unity3D,WebGL,Voxel" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_player&quot;,&quot;unity_webgl&quot;,&quot;unity_webgl_32_bit&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/98752/c1aaf42273782e07532e5581bf4f3dfffd103904.mp4?1481101876" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/98752/9eaa84ed8a371332675813dd0e0b4dfda3908061.ogv?1481101876" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/98752/390edec464d7f0d43900322469ae5ef5b28bea3a.webm?1481101876" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/98752/ae77ab0e4a75e305d7f3cf7fb6cbb07c6c5c2dae.gif?1481101876&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/98752/5ee2bf38482e8f5b264fc0038f006e05359b7da0.gif?1481101876&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/98752/155e567ca94986bcfb6df1dca5869f71a944a982.gif?1481101876&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/98752/ddfe2d6c215b88c0a7677214e83049f04d53d504.gif?1481101876&quot;]">
+  <input type="hidden" name="for-girls-130504" id="for-girls-130504" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/blocky_trials">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Blocky trials" src="https://img-cf.y8.com/cloud/y8-thumbs/95666/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/blocky_trials">
+    <div class="infos">
+      <p class="title ltr">Blocky trials</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          85%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          2,524,596 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_82856" class="item thumb videobox" data-item-id="82856" data-label-ids="Match 3,Mouse Skill,Christmas,Android game,HTML5,Y8 Account,Y8 Highscore,iPad,iPhone,Mobile,Touchscreen" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/113726/2886b5ed1fdf8098f5f079acdf0f6d164bd173c6.mp4?1513716047" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/113726/9af6732acad1d648936ea03845cf75789b1bb99d.ogv?1513716047" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/113726/61a7200838e78e02c2cbf61558cf30293acbb81b.webm?1513716047" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/113726/81e7da1342c67517d5024dfc4d4522c7a962a7ba.gif?1513716047&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/113726/8f147dafc5139f99af09c857f8dabbe1a70a83d3.gif?1513716047&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/113726/42481a462024baf6b147fb8f3ad4d1dffee7c12d.gif?1513716047&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/113726/358e24cc9b52735cda415316e05c58ce3b003b2d.gif?1513716047&quot;]">
+  <input type="hidden" name="for-girls-82856" id="for-girls-82856" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/christmas_chain">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Christmas Chain" src="https://img-cf.y8.com/cloud/y8-thumbs/63312/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/christmas_chain">
+    <div class="infos">
+      <p class="title ltr">Christmas Chain</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          74%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          148,208 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_152475" class="item thumb videobox" data-item-id="152475" data-label-ids="1 Player,Android game,Beer,Drunk,Free Game,Fun,Funny,Guessing Game,HTML5,Y8 Account,Y8 Achievements,Y8 Highscore,Y8 Save,iPad,iPhone,Mobile,Touchscreen,Wine,Y8 Screenshot,Dress Up,Purchase Equipment Upgrades" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/118226/b02b11b404740b0bd27130664d173b089e0ac707.mp4?1524052514" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/118226/29e0332d80cc2a0a7b59267ff2d862536ec23141.ogv?1524052514" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/118226/ab836e6f8aed5c4f24110894fe6c7a47d7328dfb.webm?1524052514" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/118226/febac85e79facadc8b5166678365b4936f77d2d6.gif?1524052514&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/118226/20a3aaa41bfa73f76069859f542edcc714586850.gif?1524052514&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/118226/0043d3c821451d27e0b06263758706e417041c67.gif?1524052514&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/118226/f6f21274620200352796193fb9b503355e6db7eb.gif?1524052514&quot;]">
+  <input type="hidden" name="for-girls-152475" id="for-girls-152475" value="true" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/bartender_the_celeb_mix">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Bartender The Celeb Mix" src="https://img-cf.y8.com/cloud/y8-thumbs-small-thumbnails-001/109860/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/bartender_the_celeb_mix">
+    <div class="infos">
+      <p class="title ltr">Bartender The Celeb Mix</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          73%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          3,375,379 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_154387" class="item thumb videobox" data-item-id="154387" data-label-ids="1 Player,Arcade,Collecting Games,Retro" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/120276/e3dcf7ec4745465a02f7bdb49edfc4fb8e636767.mp4?1528349949" data-ogv-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/120276/67cc1bc8684bf5f0c7748f7e5d85486fd6665476.ogv?1528349949" data-vp8-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/120276/07c7db67bfbb419e3b24f7eab7532988d6855c27.webm?1528349949" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/120276/a7e42a2a98a4735977bbbcfc6d966e34b3a9137f.gif?1528349949&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/120276/087310c899543b08b034c826d47e3eb4d9faa987.gif?1528349949&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/120276/b4dec3e73688307e6f123cba88b3aeb0e501d508.gif?1528349949&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/120276/339a9d01ce45fc678f91e764fcd360447bd42a98.gif?1528349949&quot;]">
+  <input type="hidden" name="for-girls-154387" id="for-girls-154387" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/another_pac_man">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Another Pac Man" src="https://img-cf.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/111606/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/another_pac_man">
+    <div class="infos">
+      <p class="title ltr">Another Pac Man</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          71%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          18,342 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_162051" class="item thumb videobox" data-item-id="162051" data-label-ids="1 Player,Blocks,HTML5,Puzzle,Thinking,Y8 Account,Y8 Highscore,Y8 Save,Android game,Mobile,Touchscreen,iPad,iPhone" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127183/34c90b55cdf8d5ff7d42fd47c8631d99728f68e5.mp4?1543517276" data-ogv-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127183/84fe2d4244ebf03496494f377f177cc058d68485.ogv?1543517276" data-vp8-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127183/ca19c2eb4aa212aee3443ba86bc717141fb9e2aa.webm?1543517276" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127183/4ce505aefa31519cda4cec64bc0ecc84ebf47a08.gif?1543517276&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127183/bfcce52ba9e80db051261a33a4fdf468778f48cb.gif?1543517276&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127183/9801afccc174b287fab09700b6038f03e95c0c82.gif?1543517276&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127183/3642fcec4bd6a2d1159d8bab84055095f0d25c37.gif?1543517276&quot;]">
+  <input type="hidden" name="for-girls-162051" id="for-girls-162051" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/woblox">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Woblox" src="https://img-cf.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/117409/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/woblox">
+    <div class="infos">
+      <p class="title ltr">Woblox</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          70%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          116,612 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_162904" class="item thumb videobox" data-item-id="162904" data-label-ids="1 Player,3D,Delivery,Driving,Racing,Simulation,Snow,Unity3D,Vitality Games,WebGL,Truck Games" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127863/1a03eb6bd2be0c3d504feef7384efe7cece06c2c.mp4?1545669929" data-ogv-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127863/e0a860d837a8669ea0ee4be552a7b21872f2d052.ogv?1545669929" data-vp8-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127863/f620626a22edb0d9e017ec4241f5b5a73d832631.webm?1545669929" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127863/3206a88175f42dc514766822d7175aa7a0cac6ce.gif?1545669929&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127863/ead6d1af764c812c3a4c10b431bbba7fd0a515ce.gif?1545669929&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127863/1abbaacdbc30be4106f558e312a52f5e52e6ed3e.gif?1545669929&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127863/5def0fdc8f2e9842120e6af034b2c6dcc1fe154c.gif?1545669929&quot;]">
+  <input type="hidden" name="for-girls-162904" id="for-girls-162904" value="false" />
+  <span class="new-item-icon">New</span>
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/off_road_cargo_drive_simulator">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Off Road Cargo Drive Simulator" src="https://img-cf.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/118082/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/off_road_cargo_drive_simulator">
+    <div class="infos">
+      <p class="title ltr">Off Road Cargo Drive Simulator</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          81%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          11,100 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_162965" class="item thumb videobox" data-item-id="162965" data-label-ids="1 Player,Christmas,Dress Up,Girl,Girls,Makeover / Make-up,Famobi,HTML5" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127909/9b341e7b3a4ea0ea3c66b01ae220eb6685d50295.mp4?1545877367" data-ogv-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127909/688579b33b1b147d73dd52d2312e05400b6a1c5f.ogv?1545877367" data-vp8-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127909/56c52088cced815f20caead5cc9fbac4191e9d06.webm?1545877367" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127909/756f922bb1b279e804dda75f8ef66231b410b28f.gif?1545877367&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127909/7d2cbf98871d993161837d5d8816c057285203e5.gif?1545877367&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127909/4dfc14191cefe7deb439c1db79bf80600939b226.gif?1545877367&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127909/0dae0616ad4e6fc58315ec6fd3e070f923774129.gif?1545877367&quot;]">
+  <input type="hidden" name="for-girls-162965" id="for-girls-162965" value="true" />
+  <span class="new-item-icon">New</span>
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/christmas_costume">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Christmas Costume" src="https://img-cf.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/118117/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/christmas_costume">
+    <div class="infos">
+      <p class="title ltr">Christmas Costume</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          83%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,586 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_74529" class="item thumb videobox" data-item-id="74529" data-label-ids="1 Player,Girl,Girls,School,Timing Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/1379/4437a5bf6f3b435a315966fcdaad1ac50dec15df.mp4?1461416057" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/1379/c58c6260376d1f27daec413c478acb4f064cce45.ogv?1461416057" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/1379/7e1071a29f79bb9f9f1bee471ca540ba70f6c3e0.webm?1461416057" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/1379/3b4f4bb9b85c28ea1953b813602b146568e2ac72.gif?1461416057&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/1379/3698a05f226c71ebbbe3db855950402197496c44.gif?1461416057&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/1379/3c6b0947b17f406a4a165c82a8cd8a8e486a575a.gif?1461416057&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/1379/556492e2a2ad4d360ebabefd9d4e1f27228c0c4a.gif?1461416057&quot;]">
+  <input type="hidden" name="for-girls-74529" id="for-girls-74529" value="true" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/school_yard_slacking">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="School Yard Slacking" src="https://img-cf.y8.com/cloud/y8-thumbs/57606/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/school_yard_slacking">
+    <div class="infos">
+      <p class="title ltr">School Yard Slacking</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          92%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,464,939 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_1741" class="item thumb videobox" data-item-id="1741" data-label-ids="Puzzle,1 Player,Free Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/13692/e93a560b7149311223810803cad21b06b9bec165.mp4?1458997456" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/13692/41465414b7905b1545ad1230d9b2c51809e9945f.ogv?1458997456" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/13692/868263ca3ad7a6c8fb2a2730935adc30c9a3ccf5.webm?1458997456" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/13692/979c691df2d9bb1ebe227b9a802e054dca69ab41.gif?1458997456&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/13692/245cd8b7c5146cf0491f3589343a2019a5620405.gif?1458997456&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/13692/3a97a27cb45c507cf2faf7eb1bd9fe9c87ae749a.gif?1458997456&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/13692/7d60390be5a523cc801ed1247cc9dc64e9ad8da0.gif?1458997456&quot;]">
+  <input type="hidden" name="for-girls-1741" id="for-girls-1741" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/oida_cube">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Oida Cube" src="https://img-cf.y8.com/cloud/y8-thumbs/1485/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/oida_cube">
+    <div class="infos">
+      <p class="title ltr">Oida Cube</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          64%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,122,574 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_4995" class="item thumb videobox" data-item-id="4995" data-label-ids="1 Player,Action,Blood,Series,Funny,Free Game,Gore,Violence" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/535/10322c424b7c4e0bf06d91350eb7f1605d3308ab.mp4?1459118911" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/535/a5714b4b19e902ca946886aa4a732f1188a64b4d.ogv?1459118911" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/535/fe8a3734da8b7f85fba272e2921f007d176d8dd2.webm?1459118911" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/535/7323b18e3619bfa7c94a8eb3dd14340dcb71cb7e.gif?1459118911&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/535/51b3aa7744c20ed30f0c4874c7f9a63dded89594.gif?1459118911&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/535/41eabc81314b174711a9d29cb04760cd9c4521d1.gif?1459118911&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/535/5ec1d4e9b8e8516a403d5a30b34e3c66ad38c9ab.gif?1459118911&quot;]">
+  <input type="hidden" name="for-girls-4995" id="for-girls-4995" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/whack_your_soul_mate">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Whack Your Soul Mate" src="https://img-cf.y8.com/cloud/y8-thumbs/4367/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/whack_your_soul_mate">
+    <div class="infos">
+      <p class="title ltr">Whack Your Soul Mate</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          82%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          21,589,907 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_11396" class="item thumb videobox" data-item-id="11396" data-label-ids="1 Player,Sports,Evade,Free Game,Football US" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/740/cf2137db3925516e0b71cb6e668cb5e18636c262.mp4?1459403097" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/740/2480fc796007bba2af0c5705b9b34ab1f140eaf7.ogv?1459403097" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/740/a0505ede3e66967e32774a60f5b04a2c5402c334.webm?1459403097" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/740/4bcfd52775ba7105371df26a437999cedd5c298c.gif?1459403097&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/740/2f370f8fa0cbf864252e87fb44c7cdb5ff39549c.gif?1459403097&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/740/2e84cef30bb7106e4b539fa51d9f2dcb83961d1a.gif?1459403097&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/740/2ff2afa3665d04ff9e7a89277cbc3ea10f72686f.gif?1459403097&quot;]">
+  <input type="hidden" name="for-girls-11396" id="for-girls-11396" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/speedback">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Speedback" src="https://img-cf.y8.com/cloud/y8-thumbs/10418/small.jpg" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/speedback">
+    <div class="infos">
+      <p class="title ltr">Speedback</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          92%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          6,222,811 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_77125" class="item thumb videobox" data-item-id="77125" data-label-ids="1 Player,2 Player,Boxing Games,Fighting,Free Game,Ninja,Punch,Street Fighting" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/396/b5d5ca3f111d45449e9be6b3564b52f90f3d9d4d.mp4?1461466118" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/396/bcf542e38d17d7473df67e8db6ec2f03dd4b9308.ogv?1461466118" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/396/47c03aaaebdc735be5495fa2e480ea01514e4937.webm?1461466118" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/396/48fba305afc9663ed15bda488de238c4ee81b350.gif?1461466118&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/396/95ae3981059f26ab57b76039352c63582fbe946b.gif?1461466118&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/396/5b3e06d2aa7779231066f3a322f4e1be117803c1.gif?1461466118&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/396/a2a6d85f3b24859e9ec9d35d453a4a89be7bc84a.gif?1461466118&quot;]">
+  <input type="hidden" name="for-girls-77125" id="for-girls-77125" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/frantic_ninjas">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Frantic Ninjas" src="https://img-cf.y8.com/cloud/y8-thumbs/59341/small.jpg" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/frantic_ninjas">
+    <div class="infos">
+      <p class="title ltr">Frantic Ninjas</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          80%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          3,140,349 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_138004" class="item thumb videobox" data-item-id="138004" data-label-ids="1 Player,Fun,Skeleton" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/105255/5ea8fd46b930a728c62de398fdf8502629345052.mp4?1493280585" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/105255/a0ce46608919b3a68ea7aa41ae1e4d59fad5f92b.ogv?1493280585" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/105255/c74498a2aa04f4111ff255101afa1e4b32291f2a.webm?1493280585" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/105255/92ec132510354962a3249bddb5663c8962b489f7.gif?1493280585&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/105255/58a2f1ac0eae7466ab0aae0eb70dcc52d890d878.gif?1493280585&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/105255/8a7badf0ffd90e9971d32692f45d11e313b51883.gif?1493280585&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/105255/b75a4bb9e9b9f3eaf0a3f0c5ca1d6045e7ef95e9.gif?1493280585&quot;]">
+  <input type="hidden" name="for-girls-138004" id="for-girls-138004" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/wireframe_skeleton">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Wireframe Skeleton" src="https://img-cf.y8.com/cloud/y8-thumbs/99269/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/wireframe_skeleton">
+    <div class="infos">
+      <p class="title ltr">Wireframe Skeleton</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          76%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          310,191 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_146776" class="item thumb videobox" data-item-id="146776" data-label-ids="1 Player,Blood,Bizarre,Gore,Mouse Skill,Purchase Equipment Upgrades,Timing Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/113401/298e3181c1b115774e4de6837b87f6f0899e6853.mp4?1512720520" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/113401/251c30c8400cf9708642a4ac51c0b5bf82a541e8.ogv?1512720520" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/113401/565a4c8c8e3499f19f62a83e5b2471251267712f.webm?1512720520" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/113401/09f29e70fa223479c88dd30e71d16adb31232cde.gif?1512720520&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/113401/c810d46a9df8acb1ee1f8ff7c3e012d3e77273c9.gif?1512720520&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/113401/be59c88a38040cc1f2301c08ebf570e7d2898d0d.gif?1512720520&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/113401/de06de3ed5abef80f499860861f87192265cd02b.gif?1512720520&quot;]">
+  <input type="hidden" name="for-girls-146776" id="for-girls-146776" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/slice_the_finger">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Slice the Finger" src="https://img-cf.y8.com/cloud/y8-thumbs-small-thumbnails-001/105598/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/slice_the_finger">
+    <div class="infos">
+      <p class="title ltr">Slice the Finger</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          70%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,294,482 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_152875" class="item thumb videobox" data-item-id="152875" data-label-ids="1 Player,3D,Aircraft,Flying,Y8 Account,Y8 Achievements,Y8 Highscore,Shoot &#39;Em Up,Shooting,Unity3D,War,WebGL,Action,Search and Destroy" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;unity_webgl&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/118559/999db4a32716674b531c22924ffacc16d499addb.mp4?1524747422" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/118559/16827d0aeda9f3554e4eaf7fe4de2be6f49b55a8.ogv?1524747422" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover-002/videos/118559/3831084f4291a4ac636fe5868f6b5ef4e2f4c282.webm?1524747422" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/118559/e2cd482b6e46d1a01224a86b2dac77ddff144ed9.gif?1524747422&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/118559/4057b2568ad3cc89ad418563996c6511eeb2c428.gif?1524747422&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/118559/19c4de518d6e5d214152d941e14b62de65d8c16b.gif?1524747422&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover-002/videos/118559/b6fc3b8b2dd761d3a39b1da6a44cd8ddde092407.gif?1524747422&quot;]">
+  <input type="hidden" name="for-girls-152875" id="for-girls-152875" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/air_fighter">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Air Fighter" src="https://img-cf.y8.com/cloud/y8-thumbs-small-thumbnails-001/110129/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/air_fighter">
+    <div class="infos">
+      <p class="title ltr">Air Fighter</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          85%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          319,446 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_161856" class="item thumb videobox" data-item-id="161856" data-label-ids="1 Player,Christmas,Coloring,Kids,Mouse Skill" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127045/8ea2c176cc459296659b7dcc6cfa6448e9f9cd5d.mp4?1542943662" data-ogv-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127045/f45ded1bd89f54bb8a6e8f20f9d826d4142392b3.ogv?1542943662" data-vp8-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127045/315d282bbf5a7914eb7cae5550c4275a66e2ae54.webm?1542943662" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127045/cea73680399f3d51b7016e4a2478c2554cfdc2a4.gif?1542943662&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127045/b2dbecf210419cd1342d2dcd9f2a21cfd1e03627.gif?1542943662&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127045/37777adf61c956aca7e84cb1db92402b1ad04f1f.gif?1542943662&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127045/1ad69a88da78c89b3ec7f57b8cfa1773ea2df79c.gif?1542943662&quot;]">
+  <input type="hidden" name="for-girls-161856" id="for-girls-161856" value="false" />
+  <span class="new-item-icon">New</span>
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/christmas_tree_coloring">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Christmas Tree Coloring" src="https://img-cf.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/117250/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/christmas_tree_coloring">
+    <div class="infos">
+      <p class="title ltr">Christmas Tree Coloring</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          66%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          1,238 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_162991" class="item thumb videobox" data-item-id="162991" data-label-ids="1 Player,Doctor,Free Game,HTML5,Y8 Account,Y8 Achievements,Y8 Screenshot,Dress Up,Mouse Skill" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127941/fb991cce6e87a64840a811bdbe7e41d9706253a6.mp4?1546009709" data-ogv-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127941/f2a7172d630ab70b75aaa04bc41cd6133fb324e2.ogv?1546009709" data-vp8-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127941/681a833370b94f07bf69a1a704562cb2a912948c.webm?1546009709" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127941/b6099582a1a0b371a798ebf6e05fe43fcb206aef.gif?1546009709&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127941/fedfb8d85da1e6802c4661dfc90a6beaac0bacf7.gif?1546009709&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127941/92045f65c49703dae8f840d6ea397750fe21bfca.gif?1546009709&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/127941/f4a0b8c7e07cbafbd1a45b52d76c561450c1bcc8.gif?1546009709&quot;]">
+  <input type="hidden" name="for-girls-162991" id="for-girls-162991" value="true" />
+  <span class="new-item-icon">New</span>
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/lab_accident_surgery">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Lab Accident Surgery" src="https://img-cf.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/118161/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/lab_accident_surgery">
+    <div class="infos">
+      <p class="title ltr">Lab Accident Surgery</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          82%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          56,569 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_155986" class="item thumb videobox" data-item-id="155986" data-label-ids="1 Player,Caring,Doctor,Funny,HTML5,Y8 Account,Y8 Achievements,Y8 Screenshot,Mouse Skill,Simulation,Android game,iPad,iPhone,Mobile,Touchscreen" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/121628/d5dac0e59e1470d080f43c20f8b4348389895534.mp4?1531245789" data-ogv-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/121628/bdb917797f5855c1bcf455576f79e326a8a074c2.ogv?1531245789" data-vp8-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/121628/b038f53239c4fbd38d819fc313321408744177e3.webm?1531245789" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/121628/0e70e9f785b450431af38dc7d07ab002bd1e2fac.gif?1531245789&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/121628/3d643e47dedc1af990154d38e8b243e8f82855de.gif?1531245789&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/121628/d4463e5702ab7737280ed4eeff7dde44a471eb93.gif?1531245789&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/121628/1d59dd9b406673726bbd3f43d7ada08018cfa35b.gif?1531245789&quot;]">
+  <input type="hidden" name="for-girls-155986" id="for-girls-155986" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/funny_throat_doctor">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Funny Throat Doctor" src="https://img-cf.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/112795/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/funny_throat_doctor">
+    <div class="infos">
+      <p class="title ltr">Funny Throat Doctor</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          69%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          2,294,825 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_158656" class="item thumb videobox" data-item-id="158656" data-label-ids="1 Player,Blood,Bow,Fruit,HTML5,Mouse Skill,GameDistribution.com" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;html5&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/124046/b1ee469b291beccd8490fe842bf73220b6917a36.mp4?1536825522" data-ogv-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/124046/9f4c2d1c0e30949f1dcb2c7be6c37e789854e0a3.ogv?1536825522" data-vp8-movie="https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/124046/7efb8e4e9510f68c7953394267a62af3814eee50.webm?1536825522" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/124046/9629260a3b8923d4bbf35825d919a83b4b8e0c7e.gif?1536825522&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/124046/45aa2ad3eab7b85532dc017c1f084d6b490ba8ca.gif?1536825522&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/124046/574bd590a4aaaf00c7cd0df9624031dc09ee83d3.gif?1536825522&quot;,&quot;https://img-cf.y8.com/cloud/v2-y8-video-previews-001/videos/124046/5868c528be526d3c97fff516ef179164dc3f2be6.gif?1536825522&quot;]">
+  <input type="hidden" name="for-girls-158656" id="for-girls-158656" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/apple_shooter">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Apple Shooter" src="https://img-cf.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/114977/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/apple_shooter">
+    <div class="infos">
+      <p class="title ltr">Apple Shooter</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          78%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          508,597 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_259" class="item thumb videobox" data-item-id="259" data-label-ids="1 Player,Strategy,Free Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4985/d4808bd034311aa1eb9f57833e0210cbb64db2f8.mp4?1458942005" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4985/94d1e69a888a1d7f02183d6549a83a73d6ceb8da.ogv?1458942005" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/4985/a0a42c5f1e08defb262fb76ba01a70cc0dbffc9b.webm?1458942005" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4985/7541e165df7c3c960070d218b6110059ba535f72.gif?1458942005&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4985/9ececd15ee8ee005412f572a28a3823f8a2866e4.gif?1458942005&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4985/c8f9428c4ea0340fca079176ad2c988024bc892a.gif?1458942005&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/4985/eb58d229f85a6c4e5dfbb11d951e26de6ebda20e.gif?1458942005&quot;]">
+  <input type="hidden" name="for-girls-259" id="for-girls-259" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/mc_donalds_video">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="McDonalds Videogame" src="https://img-cf.y8.com/cloud/y8-thumbs/238/small.jpg" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/mc_donalds_video">
+    <div class="infos">
+      <p class="title ltr">McDonalds Videogame</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          84%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          2,160,143 plays
+      </p>
+    </div>
+</a></div>
+<div id="item_458" class="item thumb videobox" data-item-id="458" data-label-ids="1 Player,Series,Money,Free Game,Bet,Guessing Game" data-poster-url="https://img-cf.y8.com/assets/video_loader_180x135-5d7a08a389acde1ec99d6fb7d88f33bec81cd4d805feacafa5c6f85dc85934f4.gif" data-technologies="[&quot;flash&quot;]" data-mp4-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/1029/0cf0b18970806268864c4c8b4dd732beda41d941.mp4?1458950153" data-ogv-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/1029/c5577fee8989383765d3b2ce7348ef89e1b3a9a9.ogv?1458950153" data-vp8-movie="https://img-cf.y8.com/cloud/y8-rollover/videos/1029/b88bcabdbf790961ce6025e17018f8a3b9988d67.webm?1458950153" data-thumb-movie="[&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/1029/0c979d7ef7657e3e1d41db7d21eb8e22495a13d3.gif?1458950153&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/1029/63b761583bebfa1777f7906e85b2b3dd1defc66b.gif?1458950153&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/1029/36597974d074e1e1db6a030ed9f5a214fa4d9315.gif?1458950153&quot;,&quot;https://img-cf.y8.com/cloud/y8-rollover/videos/1029/7ef0e9df5ce56643d1281c3ef2d369375937d4be.gif?1458950153&quot;]">
+  <input type="hidden" name="for-girls-458" id="for-girls-458" value="false" />
+  
+
+  <div class="thumbarea">
+    <div class="microthumb"></div>
+    <a href="https://www.y8.com/games/deal_or_no_deal">
+      <div class="thumb-img-container">
+        <img class="thumb playable" alt="Deal or No Deal" src="https://img-cf.y8.com/cloud/y8-thumbs/430/small.gif" />
+      </div>
+</a>  </div>
+
+  <a href="https://www.y8.com/games/deal_or_no_deal">
+    <div class="infos">
+      <p class="title ltr">Deal or No Deal</p>
+
+
+      <div class="technology">
+        <p class="html"></p>
+      </div>
+
+      <p class="rating">
+        Rating:
+        <span class="number">
+          89%
+        </span>
+      </p>
+
+      <p class="plays-count">
+          14,886,699 plays
+      </p>
+    </div>
+</a></div>
+</div>  </div>
+</div>
+
+    </div>
+
+    <div class="header-menu-modal" style="display:none"></div>
+
+    <footer class="footer">
+      <div class="container">
+        <ul class="bottom-nav">
+          <li><a href="https://www.y8.com/contact/new">Contact Form</a></li>
+          <li><a href="https://www.y8.com/upload">Submit a Game or Video</a></li>
+          <li><a href="https://www.y8.com/games_for_your_website">Games for Your Website</a></li>
+          <li><a href="https://www.y8.com/terms">Terms of Use</a></li>
+          <li><a href="https://www.y8.com/privacy">Privacy Policy</a></li>
+          <li><a href="https://www.y8.com/cookie-policy"><span class="translation_missing" title="translation missing: en.views.shared._footer.cookie-policy">Cookie Policy</span></a></li>
+        </ul>
+
+        <div class="right">
+          <div class="facebook-widget">
+  <div class="social-widget" data-target-class="facebook-widget" data-html-tag="iframe" data-src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FY8-Games-225100494185683%2F&width=95&layout=button_count&action=like&size=large&show_faces=false&share=false&height=21&appId=267266673296925" width="180" height="30" data-style="border:none;overflow:hidden" data-scrolling="no" data-frameborder="0" data-allowTransparency="true">
+    <svg width="96px" height="28px" viewBox="0 0 96 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Artboard">
+      <g id="Group">
+        <rect id="background" fill="#FF613E" x="0" y="0" width="28" height="28" rx="5"></rect>
+        <path d="M15,13 L15,11 L13,11 L13,13 L11,13 L11,15 L13,15 L13,17 L15,17 L15,15 L17,15 L17,13 L15,13 Z M9.97704962,9 L18.0229504,9 C18.5703125,9 19,9.43744001 19,9.97704962 L19,18.0229504 C19,18.5703125 18.56256,19 18.0229504,19 L9.97704962,19 C9.4296875,19 9,18.56256 9,18.0229504 L9,9.97704962 C9,9.4296875 9.43744001,9 9.97704962,9 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+      </g>
+      <rect id="background" stroke="#4267B2" stroke-width="0.5" fill="#4465B8" x="0.25" y="0.25" width="30.5" height="27.5" rx="5"></rect>
+      <path d="M14,13.1571909 L15.80023,11.0931632 L16.8015414,9.24372206 L16.8015414,8 C17.5976134,7.87883258 18.1553507,7.99611587 18.4747532,8.35184985 C18.953857,8.88545083 18.8397217,9.52202189 18.8397217,10.2700195 C18.8397217,10.7686846 18.7180655,11.2618667 18.4747532,11.7495658 L18.028979,12.2838312 L21.810054,12.2838312 L22,13.1571909 L20.5142896,18.4909276 C18.9951919,18.5320096 17.8214542,18.5320096 16.9930764,18.4909276 C16.1646987,18.4498456 15.1670065,18.3421572 14,18.1678624 L14,13.1571909 Z M10,13.2608696 L13,13.2608696 L13,19 L10,19 L10,13.2608696 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+  </g>
+</svg>
+
+  </div>
+</div>
+
+
+          <div class="addthis-default-style">
+            <!-- AddThis Button BEGIN -->
+<a class="addthis_counter addthis_pill_style" addthis:url="https://www.y8.com" addthis:title="Y8 Games : Play free online games at Y8.com"></a>
+
+<div class="social-widget" data-target-class="add-this-widget" data-html-tag="script" data-src="https://s7.addthis.com/js/300/addthis_widget.js#domready=1&pubid=addy8" width="30" height="30">
+  <svg width="68px" height="28px" viewBox="0 0 68 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Artboard">
+      <rect id="background" fill="#FF613E" x="0" y="0" width="28" height="28" rx="5"></rect>
+      <path d="M15,13 L15,11 L13,11 L13,13 L11,13 L11,15 L13,15 L13,17 L15,17 L15,15 L17,15 L17,13 L15,13 Z M9.97704962,9 L18.0229504,9 C18.5703125,9 19,9.43744001 19,9.97704962 L19,18.0229504 C19,18.5703125 18.56256,19 18.0229504,19 L9.97704962,19 C9.4296875,19 9,18.56256 9,18.0229504 L9,9.97704962 C9,9.4296875 9.43744001,9 9.97704962,9 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+    </g>
+  </g>
+</svg>
+
+</div>
+
+<!-- AddThis Button END -->
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="policy-validation" id="policy-validation" style="display:none;">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 45">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#000" d="M36 0h9v18h-9V0zm-9 18h9v9h-9v-9zM9 18h9v9H9v-9zm9 9h9v18h-9V27zM0 0h9v18H0V0z"/>
+    <path fill="#E81919" d="M62 0h29v9H62V0zm29 9h9v9h-9V9zM53 9h9v9h-9V9zm0 18h9v9h-9v-9zm9-9h29v9H62v-9zm0 18h29v9H62v-9zm29-9h9v9h-9v-9z"/>
+  </g>
+</svg>
+
+<img src="https://img-cf.y8.com/assets/y8/logo-header-68adbbce03b92e0b47b4e43fdf321a597d4ed2324c117f0eca1b0a9abe43f3f0.png" alt="Logo header" />
+
+    </div>
+
+  <div class="content">
+    We and our partners collect data and use cookies for ad personalization and measurement, content personalization and traffic analysis. By continuing on our website you consent to it. Learn how reading our <a target="_blank" href="https://www.y8.com/privacy">Privacy Policy</a> and <a target="_blank" href="https://www.y8.com/cookie-policy">Cookie Policy</a>.
+  </div>
+
+  <div class="actions">
+    <a class="validate-policy" href="#">Got it</a>
+  </div>
+</div>
+
+    <script>
+//<![CDATA[
+
+  var triggerSuccess = function(){
+    if (document.location.pathname.match(/^\/login|^\/register/))
+    {
+      window.location.replace('/');
+    }
+    else
+    {
+      window.location.reload(true);
+    };
+  };
+  var triggerFailure = function(){
+    window.location.reload(true);
+  };
+
+  window.idAsyncInit = function(){
+    var query = document.location.search.substring(1);
+    var obj = {}, vars = query.split('&');
+    var pairs, key, val, ln = vars.length, enableTrack = false;
+
+    if (ln > 0) {
+      for (var i = 0; i < ln; i++) {
+        pairs = vars[i].split('=');
+        key = decodeURIComponent(pairs[0]);
+        val = decodeURIComponent(pairs[1]);
+
+        if (key === 'utm_source') {
+          enableTrack = true;
+        }
+
+        obj[key] = val;
+      }
+      enableTrack && ID.track && ID.track(obj);
+    }
+
+    var idnetRedirectUri = document.location.protocol + '//' + document.location.host + '/auth/idnet/callback';
+
+    // Use an Y8 Account event to wait until after init
+    // CF https://doc.y8.com/docs/javascript/the-basics/
+    //
+    ID.Event.subscribe('id.init', function() {
+      // Any other script may listen to that event and wait for Y8 Account
+      // initialization:
+      //
+      //   $(window).on('id.init', function() {
+      //     // some Y8 Account related code
+      //   });
+      //
+      $(window).trigger('id.init');
+
+      // copied from account.y8.com/sdk/scripts.id.js:48
+      // UserAgent.safari() returns 537.36 on my Ubuntu Chrome :/
+      // OPTIMIZE: fix UserAgent library or move this method to an object.
+      function safari() {
+        return navigator.userAgent.indexOf('Safari') != -1 &&
+          navigator.userAgent.indexOf('Chrome') == -1;
+      }
+
+      var idnetOptions = safari() ? { redirect_uri: idnetRedirectUri + '?origin=' + encodeURIComponent(location.pathname) } : {};
+
+      $('.idnet-fast-login-link').on('click', function(){
+        // Y8 Account tests if the browser is Safari.
+        // If no: usual login approach, using the modal
+        // If yes: OAuth recommended approach, redirecting the client
+        //
+        // Because Safari does not allow cross-domain cookies.
+        //
+        // Also, this is not the default Y8 Account behavior because we don't want
+        // to break the user experience and end a game session by redirecting
+        // the user. This is why the choice if up to the client (using regular
+        // ID.login() or ID.safariFixLogin() method).
+        //
+        ID.safariFixLogin(null, idnetOptions);
+        _gaq.push (['_trackEvent', 'Authentication', 'login']);
+        $(document).trigger('checkOverlayMenus');
+      });
+      $('.idnet-fast-register-link').on('click', function(){
+        ID.safariFixRegister(null, idnetOptions);
+        _gaq.push (['_trackEvent', 'Authentication', 'register']);
+        $(document).trigger('checkOverlayMenus');
+      });
+    });
+
+    ID.Event.subscribe('auth.authResponseChange', function(auth) {
+      $(window).trigger('auth.authResponseChange');
+    });
+
+    ID.init({
+     appId: '4fbb62b133968d57c10041b0',
+     redirectUri: idnetRedirectUri,
+     responseType: 'code'
+    });
+  };
+  (function () {
+    var idnet = document.createElement('script');
+    idnet.type = 'text/javascript';
+    idnet.async = true;
+    idnet.sucess = triggerSuccess;
+    idnet.error = triggerFailure;
+    idnet.src = 'https://cdn.y8.com/api/sdk.js';
+    var s = document.getElementsByTagName('script')[3];
+    s.parentNode.insertBefore(idnet, s);
+  })();
+
+//]]>
+</script>
+    <script id="live-search-template" type="text/x-handlebars-template">
+  <li>
+    <a href="{{path}}">
+      <img src="{{thumbnail}}" class="thumb">
+      {{name}}
+    </a>
+  </li>
+</script>
+
+
+        <script>
+      var addthis_config = addthis_config || {};
+      addthis_config.data_track_addressbar = false;
+      addthis_config.data_track_clickback = false;
+
+      var addthis_share = {
+        url_transforms : {
+          clean: true
+        }
+      }
+    </script>
+    <div class="add-this-widget"></div>
+
+  </body>
+</html>
+<!-- 2019-01-03 08:36:35 UTC -->

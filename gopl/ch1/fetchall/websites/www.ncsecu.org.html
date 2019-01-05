@@ -1,0 +1,806 @@
+﻿<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/MasterTemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+<!-- head -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- InstanceBeginEditable name="Title" -->
+  		<title>State Employees' Credit Union - Home</title>
+  	<!-- InstanceEndEditable -->  
+	<!-- InstanceBeginEditable name="MetaInformation" -->
+		<meta name="Description" content="Proudly serving North Carolina employees, their families and our community. People helping people - together we can make 
+        a difference!" />
+		<meta name="Keywords" content="SECU,credit union,financial institution,bank,mortgage assistance,mortgage loan,home equity,home equity loan,vehicle loan,
+        auto loan,checking,checking account,money market,cds,certificate of deposit,savings,savings account,invest,investment account,online service,online 
+        banking,mobile access,bill payment,visa check card,visa credit card,credit card" />
+		<meta name="searchTitle" content="Home" />
+		<meta name="ROBOTS" content="NOODP" />
+	<!-- InstanceEndEditable -->
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+    <!-- icons -->
+	<link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="Images/icon-v2-128x128.png" sizes="128x128"/> 
+	<link rel="icon" href="Images/icon-v2-192x192.png" sizes="192x192"/> 
+	<link rel="apple-touch-icon" href="Images/apple-touch-icon-v2-76x76.png">
+	<link rel="apple-touch-icon" href="Images/apple-touch-icon-v2-152x152.png" sizes="152x152">
+	<link rel="apple-touch-icon" href="Images/apple-touch-icon-v2-167x167.png" sizes="167x167">
+	<link rel="apple-touch-icon" href="Images/apple-touch-icon-v2-180x180.png" sizes="180x180">
+	<!-- css -->      
+    <link rel="stylesheet" type="text/css" href="Includes/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Includes/Secu2017.css?ver=5.1">  
+    <script type="text/javascript" src="Includes/Global.js?ver=3.1"></script>
+	<script type="text/javascript" src="Includes/gaTrack.min.js?ver=1.0"></script>
+	<!-- InstanceBeginEditable name="HeadItems" -->
+
+<link rel="stylesheet" type="text/css" href="Includes/Secu2017-home-banners.css?ver=8.2"> 	
+<script type="text/javascript" src="Info/Data/ImportantNotice.js"></script>	
+
+	<!-- InstanceEndEditable -->
+</head>
+<!-- body -->
+<body onload="LoadPage();" onunload="UnloadPage();" class="secu-home">
+<!-- ribbon -->
+<div class="ribbon-wrapper">
+    <div class="ribbon">
+            <div class="ribbon-logo">
+                <a href="Home.html" target="_top"><img src="Images/state-employees-credit-union-logo@2x.png" alt="State Employees' Credit Union Logo" border="0" /></a>
+            </div>
+            <ul class="utility-links">
+            	<li><a href="Home/ContactUs.html" target="_top">Contact Us</a></li>
+            	<li><a href="Home/GeneralHelp.html" target="_top">Help</a></li>
+            	<li><a href="RatesAndFees/LendingRates.html" target="_top">Lending Rates</a></li>
+				<li><a href="RatesAndFees/DepositRates.html" target="_top">Deposit Rates</a></li>
+            	<li><a href="AboutSECU/ABARoutingTransitNumber.html" target="_top">Routing Number: 253177049</a></li>
+            </ul>
+            <div class="secu-clearer-right"></div>
+            <form id="SearchRequestForm" method="post" action="javascript:void(0);" onsubmit="DoSearch();">
+                       <input id="start" name="start" type="hidden" title="Search Request Form">
+                        <div class="input-group">
+                            <input type="text" id="searchInput" name="searchInput" class="form-control" placeholder="Search" 
+                            aria-describedby="basic-addon2" maxlength="50" onfocus="SearchBoxFocus(this);" onblur="SearchBoxBlur(this);" title="Search Request Form Field">
+                            <button class="input-group-addon" id="basic-addon2" onclick="DoSearch()" onkeypress="DoSearch()" title="Search Button">
+                            Search<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+							</button>
+                        </div>             
+            </form>          
+          	<div class="navbar-mobile-link">
+          		<a href="https://locations.ncsecu.org/search" target="_blank">Locate Us</a>
+          		<a href="Home/MobileSignIn.html">Sign In</a>
+          	</div>
+    </div>
+</div>
+<!-- nav -->
+<div class="navbar-wrapper">
+<nav class="navbar navbar-default yamm">
+        <div class="navbar-header">
+          	<button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle collapsed">
+            Menu<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">NC SECU</a>
+        </div>
+        <div id="navbar-collapse-grid" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+           	<!-- nav 1 loan products -->
+                <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle slidingUnderline">Loan Products</a>
+                <ul class="dropdown-menu">
+                  <li class="grid-demo">
+                    <div class="row secu-nav-row">
+                    <!-- secu row start -->
+                      <div class="col-sm-3">
+                      <!-- auto -->
+					  <p class="secu-nav-heading">Auto</p>
+                      <a href="AutoCenter/CarBuying.html">Car Buying Service</a>
+                      <a href="AutoCenter/CarValuations.html">Car Valuations</a>
+                      <a href="AutoLoans/GAPCoverage.html">GAP Coverage</a>
+                      <a href="AutoLoans/VehicleLoans.html">Vehicle Loans</a>						
+                      </div>
+                      <div class="col-sm-3">
+                      <!-- mortgages -->
+                      <p class="secu-nav-heading">Mortgages</p>
+                      <a href="Mortgages/AdjustableMortgage.html">Adjustable Rate Mortgages</a>
+                      <a href="Mortgages/FixedMortgage.html">Fixed Rate Mortgages</a>
+                      <a href="Mortgages/HomeEquity.html">Home Equity Line of Credit</a>
+                      <a href="Mortgages/MortgageAssistanceProgram.html">Mortgage Assistance Program</a>
+                      <a href="Mortgages/MortgageToolKit.html">Mortgage Loan Toolkit</a>
+                      <a href="Mortgages/MLSRegistry.aspx">National Mortgage Licensing System<br> (NMLS) and S.A.F.E. Act</a>
+                      <a href="Mortgages/SpecialMortgages.html">Special Mortgage Programs</a>
+                      </div>
+                      <div class="col-sm-3">
+                      <!-- personal -->	
+                      <p class="secu-nav-heading">Personal</p>
+                      <a href="PersonalLoans/OpenEndSignature.html">Open-End Signature</a>
+                      <a href="PersonalLoans/SalaryAdvance.html">Salary Advance</a>
+                      <a href="PersonalLoans/ShareSecured.html">Share Secured</a>
+                      <a href="PersonalLoans/Student.html">Student</a>
+                      <a href="PersonalLoans/TermNotes.html">Term Notes</a>
+                      <a href="Cards/Credit.html">Visa Credit Card</a>
+                      <div class="secu-clearer"></div>
+                      <p class="secu-nav-heading">Related Links</p>
+                      <a href="Mortgages/CreditReport.html">Credit Report</a>
+                      <a href="RatesandFees/Fees.html">Lending Fees</a>
+                      <a href="RatesandFees/LendingRates.html">Lending Rates</a>
+                      <a href="PersonalLoans/LoanQualifying.html">Qualifying</a>
+                      </div>
+                      <div class="col-sm-3 nav-promo nav-promo-loan-products">
+                      <!-- promo -->
+                      <!-- -->
+                      </div>
+                      <!-- secu row end -->
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- nav 2 accounts & cards -->
+              <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle slidingUnderline">Accounts &amp; Cards</a>
+                <ul class="dropdown-menu">
+                  <li class="grid-demo">
+                    <div class="row secu-nav-row">
+                        <div class="col-sm-3">
+                        <!-- cards -->
+                        <p class="secu-nav-heading">Cards</p>
+                        <a href="Cards/CardholderTravelInfo.html">Cardholder Travel Information</a>
+                        <a href="Cards/CPG.html">CashPoints Global (CPG)</a>
+                        <a href="Cards/Debit.html">Debit Cards</a>
+                        <a href="Cards/Credit.html">Visa Credit Card</a>
+                        <a href="Cards/GiftCard.html">Visa Gift Card</a>
+                        </div>
+                        <div class="col-sm-3">
+                        <!-- deposit accounts -->
+                        <p class="secu-nav-heading">Deposit Accounts</p>
+                        <a href="Cards/CPG.html">CashPoints Global (CPG)</a>
+                        <a href="DepositAccounts/Checking.html">Checking</a>
+                        <a href="DepositAccounts/CESA.html">Coverdell Education Savings (CESA)</a>
+                        <a href="DepositAccounts/HealthSavingsAcct.html">Health Savings (HSA)</a>
+                        <a href="DepositAccounts/HolidayCashAcct.html">Holiday Cash Club</a>
+                        <a href="DepositAccounts/IRA.html">Individual Retirement (IRA)</a>
+                        <a href="DepositAccounts/MoneyMarket.html">Money Market Share</a>
+                        <a href="DepositAccounts/NC529.html" target="_top">NC 529 Plan</a>
+                        <a href="DepositAccounts/Share.html" target="_top">Share (Savings)</a>
+                        <a href="DepositAccounts/STC.html" target="_top">Share Term Certificate (STC)</a>
+                        <a href="DepositAccounts/SummerCashAcct.html" target="_top">Summer Cash</a>
+                        </div>
+                        <div class="col-sm-3">
+                        <!-- life stages -->
+                        <p class="secu-nav-heading">Life Stages</p>
+                        <a href="LifeStages/FatCat.html" target="_top">(Ages 0-12) FAT CAT</a>
+                        <a href="LifeStages/Zard.html" target="_top">(Ages 13-19) Zard</a>
+                        <div class="secu-clearer"></div>
+                        <p class="secu-nav-heading">Related Links</p>
+                        <a href="DepositAccounts/PewSafeChecking.html" target="_top">Pew Safe Checking</a>
+                        <a href="DepositAccounts/RegulationD.html" target="_top">Regulation D</a>                      
+						<a href="RatesAndFees/Fees.html" target="_top">Deposit Account Fees</a>                       
+						<a href="RatesAndFees/DepositRates.html" target="_top">Deposit Account Rates</a>   
+                        </div>
+                        <div class="col-sm-3 nav-promo nav-promo-accounts-cards">
+                      	<!-- promo -->
+                      	</div>
+                      <!-- secu row end -->
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- nav 3 estates & trust -->
+              <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle slidingUnderline">Estates &amp; Trusts</a>
+                <ul class="dropdown-menu">
+                  <li class="grid-demo">
+                    <div class="row secu-nav-row">
+                          <div class="col-sm-3">
+                          <!-- estate planning -->
+                          <p class="secu-nav-heading">Estate Planning</p>
+                          <a href="EstatePlanning/HealthCareDirective.html">Advance Health Care Directive</a>
+                          <a href="EstatePlanning/EstatePlanningEssentialsProgram.html">Estate Planning Essentials Program</a>
+                          <a href="EstatePlanning/Guardianship.html">Guardianship</a>
+                          <a href="EstatePlanning/PowerOfAttorney.html">Power of Attorney</a>
+                          <a href="EstatePlanning/Probate.html" target="_top">Probate</a>
+                          <a href="EstatePlanning/WhenALovedOneDies.html">What to Do When a Loved One Dies</a>
+                          <a href="EstatePlanning/Will.html">Will</a>
+                          <a href="EstatePlanning/WillSubstitute.html">Will Substitute</a>
+                          </div>
+                          <div class="col-sm-3">
+                          <!-- trusts -->	
+                          <p class="secu-nav-heading">Trusts</p>
+                          <a href="Trust/BenefitstoEstablishingaTrust.html" target="_top">Benefits to Establishing a Trust</a>
+                          <a href="Trust/MEMBERSTrustCompany.html" target="_top">MEMBERS Trust Company</a>
+                          <a href="Trust/RevocableLivingTrust.html" target="_top">Revocable Living Trust</a>
+                          <a href="Trust/SpecialNeedsTrust.html" target="_top">Special Needs Trust</a>
+                          <p class="secu-nav-heading">Related Links</p>
+                          <a href="AboutSECU/FiduciaryResourceGuides.html" target="_top">Fiduciary Resource Guides</a>
+                          </div>
+                          <div class="col-sm-6 nav-promo nav-promo-estates-insurance">
+                      	<!-- promo -->
+                      	</div>
+                      <!-- secu row end -->
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- nav 4 insurance & investments -->
+              <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle slidingUnderline">Insurance &amp; Investments</a>
+                <ul class="dropdown-menu">
+                  <li class="grid-demo">
+                    <div class="row secu-nav-row">
+                          <div class="col-sm-3">
+                          <!-- insurance -->	
+                          <p class="secu-nav-heading">Insurance</p>
+                          <a href="Insurance/Annuities.html" target="_top">Annuities</a>
+                          <a href="Insurance/AutoHomeowners.html" target="_top">Auto, Homeowners and Other</a>
+                          <a href="Insurance/Health.html" target="_top">Health</a>
+                          <a href="Insurance/LifeInsurance.html" target="_top">Life Insurance</a>
+                          <a href="Insurance/MedicareSupplementPlan.html" target="_top">Medicare Supplement Plan</a>
+                          </div>
+                          <div class="col-sm-3">
+                          <!-- investments -->	
+                          <p class="secu-nav-heading">Investments</p>
+                          <a href="Investments/InvestmentAccount.html" target="_top">Investment Accounts</a>
+                          <div class="secu-clearer"></div>
+                          <p class="secu-nav-heading">Planning</p>
+                          <a href="BranchServices/FinancialCounseling.html" target="_top">Financial Counseling</a>
+                          <a href="AboutSecu/RetirementPlanning.html" target="_top">Retirement Planning</a>
+                          </div>
+                          <div class="col-sm-6 nav-promo nav-promo-investments-trusts">
+                          <!-- promo -->
+                          </div>
+                      <!-- secu row end -->
+                    </div>
+                  </li>
+                </ul>
+              </li>
+             <!-- nav 5 mobile and online -->
+             <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle slidingUnderline">Mobile &amp; Online</a>
+                <ul class="dropdown-menu">
+                  <li class="grid-demo">
+                    <div class="row secu-nav-row">
+                      <div class="col-sm-3">
+                      <!-- mobile -->
+                      <p class="secu-nav-heading">Mobile Services</p>
+                      <a href="MobileServices/Alerts.html" target="_top">Alerts</a>
+                      <a href="MobileServices/AnotherChance.html" target="_top">Another Chance</a>
+                      <a href="MobileServices/DebitCardAlerts.html" target="_top">Debit Card Alerts</a>
+                      <a href="MobileServices/MobilePayments.html" target="_top">Mobile Payments</a>
+                      <a href="MobileServices/MobileServices.html" target="_top">Mobile Services</a>
+                      <a href="MobileServices/OneTimePasscode.html" target="_top">One Time Passcode</a>
+                      <a href="MobileServices/TextMessaging.html" target="_top">Two-Way Text Messaging</a>
+                      <a href="MobileServices/VisaCheckout.html" target="_top">Visa Checkout</a>
+                      </div>
+                      <div class="col-sm-3">
+                      <!-- online -->
+                      <p class="secu-nav-heading">Online Services</p>
+                      <a href="OnlineServices/BillPay.html" target="_top">BillPay</a>
+                      <a href="OnlineServices/BrowserRequirements.html" target="_top">Browser Requirements</a>
+                      <a href="OnlineServices/CheckImages.html" target="_top">Check Images</a>
+                      <a href="OnlineServices/FICOScore.html" target="_top">FICO Score </a>
+                      <a href="Highlights/FinancialAssessment.html" target="_top">Financial Assessment</a>
+                      <a href="OnlineServices/MemberAccess.html" target="_top">Member Access</a>
+                      <a href="Security/SecurityOverview.html" target="_top">Online Security</a>
+                      <a href="OnlineServices/QuickenDownload.html" target="_top">Quicken Download</a>
+                      <a href="OnlineServices/RealTimeLoanAdvance.html" target="_top">Real-Time Loan Advance</a>
+                      <a href="OnlineServices/Statements.html" target="_top">Statements</a>
+                      <a href="OnlineServices/CreditCardBalanceTransfer.html" target="_top">Visa Credit Card Balance Transfer</a>
+                      <a href="OnlineServices/CreditCardCashAdvance.html" target="_top">Visa Credit Card Cash Advance</a> 
+                      </div>
+                      <div class="col-sm-6 nav-promo nav-promo-mobile-online">
+                      <!-- promo -->
+                      </div>  
+                      <!-- secu row end -->
+                    </div>
+                </li>      
+            </ul>
+           	</li>
+             <!-- nav 6 services -->
+             <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle slidingUnderline">Services</a>
+                <ul class="dropdown-menu">
+                  <li class="grid-demo">
+                    <div class="row secu-nav-row">
+                      <div class="col-sm-3">
+                      <!-- automated services -->
+                      <p class="secu-nav-heading">Automated Services</p>
+                      <a href="AutomatedServices/ASKSECU.html" target="_top">ASK SECU</a>
+                      <a href="AutomatedServices/ATM.html" target="_top">CashPoints ATM</a>
+                      <a href="AutomatedServices/DirectDeposit.html" target="_top">Direct Deposit</a>
+                      <a href="AutomatedServices/FundsTransfer.html" target="_top">Funds Transfer</a>
+                      <a href="AutomatedServices/OverdraftTransferService.html" target="_top">Overdraft Transfer Service</a>
+                      <a href="AutomatedServices/PayrollDeduction.html" target="_top">Payroll Deduction</a>
+                      <a href="AutomatedServices/WireTransfer.html" target="_top">Wire Transfer</a>
+                      </div>
+                      <div class="col-sm-3">
+                      <!-- branch services -->	
+                      <p class="secu-nav-heading">Branch Services</p>
+                      <a href="BranchServices/Switch.html" target="_top">Checking Account Switch Kit</a>
+                      <a href="BranchServices/CoinSorters.html" target="_top">Coin Sorters</a>
+                      <a href="BranchServices/Currency.html" target="_top">Currency</a>
+                      <a href="BranchServices/Notary.html" target="_top">Notary &amp; Signature Guarantee</a>
+                      <a href="BranchServices/SafeDepositBox.html" target="_top">Safe Deposit Boxes</a>
+                      <a href="BranchServices/SavingsBonds.html" target="_top">Savings Bonds</a>
+                      <a href="BranchServices/ShredDays.html" target="_top">Shred Days</a>
+                      <a href="BranchServices/LaidOffTurntoSECU.html" target="_top">When Laid Off, Turn to SECU</a>
+                      </div>
+                      <div class="col-sm-3">
+                      <!-- tax services -->
+                      <p class="secu-nav-heading">Tax Services</p>
+                      <a href="TaxServices/FreeTaxReturnPreparation.html" target="_top">Free Tax Return Preparation</a>
+                      <a href="TaxServices/LowCostTaxProgram.html" target="_top">Low-Cost Tax Program</a>
+                      <a href="TaxServices/PrepareYourOwnTaxes.html" target="_top">Prepare Your Own Taxes</a>
+                      <a href="TaxServices/TaxRefundInformation.html" target="_top">Tax Refund Information</a>
+                      <a href="TaxServices/VITAFreeTaxPreparation.html" target="_top">Volunteer Income Tax Assistance (VITA)</a>
+                      <a href="TaxServices/YearEndTaxDocuments.html" target="_top">Year-End Tax Documents</a>
+					  <!-- related links -->
+					  <p class="secu-nav-heading">Related Links</p>
+					  <a href="https://onlineaccess.ncsecu.org/O/selfservices/housinglocator/housinglocator.aspx" target="_blank">SECU*RE Rental Housing Locator</a>
+                      </div>                        
+                      <div class="col-sm-3 nav-promo nav-promo-services">
+                      <!-- promo -->
+                      </div>
+                      <!-- secu row end -->
+                    </div>
+                </li>      
+            </ul>
+           	</li>
+			<!-- nav 7 sign in --> 
+            <li class="dropdown yamm-fw nav-sign-in"><a href="#" data-toggle="dropdown" class="dropdown-toggle slidingUnderline">Sign In</a>
+                <ul class="dropdown-menu">
+                  <li class="grid-demo">
+						<div class="row secu-nav-row">
+                    	<!-- left half -->
+                      	<div class="col-sm-9 sign-in-enroll">
+                      	<!-- load on nav active <img src="Images/Navigation/computer-with-coffee-nav.jpg" alt="Sign up for Member Access"> -->
+                       	<p class="secu-nav-heading">Enroll in Member Access</p> 
+                        <p>Check out our many <a href="OnlineServices/MemberAccess.html">online</a> and <a href="MobileServices/MobileServices.html">mobile</a> services and enroll in Member Access today!</p> 
+                        <p><strong class="text-secu-blue">What you will need to enroll:</strong></p> 
+                        <ul>
+                              <li>16-digit ATM/Debit card number</li>
+                              <li>3-digit voice response number</li>
+                              <li>For the best user experience, view our <a href="OnlineServices/BrowserRequirements.html">Browser Requirements</a></li>
+                        </ul>
+                        <a href="https://onlineaccess.ncsecu.org/O/Enroll.aspx?role=SECU" target="_top" class="nav-form-button">Enroll Now</a>
+                      	</div>
+                      	<!-- right half -->
+                      	<div class="col-sm-3 sign-in-access">
+                        <p class="secu-nav-heading">Sign Into Member Access</p>
+                        <!-- tms begin -->
+                        <form method="post" id="templateForm" name="templateForm" action="Javascript:void(0);" onsubmit="SignOn(document.templateForm.userid, document.templateForm, document.templateForm.password, document.templateForm.rememberMeCheckbox);">
+                        <input type="text" name="userid" id="userid" placeholder="User ID" maxlength="16" onkeypress="return checkForValidCharacters(event)" size="16" title="User ID">
+                        <div id="remember-me" class="Hide"><input name="rememberMeCheckbox" id="rememberMeCheckbox" type="checkbox" title="Check this box to remember the User ID" onchange="onRemberMeCheckBoxChanged(this, document.templateForm.userid.value)"/><a href="Security/RememberUserID.html" target="_top">Remember me</a></div>
+                        <input type="password" name="password" id="password" title="Key in your password" maxlength="32" placeholder="Password" autocomplete="off">       
+                        <a href="https://onlineaccess.ncsecu.org/O/ForgottenPassword/ForgottenPassword.aspx" target="_blank" id="forgottenPasswordLink" class="forgotten-password">Forgotten Password</a>
+                        <input type="submit" value="Sign In" id="member-access-sign-in" class="nav-form-button" title="Sign In Button">
+                        </form>
+						<!-- tms end -->
+                      </div>                          
+                      <!-- secu row end -->
+                    </div>      
+                  </li>  
+                </ul>
+            </li>
+            <!-- nav 8 locate us -->
+            <li class="dropdown yamm-fw nav-locate-us"><a href="https://locations.ncsecu.org/search" target="_blank">Locate Us</a>
+            </li> <!-- end of locate us-->       
+        </ul> <!-- end of nav navbar-nav -->   
+      </div><!-- end of navbar-collapse collapse and id -->
+</nav>
+</div> 
+        <!-- InstanceBeginEditable name="Body" -->
+
+<!-- important notice -->
+<div id="ImportantNotice">
+
+</div>
+<!-- no JS notice -->
+	<noscript><div class="AlertBoxOn noJsAlertBoxOn"><p>JavaScript Notice</p><strong class="text-secu-blue">Please Check Your Browser</strong><br>Your current browser is not capable of   viewing this site because it does not support javascript. <br />If you are still unable to access the site, please visit our <a href="Home/GeneralHelp.html#SiteRecommendations">Browser page</a>.</div></noscript>
+<!-- banner -->
+<div class="revampCarouselWrapper">  
+            <div id="myCarousel" class="carousel slide carousel-fade lazier" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li> 
+                <li data-target="#myCarousel" data-slide-to="3"></li> 
+              </ol>        
+              <div class="carousel-inner" role="listbox">
+                <!-- slide 1 -->
+				<div class="item auto-loan-jan active">
+                  <img class="carouselSlide one-src" src="Images/MABoxMidW.png" data-original="Images/HomePromos/auto-loan-jan.jpg" alt="SECU Auto Loan" width="1920" height="515">
+                  <div class="container">
+                        <div class="carousel-caption carousel-caption-blue">
+                        <a class="btn-carousel-blue caption-title-auto-loan-jan" href="AutoLoans/VehicleLoans.html" target="_top">
+                            <h2 class="caption-title caption-title-v2">Go Places</h2>
+                            <span class="caption-span-v2">with an SECU auto loan! </span>
+                            <div class="caption-learn">Learn More &raquo;</div>
+                        </a>
+                        </div>
+                  	</div>  
+                </div> 
+                <!-- slide 2 -->
+				<div class="item arm-mort-jan">
+                  <img class="carouselSlide lazy" src="Images/MABoxMidW.png" data-src="Images/HomePromos/arm-mort-jan.jpg" alt="SECU Mortgages" width="1920" height="515">
+                  <div class="container">
+                        <div class="carousel-caption carousel-caption-blue">
+                        <a class="btn-carousel-blue caption-title-arm-mort-jan" href="Mortgages/AdjustableMortgage.html" target="_top">
+							<h2 class="caption-title caption-title-v2">SECU Mortgages</h2>
+                          <span class="caption-span-v2">Cozy up with a 5-Year Adjustable Rate Mortgage.</span>
+                          <div class="caption-learn">Learn More &raquo;</div>
+                        </a>
+                        </div>
+                  	</div>  
+                </div>    
+                <!-- slide 3 -->
+                <div class="item tax-prep-jan">
+                  <img class="carouselSlide lazy" src="Images/MABoxMidW.png" data-src="Images/HomePromos/tax-prep-jan.jpg" alt="Low-Cost Tax Preparation Program" width="1920" height="515">
+                  <div class="container">
+                        <div class="carousel-caption carousel-caption-blue">
+                        <a class="btn-carousel-blue caption-title-tax-prep-jan" href="TaxServices/LowCostTaxProgram.html" target="_top">
+							<h2 class="caption-title caption-title-v2">Tax Time is Here</h2>
+                          <span class="caption-span-v2">Our Low-Cost Tax Program will begin January 23, 2019 for qualified members.</span>
+                          <div class="caption-learn">Learn More &raquo;</div>
+                        </a>
+                        </div>
+                  	</div>  
+                </div> 
+                <!-- slide 4 -->
+                 <div class="item car-buying-jan">
+                  <img class="carouselSlide lazy" src="Images/MABoxMidW.png" data-src="Images/HomePromos/car-buying-jan.jpg" alt="SECU's Car Buying Service" width="1920" height="515">
+                    <div class="container">
+                        <div class="carousel-caption carousel-caption-blue">
+                        <a class="btn-carousel-blue caption-title-car-buying-jan" href="AutoCenter/CarBuying.html" target="_top">
+							<h2 class="caption-title caption-title-v2">SECU&rsquo;s Car Buying Service</h2>
+                         	<span class="caption-span-v2">Our online service can help guide you with your next new car purchase.</span>
+                         	<div class="caption-learn">Learn More &raquo;</div>
+                        </a>
+                        </div>
+                    </div>
+				 </div>      
+
+		       <!-- arrows -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        				<span class="sr-only">Previous</span>
+      			</a>
+      			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        				<span class="sr-only">Next</span>
+      			</a>   
+		        </div><!-- end carousel inner -->          
+          	</div><!-- end carousel wrapper -->
+			<!-- banner member access -->
+          	<div class="red">
+          	<div class="red-content">                         
+            	<form method="post" id="homeForm" name="homeForm" action="Javascript:void(0);" onsubmit="SignOn(document.homeForm.userIDHome, document.homeForm, document.homeForm.userPasswordHome, document.homeForm.checkboxHomeRememberMe);">                         
+              	<h1>Member Access</h1>                        
+              	<div class="banner-member-access">                                             
+                        <input type="text" class="form-control" name="userIDHome" id="userIDHome" placeholder="User ID" autofocus title="User ID Home">
+                        <input type="checkbox" id="checkboxHomeRememberMe" class="red-checkbox" name="checkboxHomeRememberMe" onchange="onRemberMeCheckBoxChanged(this, document.homeForm.userIDHome.value)" title="Remember Me Check Box Home"> 
+                        <a href="Security/RememberUserID.html" target="_top" class="remember-me-check">Remember Me</a>
+                        <input type="password" class="form-control" name="userPasswordHome" id="userPasswordHome" placeholder="Password" title="Key in your password Home" autocomplete="off">
+                        <a href="https://onlineaccess.ncsecu.org/O/ForgottenPassword/ForgottenPassword.aspx" target="_blank" class="red-forgotten-link">Forgotten Password</a>
+                        <input type="submit" value="Sign&nbsp;In" class="button highlights-button highlights-button-inline form-control" title="Login submit">                        
+                        <a href="Home/WhatIsMemberAccess.html" target="_top" class="red-enroll-link">Enroll in Member Access</a>
+              	</div>
+              	</form>
+          </div>            
+          </div>     
+</div>
+<!-- body content -->
+	<div class="marketing-wrapper">
+      <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-sm-4">       
+			<a href="BranchServices/ShredDays.html" target="_top" class="home-vector-link">
+			<svg version="1.1" id="settlement-vector" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 140 140" enable-background="new 0 0 140 140" xml:space="preserve">
+			<title>SECU Shred Days</title>
+			<circle cx="70" cy="70" r="70"/>
+			<g>
+			<path d="M70,2c37.5,0,68,30.5,68,68s-30.5,68-68,68S2,107.5,2,70S32.5,2,70,2 M70,1C31.9,1,1,31.9,1,70s30.9,69,69,69s69-30.9,69-69S108.1,1,70,1L70,1z"/>
+			</g>
+			<g>
+			<path class="st0" d="M109.1,52h-9.6V25h-58v27H30.9c-3,0-5.4,2.4-5.4,5.4v24.3c0,3,2.4,5.4,5.4,5.4h10c-0.6,6.5-1.6,15.7-3.3,22.5l3.9,1c3-12,4-30.6,4.1-31.4v-7.1h3.7c0,16.7-1.6,37.6-1.7,37.8l4,0.3c0-0.2,1.7-21.3,1.7-38.2h3.5v42h4V72h3.8v33h4V72h4v43h4V72h3.8c0,20.9,2.2,40,2.3,40.2l4-0.5c0-0.2-2.2-19.1-2.2-39.8H88c0,13.9,1.5,34.9,1.5,35.1l4-0.3c0-0.2-1.5-21.1-1.5-34.9h3.5v7v0.1c0,0.8,1,19.3,4.1,31.4l3.9-1c-1.7-6.8-2.8-16-3.3-22.5h9c3,0,5.4-2.4,5.4-5.4v-24C114.5,54.4,112.1,52,109.1,52z M41.5,78.9c0,0.1,0,0.5-0.1,1c-2.2,0-3.9-1.8-3.9-4c0-2.2,1.8-4,4-4V78.9z M95.5,52h-50V29h50V52z M99.6,80c0-0.6-0.1-0.9-0.1-1v-7c2.2,0,4,1.8,4,4S101.7,80,99.6,80z M103.5,68c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S105.7,68,103.5,68z"/>
+			<path class="st0" d="M50.5,41h41c1.1,0,2-0.9,2-2s-0.9-2-2-2h-41c-1.1,0-2,0.9-2,2S49.4,41,50.5,41z"/>
+			<path class="st0" d="M50.5,49h32c1.1,0,2-0.9,2-2s-0.9-2-2-2h-32c-1.1,0-2,0.9-2,2S49.4,49,50.5,49z"/>
+			</g>
+			</svg>	
+			</a>
+		  	<div class="highlights-title">SECU Shred Days</div>
+		  <p class="highlights-description">View the listing of upcoming shred day events, or check with your local branch for an event scheduled in your area.</p>
+        <p><a class="btn btn-default highlights-button" href="BranchServices/ShredDays.html" role="button" target="_top">Learn More</a></p>         
+      </div><!-- /.col-sm-4 -->
+      <div class="col-sm-4">
+			<a href="PDF/Grassroots/GR_0119.pdf" target="_blank" class="home-vector-link">
+			<svg version="1.1" id="grassroots-vector" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 140 140" enable-background="new 0 0 140 140" xml:space="preserve">
+			<title>January Grassroots</title>
+			<circle cx="70" cy="70" r="70"/>
+			<g>
+			<path d="M70,2c37.5,0,68,30.5,68,68s-30.5,68-68,68S2,107.5,2,70S32.5,2,70,2 M70,1C31.9,1,1,31.9,1,70s30.9,69,69,69s69-30.9,69-69S108.1,1,70,1L70,1z"/>
+			</g>
+			<g>
+			<path d="M62.542,40.46c0.886-0.883,1.329-1.953,1.329-3.21c0-1.25-0.443-2.314-1.329-3.193c-0.886-0.878-1.951-1.317-3.192-1.317h-2.848v9.043h2.848C60.592,41.783,61.656,41.342,62.542,40.46z"/>
+			<path d="M84.462,48.044V27.06H34.555v85.961h70.973V48.044H84.462z M55.552,31.778h4.403c1.282,0.174,2.369,0.708,3.264,1.602
+			c1.068,1.076,1.602,2.366,1.602,3.869c0,1.519-0.534,2.813-1.602,3.881c-0.744,0.744-1.595,1.23-2.552,1.46l3.869,5.97h-1.163
+			l-3.738-5.815h-3.133v5.815h-0.949V31.778z M38.972,40.169c0-2.366,0.837-4.389,2.51-6.07c1.673-1.681,3.7-2.522,6.082-2.522
+			c2.215,0,4.142,0.748,5.78,2.243L52.62,34.46c-1.44-1.274-3.125-1.911-5.056-1.911c-2.105,0-3.903,0.744-5.394,2.231
+			c-1.492,1.488-2.237,3.284-2.237,5.388c0,2.113,0.746,3.913,2.237,5.4c1.491,1.488,3.289,2.231,5.394,2.231
+			c1.804,0,3.394-0.554,4.771-1.662v-4.175h-4.863v-0.972h5.789v0.032h0.012v5.447c-1.59,1.527-3.493,2.291-5.709,2.291
+			c-2.382,0-4.409-0.837-6.082-2.51C39.809,44.577,38.972,42.55,38.972,40.169z M62.992,107.997h-9.032
+			c0,0,1.335-27.141-10.332-35.399C65.423,78.669,62.911,105.728,62.992,107.997z M74.411,107.997H65.11
+			c0,0,2.014-37.997-15.279-52.975C77.251,63.681,74.411,107.997,74.411,107.997z M73.563,78.312c0,0,4.418-15.28,15.761-17.062
+			C79.52,68.46,75.734,89.768,75.734,89.768S74.878,82.758,73.563,78.312z M87.082,107.997h-9.29c0,0-0.945-26.979,17.932-35.281
+			C85.111,88.354,87.082,107.997,87.082,107.997z"/>
+			</g>
+			<path d="M107.466,46.099l-21.059-21.06v-0.005H33.501h-0.972v0.972v87.986v0.972h0.972h72.998h0.972v-0.972V46.099H107.466zM86.547,26.555l19.405,19.405H86.547V26.555z M33.501,113.993V26.007h52.074v20.925h20.924v67.061H33.501z"/>
+			</svg>	 
+			</a>
+		  	<div class="highlights-title">January Grassroots</div>
+        <p class="highlights-description">Consider SECU&rsquo;s Car Buying Service for a new vehicle purchase, maximize your IRA savings and see if SECU can help file your taxes.</p>
+        <p><a class="btn btn-default highlights-button" href="PDF/Grassroots/GR_0119.pdf" target="_blank" role="button">Learn More</a></p>
+      </div><!-- /.col-sm-4 -->
+      <div class="col-sm-4">
+			<a href="SocialMediaExternalRedirect.html?URL=https://www.youtube.com/c/ncsecu_videos" target="_blank" class="home-vector-link">
+			<svg version="1.1" id="alert-vector" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 140 140" enable-background="new 0 0 140 140" xml:space="preserve">
+			<title>SECU on YouTube</title>
+			<circle cx="70" cy="70" r="70"/>
+			<g>
+			<path d="M70,2c37.5,0,68,30.5,68,68s-30.5,68-68,68S2,107.5,2,70S32.5,2,70,2 M70,1C31.9,1,1,31.9,1,70s30.9,69,69,69s69-30.9,69-69S108.1,1,70,1L70,1z"/>
+			</g>
+			<path class="st0" d="M104.2,52.8c-0.8-3.1-3.2-5.5-6.3-6.3C92.4,45,70,45,70,45s-22.4,0-27.9,1.5c-3,0.8-5.5,3.3-6.3,6.4
+			C34.3,58.4,34.3,70,34.3,70s0,11.6,1.5,17.2c0.8,3.1,3.2,5.5,6.3,6.3C47.7,95,70,95,70,95s22.4,0,27.9-1.5c3.1-0.8,5.5-3.2,6.3-6.3
+			c1.5-5.6,1.5-17.2,1.5-17.2S105.8,58.4,104.2,52.8z M62.9,80.7V59.3L81.5,70L62.9,80.7z"/>
+			</svg>		
+	    	</a>
+		<div class="highlights-title">SECU on YouTube</div>
+        <p class="highlights-description">Visit and subscribe to SECU’s YouTube channel for helpful consumer information, how-to videos and more!</p>
+        <p><a class="btn btn-default highlights-button" href="SocialMediaExternalRedirect.html?URL=https://www.youtube.com/c/ncsecu_videos" target="_blank" role="button">Learn More</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+      <!-- START THE FEATURETTES --> 
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-sm-7">
+        		<div class="featurette-content-wrapper">
+				<div class="featurette-heading">Holiday Travel with a CashPoints&reg; Global</div>
+          		<p class="featurette-lead">Planning to travel abroad or across the country? The CPG card is a convenient way to fund a trip. Funds can be added for subsequent trips via secure Member Access, Mobile Access or ASK-SECU voice response.</p>			
+                <!-- insert optional legal lines here within a <p class="featurette-legal"> element -->
+                
+                <p class="featurette-link">
+                <a href="Cards/CPG.html" target="_top">Learn More About the CPG Account &raquo;</a>
+                </p>			
+                </div>
+        </div>
+        <div class="col-sm-5">
+			<a href="Cards/CPG.html" target="_top"><img class="featurette-image img-responsive lazy" src="Images/MABoxMidW.png" data-original="Home/Images/travel-dec-14.jpg" alt="Travel with CPG"></a>
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-sm-7 col-sm-push-5">
+        	<div class="featurette-content-wrapper">
+				<div class="featurette-heading">One Time Passcode</div>
+          		<p class="featurette-lead">In addition to your Member Access user name and password, the Credit Union offers the One Time Passcode (OTP) feature.  As an alternative to your security questions, OTP is a more secure and convenient option.</p>
+          		<!-- insert optional legal lines here within a <p class="featurette-legal"> element:
+                <p class="featurette-legal"></p> -->
+                <p class="featurette-link">
+                <a href="MobileServices/OneTimePasscode.html" target="_top">Register for the One Time Passcode Service Today  &raquo;</a>
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-5 col-sm-pull-7">
+			<a href="MobileServices/OneTimePasscode.html" target="_top"><img class="featurette-image img-responsive lazy" src="Images/MABoxMidW.png" data-original="Home/Images/one-time-passcode-oct-18.jpg" alt="One Time Passcode"></a>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-sm-7">
+        	<div class="featurette-content-wrapper lead-annuities">
+				<div class="featurette-heading">Membership Eligibility</div>
+          		<p class="featurette-lead">State Employees' Credit Union is a member-owned, not-for-profit cooperative. Find out if you meet one of the eligibility requirements and become an SECU member today!</p>
+                <!-- insert optional legal lines here within a <p class="featurette-legal"> element -->
+		
+                <p class="featurette-link">    
+                <a href="AboutSECU/MembershipEligibility.html" target="_top">View Our Membership Eligibility Requirements  &raquo;</a>
+                </p>
+        		</div>
+            </div>
+        <div class="col-sm-5">
+			<a href="AboutSECU/MembershipEligibility.html" target="_top"><img class="featurette-image img-responsive lazy" src="Images/MABoxMidW.png" data-original="Home/Images/MembershipEligibility.jpg" alt="Membership Eligibility"></a>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+      
+      <div class="row featurette">
+        <div class="col-sm-7 col-sm-push-5">
+        	<div class="featurette-content-wrapper">
+				<div class="featurette-heading">SECU Spotlights</div>
+          		<p class="featurette-lead">As a not-for-profit financial institution SECU demonstrates a cooperative principle as it seeks to be a valuable partner in communities across North Carolina. Credit Union employees, working with teachers in their local schools, make a difference as they put SECU’s &ldquo;People Helping People&rdquo; philosophy into action.</p>
+                <!-- insert optional legal lines here within a <p class="featurette-legal"> element:
+                <p class="featurette-legal"></p> -->
+          		<p class="featurette-link">
+                <a href="Home/SECUSpotlights.html" target="_top">Check Out Our Latest Spotlights Feature &raquo;</a>
+                </p>
+        		</div>
+             </div>
+        <div class="col-sm-5 col-sm-pull-7">
+			<a href="Home/SECUSpotlights.html" target="_top"><img class="featurette-image img-responsive lazy" src="Images/MABoxMidW.png" data-original="Home/Images/Spotlights-Kids.jpg" alt="SECU Spotlights"></a>
+        </div>
+      </div>    
+      <br>
+      <br>
+    </div>  
+	</div>
+            <!-- InstanceEndEditable -->
+
+        <!-- InstanceBeginEditable name="FooterLinks" -->
+        <!-- InstanceEndEditable -->
+<!-- footer -->
+<footer>
+        <div class="footer-content">
+              <div class="row footer-row">
+                  <div class="col-sm-2">
+                    <h6>Security Statement</h6>
+                    <p class="footer-p"><em>SECU will not ask for personal information such as online credentials, 
+                    account numbers or card numbers via email, voice or text messaging.</em></p>
+                    <a href="Security/SecurityOverview.html" target="_top">Online Security &raquo;</a>
+                </div>   
+                <div class="col-sm-2">
+                    <h6>Calculators</h6>
+                    <p class="footer-p"><a href="Calcs/CheckbookBalancing.html" target="_top">Checkbook Balancing</a>
+                    <a id="FooterMortgageCalc" href="Calcs/MonthlyMortgagePaymentCalculator.html" target="_top">Mortgage Calculator</a>
+                    <a href="DepositAccounts/SummerCashCalc.html" target="_top">Summer Cash</a>
+                    <a id="NewCarDirect" href="Calcs/MonthlyPayment.html">Vehicle Calculator</a>			
+                    </p>
+                    <a href="OnlineServices/CalculatorList.html" target="_top">More Calculators &raquo;</a>
+                </div>
+                <div class="col-sm-2">
+                    <h6>Publications</h6>
+                    <p class="footer-p"><a href="Publications/AnnualReport.html" target="_top">Annual Reports</a>
+                    <a href="AboutSECU/Brochures.html" target="_top">Brochures</a>
+                    <a href="Publications/Newsletters.html" target="_top">Newsletters</a>
+                    <a href="Publications/PressReleases.html" target="_top">Press Releases</a>
+                    </p>
+                    <a href="Publications/Publications.html" target="_top">More Publications &raquo;</a>
+                </div>    
+                <div class="col-sm-2 about-secu">
+                    <h6>About SECU</h6>
+                    <a href="AboutSECU/ABARoutingTransitNumber.html" target="_top">ABA Routing Number</a>
+                    <a href="AboutSECU/Calendar.html" target="_top">Calendar</a>
+                    <a href="AboutSECU/Careers.html" target="_top">Careers</a>
+                    <a href="AboutSECU/CommunityInvolvement.html" target="_top">Community Involvement</a>
+                    <a href="AboutSECU/CorporateInformation.html" target="_top">Corporate Information</a>
+                    <a href="AboutSECU/MembershipEligibility.html" target="_top">Membership Eligibility</a>
+                    <a href="AboutSECU/FinancialStatus.html" target="_top">SECU Financial Status</a>
+                    <!-- mobile about secu -->
+                    <a href="AboutSECU/Careers.html" class="mobile-about-secu">Careers</a>
+                    <a href="Home/ContactUs.html" class="mobile-about-secu">Contact Us</a>
+                    <a href="RatesAndFees/LendingRates.html" class="mobile-about-secu">Rates</a>
+                    <a href="AboutSECU/ABARoutingTransitNumber.html" class="mobile-about-secu">Routing Number</a>
+                    <a href="Sitemap.html" class="mobile-about-secu">Site Map</a>
+                </div>   
+                <div class="col-sm-2">
+                    <h6>Related Sites</h6>
+                    <a href="https://www.cufatcats.org/" target="_blank">FAT CAT</a>
+                    <a href="https://www.nclifetimeincome.org/" target="_blank">NC Lifetime Income</a>
+                    <a href="https://www.ncsecufoundation.org/" target="_blank">SECU Foundation</a>
+                    <a href="https://www.teenzard.org/" target="_blank">Zard</a>
+                </div>   
+                <div class="col-sm-2 connect-with-secu-desktop">
+                    <h6>Connect with SECU</h6>
+                    <a href="SocialMediaExternalRedirect.html?URL=https://www.facebook.com/stateemployeescreditunion" target="_blank">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 				viewBox="0 0 412 412.3" style="enable-background:new 0 0 412 412.3;" xml:space="preserve">
+					<title>Facebook Icon</title>
+					<path d="M208.4,354.8V233h-40.8v-48.4h40.8v-38.1c0-41.4,25.3-64,62.3-64c17.7,0,32.9,1.3,37.3,1.9v43.3h-25.6
+					c-20.1,0-24,9.6-24,23.6v33.3h45.4l-6.2,48.4h-39.1v121.8"/>
+					<path d="M346,6H66C32.9,6,6,32.9,6,66v280c0,33.1,26.9,60,60,60h280c33.1,0,60-26.9,60-60V66C406,32.9,379.1,6,346,6z M52.4,340.4
+					V71.6c0-10.6,8.6-19.2,19.2-19.2h268.8c10.6,0,19.2,8.6,19.2,19.2v268.8c0,10.6-8.6,19.2-19.2,19.2H71.6
+					C61,359.6,52.4,351,52.4,340.4z"/>
+					</svg>
+					</a> 
+                    <a href="SocialMediaExternalRedirect.html?URL=https://www.youtube.com/c/ncsecu_videos" target="_blank">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 528 412.3" style="enable-background:new 0 0 528 412.3;" xml:space="preserve">
+					<title>YouTube Icon</title>
+					<path d="M510.7,73.6C504.4,50,485.9,31.3,462.4,25C419.8,13.5,343,5.5,264,5.5S108.2,13.5,65.6,25c-23.5,6.3-42,24.9-48.3,48.6
+					C5.9,116.5,5.9,205.9,5.9,205.9s0,0,0,0.1c0,0.1,0,0.1,0,0.1s0,89.4,11.4,132.3c6.3,23.7,24.8,42.3,48.3,48.6
+					c42.6,11.5,119.4,19.5,198.4,19.5s155.8-8,198.4-19.5c23.5-6.3,42-24.9,48.3-48.6c11.4-42.9,11.4-132.3,11.4-132.3s0,0,0-0.1
+					c0-0.1,0-0.1,0-0.1S522.1,116.5,510.7,73.6z M264,360.1c-74.3,0-143.1-7.5-179.9-17.4c-9.3-2.5-16.7-10-19.2-19.5
+					c-7.9-29.7-9.7-94.7-9.7-117.1V206v-0.1c0-22.5,1.7-87.4,9.7-117.1c2.5-9.5,9.9-16.9,19.2-19.4c36.8-10,105.6-17.5,179.9-17.5
+					s143.1,7.5,179.9,17.4c9.3,2.5,16.7,10,19.2,19.5c7.9,29.7,9.7,94.7,9.7,117.1v0.1v0.1c0,22.5-1.7,87.4-9.7,117.1
+					c-2.5,9.5-9.9,16.9-19.2,19.4C407.1,352.6,338.3,360.1,264,360.1z"/>
+					<path d="M202.4,293.6V118.4L356.3,206L202.4,293.6z"/>
+					</svg>
+					</a>
+                    <a href="SocialMediaExternalRedirect.html?URL=https://instagram.com/secu_foundation/" target="_blank">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 				viewBox="0 0 412 412.3" style="enable-background:new 0 0 412 412.3;" xml:space="preserve">
+					<title>Instagram Icon</title>
+					<path d="M206,97.6C146,97.6,97.6,146,97.6,206S146,314.4,206,314.4S314.4,266,314.4,206S266.1,97.6,206,97.6z M206,276.5
+					c-38.8,0-70.5-31.6-70.5-70.5s31.6-70.5,70.5-70.5s70.5,31.6,70.5,70.5S244.8,276.5,206,276.5L206,276.5z"/>
+					<path d="M345,5H65C31.9,5,5,31.9,5,65v280c0,33.1,26.9,60,60,60h280c33.1,0,60-26.9,60-60V65C405,31.9,378.1,5,345,5z M51.4,339.4
+					V70.6c0-10.6,8.6-19.2,19.2-19.2h268.8c10.6,0,19.2,8.6,19.2,19.2v268.8c0,10.6-8.6,19.2-19.2,19.2H70.6
+					C60,358.6,51.4,350,51.4,339.4z"/>
+					<circle cx="312.5" cy="99.5" r="26.3"/>
+					</svg>
+					</a>
+                </div> 
+            </div>
+
+            <div class="legal-information-desktop">
+			<a href="ExternalRedirect.html?URL=https://get.adobe.com/reader/" target="_blank" class="acrobat-reader">Download Acrobat Reader</a> | 
+            <a href="Sitemap.html" target="_top">Site Map</a> | 
+            <a href="PDF/AboutSECU/PrivacyPolicy.pdf" target="_blank">Privacy Policy</a> | 
+            <a href="Home/HomeMortgageDisclosureAct.html" target="_blank">HMDA</a> |
+            <a href="Home/EqualHousingLender.html" target="_blank">Equal Housing Opportunity <img src="Home/Images/EqualHousingOpportunityHouseImage.png?ver=3.0" alt="Equal Housing"></a> | 
+            <a href="Home/Legal.html" target="_top">Terms of Use</a> | 
+            <a href="Home/DepositInsurance.html" target="_top">Federally Insured by the National Credit Union Administration</a>
+            </div>    
+            
+            <div class="legal-information-mobile">
+            <h6>Legal Information</h6>
+            <a href="ExternalRedirect.html?URL=https://get.adobe.com/reader/" target="_blank" class="acrobat-reader">Download Acrobat Reader</a>
+            <a href="Home/EqualHousingLender.html" target="_blank">Equal Housing Opportunity <img src="Home/Images/EqualHousingOpportunityHouseImage.png?ver=3.0" alt="Equal Housing"></a>
+            <a href="Home/DepositInsurance.html" target="_top">Federally Insured by NCUA</a>
+            <a href="Home/HomeMortgageDisclosureAct.html" target="_blank">HMDA</a>
+            <a href="Home/Legal.html" target="_top">Terms of Use</a> 
+            <a href="PDF/AboutSECU/PrivacyPolicy.pdf" target="_blank">Privacy Policy</a>
+            </div>
+            
+            <div class="connect-with-secu-mobile">
+            <h6>Connect with SECU</h6>
+            <a href="SocialMediaExternalRedirect.html?URL=https://www.facebook.com/stateemployeescreditunion" target="_blank">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 				viewBox="0 0 412 412.3" style="enable-background:new 0 0 412 412.3;" xml:space="preserve">
+					<title>Facebook Icon</title>
+					<path d="M208.4,354.8V233h-40.8v-48.4h40.8v-38.1c0-41.4,25.3-64,62.3-64c17.7,0,32.9,1.3,37.3,1.9v43.3h-25.6
+					c-20.1,0-24,9.6-24,23.6v33.3h45.4l-6.2,48.4h-39.1v121.8"/>
+					<path d="M346,6H66C32.9,6,6,32.9,6,66v280c0,33.1,26.9,60,60,60h280c33.1,0,60-26.9,60-60V66C406,32.9,379.1,6,346,6z M52.4,340.4
+					V71.6c0-10.6,8.6-19.2,19.2-19.2h268.8c10.6,0,19.2,8.6,19.2,19.2v268.8c0,10.6-8.6,19.2-19.2,19.2H71.6
+					C61,359.6,52.4,351,52.4,340.4z"/>
+					</svg>
+			</a> 
+            <a href="SocialMediaExternalRedirect.html?URL=https://www.youtube.com/c/ncsecu_videos" target="_blank">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 viewBox="0 0 528 412.3" style="enable-background:new 0 0 528 412.3;" xml:space="preserve">
+					<title>YouTube Icon</title>
+					<path d="M510.7,73.6C504.4,50,485.9,31.3,462.4,25C419.8,13.5,343,5.5,264,5.5S108.2,13.5,65.6,25c-23.5,6.3-42,24.9-48.3,48.6
+					C5.9,116.5,5.9,205.9,5.9,205.9s0,0,0,0.1c0,0.1,0,0.1,0,0.1s0,89.4,11.4,132.3c6.3,23.7,24.8,42.3,48.3,48.6
+					c42.6,11.5,119.4,19.5,198.4,19.5s155.8-8,198.4-19.5c23.5-6.3,42-24.9,48.3-48.6c11.4-42.9,11.4-132.3,11.4-132.3s0,0,0-0.1
+					c0-0.1,0-0.1,0-0.1S522.1,116.5,510.7,73.6z M264,360.1c-74.3,0-143.1-7.5-179.9-17.4c-9.3-2.5-16.7-10-19.2-19.5
+					c-7.9-29.7-9.7-94.7-9.7-117.1V206v-0.1c0-22.5,1.7-87.4,9.7-117.1c2.5-9.5,9.9-16.9,19.2-19.4c36.8-10,105.6-17.5,179.9-17.5
+					s143.1,7.5,179.9,17.4c9.3,2.5,16.7,10,19.2,19.5c7.9,29.7,9.7,94.7,9.7,117.1v0.1v0.1c0,22.5-1.7,87.4-9.7,117.1
+					c-2.5,9.5-9.9,16.9-19.2,19.4C407.1,352.6,338.3,360.1,264,360.1z"/>
+					<path d="M202.4,293.6V118.4L356.3,206L202.4,293.6z"/>
+					</svg>	
+			</a>
+            <a href="SocialMediaExternalRedirect.html?URL=https://instagram.com/secu_foundation/" target="_blank">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 				viewBox="0 0 412 412.3" style="enable-background:new 0 0 412 412.3;" xml:space="preserve">
+					<title>Instagram Icon</title>
+					<path d="M206,97.6C146,97.6,97.6,146,97.6,206S146,314.4,206,314.4S314.4,266,314.4,206S266.1,97.6,206,97.6z M206,276.5
+					c-38.8,0-70.5-31.6-70.5-70.5s31.6-70.5,70.5-70.5s70.5,31.6,70.5,70.5S244.8,276.5,206,276.5L206,276.5z"/>
+					<path d="M345,5H65C31.9,5,5,31.9,5,65v280c0,33.1,26.9,60,60,60h280c33.1,0,60-26.9,60-60V65C405,31.9,378.1,5,345,5z M51.4,339.4
+					V70.6c0-10.6,8.6-19.2,19.2-19.2h268.8c10.6,0,19.2,8.6,19.2,19.2v268.8c0,10.6-8.6,19.2-19.2,19.2H70.6
+					C60,358.6,51.4,350,51.4,339.4z"/>
+					<circle cx="312.5" cy="99.5" r="26.3"/>
+					</svg>	
+			</a>
+            </div> 
+
+  
+		<p class="secu-copyright">&copy;<script type="text/javascript">var date = new Date();document.write(date.getFullYear());</script> State Employees' Credit Union</p>
+		</div>
+       	<div class="ADA-msg">
+			<p>If you are using a screen reader and are having problems using this website, please call <a class="secu-tel" href="tel:18887328562">(888) 732-8562</a> for assistance. </p>
+		</div>
+        </footer>
+<!-- js -->
+<script type="text/javascript" src="Includes/jQuery/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="Includes/Bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="Includes/Secu2017.js?ver=4.2"></script>
+<script type="text/javascript" src="Includes/Secu2017-home.js?ver=3.0"></script>
+</body>
+<!-- InstanceEnd --></html>

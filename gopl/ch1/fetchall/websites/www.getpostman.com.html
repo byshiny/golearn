@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>Postman | API Development Environment</title>
+  <link rel="shortcut icon" href="/favicon.ico">
+  <!-- For Chrome for Android: -->
+  <link rel="icon" sizes="192x192" href="/img/touch-icons/touch-icon-192x192.png">
+  <!-- For iPhone 6 Plus with @3× display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/touch-icons/apple-touch-icon-180x180-precomposed.png">
+  <!-- For iPad with @2× display running iOS ≥ 7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/touch-icons/apple-touch-icon-152x152-precomposed.png">
+  <!-- For iPad with @2× display running iOS ≤ 6: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/touch-icons/apple-touch-icon-144x144-precomposed.png">
+  <!-- For iPhone with @2× display running iOS ≥ 7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/touch-icons/apple-touch-icon-120x120-precomposed.png">
+  <!-- For iPhone with @2× display running iOS ≤ 6: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/touch-icons/apple-touch-icon-114x114-precomposed.png">
+  <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/touch-icons/apple-touch-icon-76x76-precomposed.png">
+  <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/touch-icons/apple-touch-icon-72x72-precomposed.png">
+  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="/img/touch-icons/apple-touch-icon-precomposed.png"><!-- 57×57px -->
+
+  
+    <meta name="description" content="Postman is the only complete API development environment, for API developers, used by more than 5 million developers and 100,000 companies worldwide. Postman makes working with APIs faster and easier by supporting developers at every stage of their workflow, and is available for Mac OS X, Windows, and Linux users.">
+  
+
+  <!-- URL unfurling metadata - Facebook Open Graph format -->
+  <meta property="og:url" content="https://www.getpostman.com">
+  <meta property="og:title" content="Postman">
+  <meta property="og:description" content="Postman is the only complete API development environment, for API developers, used by more than 5 million developers and 100,000 companies worldwide. Postman makes working with APIs faster and easier by supporting developers at every stage of their workflow, and is available for Mac OS X, Windows, and Linux users.">
+  <meta property="og:site_name" content="Postman">
+  <meta property="og:image" content="https://www.getpostman.com/img/v2/logo-glyph.png">
+  <meta property="og:type" content="website">
+
+  <!-- URL unfurling metadata - Twitter card tags -->
+  <meta name="twitter:title" value="Postman">
+  <meta name="twitter:description" value="Postman is the only complete API development environment, for API developers, used by more than 5 million developers and 100,000 companies worldwide. Postman makes working with APIs faster and easier by supporting developers at every stage of their workflow, and is available for Mac OS X, Windows, and Linux users.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:domain" value="https://www.getpostman.com">
+  <meta name="twitter:image" content="https://www.getpostman.com/img/v2/logo-glyph.png">
+
+  <!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/> -->
+  <!-- Injecting style tags-->
+	
+    <link href='/assets/vendor.css?v=1545854555144' media='all' rel='stylesheet' type='text/css'/>
+  
+    <link href='/assets/platformVendor.css?v=1545854554355' media='all' rel='stylesheet' type='text/css'/>
+  
+    <link href='/assets/main.css?v=1545854557243' media='all' rel='stylesheet' type='text/css'/>
+  
+    
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+	<body class="homepage">
+	  <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M42M5N"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M42M5N');
+var disableOverlaySignin = false;
+</script>
+<!-- End Google Tag Manager -->
+	  <div class="homepage-root">
+  <div class="home-hero-wall">
+    <div id="menu-toggle-overlay"></div>
+<div class="navbar-wrapper">
+  <nav class="navbar">
+    <a href="/" class="navbar-logo">
+      <img src="/img/v2/logo.svg" alt="Postman">
+    </a>
+    <div class="navbar-links">
+      <a class="navbar-links-item dropdown-product">
+        Product
+      </a>
+      <a class="navbar-links-item dropdown-plans">Plans
+        & Pricing</a>
+      <a class="navbar-links-item dropdown-learning">Learning Center</a>
+    </div>
+    <div class="navbar-right">
+      <a href="/support" class="navbar-right-item navbar-right-item__support">
+        <span class="navbar-right-item__support-icon">?</span>
+        Support
+      </a>
+      <a href="https://app.getpostman.com/signup?redirect=web" class="navbar-right-item navbar-right-item__dashboard pm-btn pm-btn-sm pm-btn-primary hide-if-signedin">Sign
+        In</a>
+      <a href="https://app.getpostman.com/" class="pm-btn pm-btn-sm pm-btn-primary sign-in-button hide-if-signedout">DASHBOARD</a>
+    </div>
+    <div id="menu-toggle"></div>
+  </nav>
+
+  <div class="navbar-dropdown-content-wrapper">
+    <div class="navbar-dropdown-content dropdown-product">
+      <div class="navbar-dropdown-content__main">
+        <a href="/products">
+          <span class="navbar-dropdown-link__title">Postman</span>
+          <br>
+          <span class="navbar-dropdown-link__description">The most complete API Development Environment</span>
+        </a>
+
+        <a href="/api-network">
+          <span class="navbar-dropdown-link__title">API Network</span>
+          <br>
+          <span class="navbar-dropdown-link__description">Browse through the directory to see who’s running in Postman</span>
+        </a>
+      </div>
+      <div class="navbar-dropdown-content__sidebar">
+        <ul>
+          <li><a href="https://blog.getpostman.com">Blog</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="navbar-dropdown-content dropdown-plans">
+      <div class="navbar-dropdown-content__main">
+        <a href="/pricing">
+          <span class="navbar-dropdown-link__title">Pricing Chart</span>
+          <br>
+          <span class="navbar-dropdown-link__description">See how each Postman plan compares to one another</span>
+        </a>
+
+        <a href="/enterprise">
+          <span class="navbar-dropdown-link__title">Postman Enterprise</span>
+          <br>
+          <span class="navbar-dropdown-link__description">The most complete Postman plan for Enterprise Teams</span>
+        </a>
+      </div>
+      <div class="navbar-dropdown-content__sidebar">
+        <ul>
+          <li><a href="https://blog.getpostman.com">Blog</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="navbar-dropdown-content dropdown-learning">
+      <div class="navbar-dropdown-content__main">
+        <a href="https://learning.getpostman.com/getting-started/">
+          <span class="navbar-dropdown-link__title">Get started with Postman</span>
+          <br>
+          <span class="navbar-dropdown-link__description">New to Postman? Start your API developing journey here!</span>
+        </a>
+
+        <a href="https://learning.getpostman.com">
+          <span class="navbar-dropdown-link__title">The Learning Center</span>
+          <br>
+          <span class="navbar-dropdown-link__description">Learn how to do anything and everything within Postman</span>
+        </a>
+
+        <a href="https://learning.getpostman.com/docs">
+          <span class="navbar-dropdown-link__title">Postman Docs</span>
+          <br>
+          <span class="navbar-dropdown-link__description">Postman’s complete documentation</span>
+        </a>
+      </div>
+      <div class="navbar-dropdown-content__sidebar">
+        <ul>
+          <li><a href="https://blog.getpostman.com">Blog</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="home-hero-container">
+      <div class="content-wrapper">
+        <h1 class="content-title">Postman Makes API Development Simple.</h1>
+        <div class="content-subtitle">Developers use Postman to build<br>modern software for the API-first world.</div>
+        <a class="primary-btn" id="cta-btn-1" href="/apps">Download the App</a>
+        <div class="home-act-description"><span>Want to improve your Postman skills?</span> <a class="home-act-text" href="/next-step">Take the next step!</a></div>
+      </div>
+      <div class="home-video">
+        <iframe src="https://youtube.com/embed/VxY_cz0VQXE?iv_load_policy=3&rel=0&showinfo=0&showsearch=0" width="646" height="381" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-banner">
+    <div class="content-banner-title">Postman is used by <span>5 million developers</span> and more than <span>100,000 companies</span> to access <span>130 million APIs</span> every month.</div>
+  </div>
+
+  <div class="section content-1">
+    <div class="content-title">
+      Key Elements of Postman
+    </div>
+    <div class="content-cards">
+      <div class="content-card">
+        <img class="content-card-image" src="/img/v2/homepage/platform-icon.svg">
+        <div class="content-card-text">The only complete API development environment</div>
+        <a class="secondary-btn light-btn" href="/products">Learn More</a>
+      </div>
+      <div class="content-card">
+        <img class="content-card-image" src="/img/v2/homepage/tools-icon-sceen.svg">
+        <div class="content-card-text">Integrated tools for every stage of the API lifecycle</div>
+        <a class="secondary-btn light-btn" href="/tools">Learn More</a>
+      </div>
+      <div class="content-card">
+        <img class="content-card-image" src="/img/v2/homepage/plans-icon.svg">
+        <div class="content-card-text">Plans for everyone from individuals to enterprises</div>
+        <a class="secondary-btn light-btn" href="/pricing">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section content-2a">
+    <div class="content-title">
+      <span>Postman’s API Development Environment (ADE):</span><span>Collections, Workspaces & Tools.</span>
+    </div>
+    <div class="content-wrapper">
+      <img class="content-image" src="/img/v2/products/equation.svg">
+      <img class="content-image" src="/img/v2/products/combined-shape.svg">
+      <img class="content-image" src="/img/v2/products/equation-postman.svg">
+    </div>
+  </div>
+
+  <div class="section content-2">
+
+    <div class="content-cards">
+      <div class="content-card">
+        <img class="content-card-image" src="/img/v2/homepage/collection-icon.png">
+        <div class="content-card-title">Postman Collections</div>
+        <div class="content-card-text-1">An executable API description format.</div>
+        <div class="content-card-text-2">Run requests, test & debug, create automated tests, and mock, document & monitor an API.</div>
+        <a class="secondary-btn dark-btn" href="/collection">Learn More</a>
+      </div>
+      <div class="content-card">
+        <img class="content-card-image" src="/img/v2/homepage/workspaces-icon.svg">
+        <div class="content-card-title">Postman Workspaces</div>
+        <div class="content-card-text-1">Powerful collaboration spaces for teams of any size.</div>
+        <div class="content-card-text-2">Share collections, set permissions, and manage participation in multiple workspaces.</div>
+        <a class="secondary-btn dark-btn" href="/workspaces">Learn More</a>
+      </div>
+      <div class="content-card">
+        <img class="content-card-image" src="/img/v2/homepage/tools-icon.svg">
+        <div class="content-card-title">Built-in Tools</div>
+        <div class="content-card-text-1">Everything a developer needs to work with APIs.</div>
+        <div class="content-card-text-2">Design & mock, debug, test automation, documentation, monitor, and publish.</div>
+        <a class="secondary-btn dark-btn" href="/tools">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section content-3">
+    <div class="content-title">Postman's Tools Support Every Stage of the API Lifecycle.</div>
+    <div class="content-subtitle">Through design, testing and full production, Postman is there for faster, easier API development—without the chaos.</div>
+    <div class="wheel-container">
+      <div class="wheel-tags wheel-tags-left">
+        <a class="wheel-tag" href="/tools#publishing">
+          <div class="wheel-tag-title">Publish</div>
+          <div class="wheel-tag-text">Onboard developers to
+your API faster with Postman
+collections and documentation</div>
+        </a>
+        <a class="wheel-tag" href="/tools#api-monitoring">
+          <div class="wheel-tag-title">Monitor</div>
+          <div class="wheel-tag-text">Create automated tests to
+monitor APIs for uptime,
+responsiveness, and correctness</div>
+        </a>
+        <a class="wheel-tag" href="/tools#documentation">
+          <div class="wheel-tag-title">Document</div>
+          <div class="wheel-tag-text">Create beautiful web-viewable
+documentation</div>
+        </a>
+      </div>
+      <div class="wheel">
+        
+          <div class="wheel-dot">
+            <div class="wheel-dot-inner"></div>
+            <div class="wheel-dot-inner-mobile"></div>
+          </div>
+        
+          <div class="wheel-dot">
+            <div class="wheel-dot-inner"></div>
+            <div class="wheel-dot-inner-mobile"></div>
+          </div>
+        
+          <div class="wheel-dot">
+            <div class="wheel-dot-inner"></div>
+            <div class="wheel-dot-inner-mobile"></div>
+          </div>
+        
+          <div class="wheel-dot">
+            <div class="wheel-dot-inner"></div>
+            <div class="wheel-dot-inner-mobile"></div>
+          </div>
+        
+          <div class="wheel-dot">
+            <div class="wheel-dot-inner"></div>
+            <div class="wheel-dot-inner-mobile"></div>
+          </div>
+        
+          <div class="wheel-dot">
+            <div class="wheel-dot-inner"></div>
+            <div class="wheel-dot-inner-mobile"></div>
+          </div>
+        
+      </div>
+      <div class="wheel-tags wheel-tags-right">
+        <a class="wheel-tag" href="/tools#design-mock">
+          <div class="wheel-tag-title">Design & Mock</div>
+          <div class="wheel-tag-text">Design in Postman & use Postman’s mock service</div>
+        </a>
+        <a class="wheel-tag" href="/tools#debug">
+          <div class="wheel-tag-title">Debug</div>
+          <div class="wheel-tag-text">Test APIs, examine responses,
+add tests and scripts</div>
+        </a>
+        <a class="wheel-tag" href="/tools#test-automation">
+          <div class="wheel-tag-title">Automated Testing</div>
+          <div class="wheel-tag-text">Run automated tests using
+the Postman collection runner</div>
+        </a>
+      </div>
+    </div>
+    <div class="content-title-mobile">Postman supports every stage of the API Lifecycle.</div>
+    <div class="content-subtitle-mobile">Through design, testing and full production, Postman is there for faster, easier API development—without the chaos.</div>
+    <div class="tag-carousel-container-mobile">
+      <a class="tag-card" href="/tools#design-mock">
+        <img class="content-card-dots" src="/img/v2/homepage/three-vertical-dots.png">
+        <img class="content-card-dots" src="/img/v2/homepage/three-vertical-dots.png">
+        <div class="tag-card-title">Design & Mock</div>
+        <div class="tag-card-description">Design in Postman & use Postman’s mock service</div>
+      </a>
+      <a class="tag-card" href="/tools#debug">
+        <img class="content-card-dots" src="/img/v2/homepage/three-vertical-dots.png">
+        <img class="content-card-dots" src="/img/v2/homepage/three-vertical-dots.png">
+        <div class="tag-card-title">Debug</div>
+        <div class="tag-card-description">Test APIs, examine responses, add tests and scripts</div>
+      </a>
+      <a class="tag-card" href="/tools#test-automation">
+        <img class="content-card-dots" src="/img/v2/homepage/three-vertical-dots.png">
+        <img class="content-card-dots" src="/img/v2/homepage/three-vertical-dots.png">
+        <div class="tag-card-title">Automated Testing</div>
+        <div class="tag-card-description">Run automated tests using the Postman collection runner</div>
+      </a>
+      <a class="tag-card" href="/tools#documentation">
+        <img class="content-card-dots" src="/img/v2/homepage/three-vertical-dots.png">
+        <img class="content-card-dots" src="/img/v2/homepage/three-vertical-dots.png">
+        <div class="tag-card-title">Document</div>
+        <div class="tag-card-description">Create beautiful web-viewable documentation</div>
+      </a>
+      <a class="tag-card" href="/tools#api-monitoring">
+        <img class="content-card-dots" src="/img/v2/homepage/three-vertical-dots.png">
+        <img class="content-card-dots" src="/img/v2/homepage/three-vertical-dots.png">
+        <div class="tag-card-title">Monitor</div>
+        <div class="tag-card-description">Create automated tests to monitor APIs for uptime, responsiveness, and correctness</div>
+      </a>
+      <a class="tag-card" href="/tools#publishing">
+        <img class="content-card-dots" src="/img/v2/homepage/three-vertical-dots.png">
+        <img class="content-card-dots" src="/img/v2/homepage/three-vertical-dots.png">
+        <div class="tag-card-title">Publish</div>
+        <div class="tag-card-description">Onboard developers to your API faster with Postman collections and documentation</div>
+      </a>
+    </div>
+    <div class="tag-carousel-footer">Swipe through to learn more about each stage.</div>
+  </div>
+
+  <div class="section content-4">
+    <div class="content-text">Postman Streamlines the Development Process and Simplifies APIs.</div>
+    <a class="primary-btn" href="/apps">Get Postman Now</a>
+    <div class="home-act-description"><span>Want to improve your Postman skills?</span> <a class="home-act-text" href="/next-step">Take the next step!</a></div>
+  </div>
+
+  <div class="section content-5">
+    <div class="content-title">
+      Postman Leads the Way in the API-first Universe.
+    </div>
+    <div class="content-subtitle"><span>Postman is used by 5 million developers and more than 100,000 companies to access 130 million APIs every month.</span><span>Shouldn’t you be using Postman too?</span></div>
+    <div class="carousel-wrapper">
+      <div class="fading-left"></div>
+      <div class="carousel-container">
+        <div class="carousel-column">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/clarifai.png">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/amc.svg">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/bigcommerce.png">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/tyk.svg">
+        </div>
+        <div class="carousel-column">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/adobe.svg">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/twitter.svg">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/hotelbeds-logo.png">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/docu-sign.png">
+        </div>
+        <div class="carousel-column">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/pay-pal.svg">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/mulesoft.svg">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/square-logo.svg">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/imgur.svg">
+        </div>
+        <div class="carousel-column">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/shopify.svg">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/hootsuite.png">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/best-buy.svg">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/coursera.svg">
+        </div>
+        <div class="carousel-column">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/microsoft.svg">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/atlassian.svg">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/sikka.svg">
+          <img class="content-image-left" src="/img/v2/homepage/company-logos/synapsefi.png">
+        </div>
+      </div>
+      <div class="fading-right"></div>
+    </div>
+  </div>
+
+  <div class="section content-6">
+    <div class="content-title">
+      Everybody’s Talking about Postman.
+    </div>
+    <div class="content-wrapper">
+      <div class="content-card">
+        <img class="content-card-image" src="/img/v2/homepage/company-logos/bigcommerce.png">
+        <div class="content-card-text-1">“Postman has been essential to us in rapidly developing new APIs - internally we use it to debug and share particular contexts easily across our environments.” </div>
+        <div class="content-separator"></div>
+        <div class="content-card-text-2">Nathan Booker API Product Manager</div>
+        <a class="secondary-btn dark-btn" href="/resources/case-studies/">Read More Case Studies</a>
+      </div>
+      <div class="content-divider"></div>
+      <div class="content-list">
+        <div class="recent-news-container">
+          <!-- dynamically load the content -->
+        </div>
+        <div class="content-card-btn-container">
+          <a class="secondary-btn dark-btn" href="/press-archive">Read more news</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section content-7">
+    <div class="content-wrapper">
+      <div class="content-title">Developers ❤️ Postman</div>
+      <div class="content-subtitle">We love to hear what you have to say!</div>
+      <div class="content-text">Connect with us on Twitter for the latest updates on everything Postman.</div>
+      <a class="secondary-btn dark-btn" target="_blank" href="https://twitter.com/postmanclient">Follow Us</a>
+    </div>
+    <div class="tweet-container">
+      
+        <a class="tweet-feed__tweet" target="_blank">
+          <div class="tweet-feed__content">
+            <div class="tweet-feed__header">
+              <div class="tweet-feed__dp"></div>
+              <div class="tweet-feed__name"></div>
+              <div class="tweet-feed__handle"></div>
+            </div>
+            <div class="tweet-feed__body"></div>
+            <div class="tweet-feed__footer">
+              <div class="tweet-feed__time"></div>
+              <div class="tweet-feed__location"></div>
+            </div>
+          </div>
+        </a>
+      
+        <a class="tweet-feed__tweet" target="_blank">
+          <div class="tweet-feed__content">
+            <div class="tweet-feed__header">
+              <div class="tweet-feed__dp"></div>
+              <div class="tweet-feed__name"></div>
+              <div class="tweet-feed__handle"></div>
+            </div>
+            <div class="tweet-feed__body"></div>
+            <div class="tweet-feed__footer">
+              <div class="tweet-feed__time"></div>
+              <div class="tweet-feed__location"></div>
+            </div>
+          </div>
+        </a>
+      
+        <a class="tweet-feed__tweet" target="_blank">
+          <div class="tweet-feed__content">
+            <div class="tweet-feed__header">
+              <div class="tweet-feed__dp"></div>
+              <div class="tweet-feed__name"></div>
+              <div class="tweet-feed__handle"></div>
+            </div>
+            <div class="tweet-feed__body"></div>
+            <div class="tweet-feed__footer">
+              <div class="tweet-feed__time"></div>
+              <div class="tweet-feed__location"></div>
+            </div>
+          </div>
+        </a>
+      
+        <a class="tweet-feed__tweet" target="_blank">
+          <div class="tweet-feed__content">
+            <div class="tweet-feed__header">
+              <div class="tweet-feed__dp"></div>
+              <div class="tweet-feed__name"></div>
+              <div class="tweet-feed__handle"></div>
+            </div>
+            <div class="tweet-feed__body"></div>
+            <div class="tweet-feed__footer">
+              <div class="tweet-feed__time"></div>
+              <div class="tweet-feed__location"></div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </div>
+
+  <div class="section content-8">
+    <div class="content-title">
+      Postman has the Right Plan for Everyone.
+    </div>
+    <div class="content-cards">
+      <div class="content-card">
+        <div class="content-card-title">Postman</div>
+        <div class="content-card-text-1">$0</div>
+        <div class="content-card-text-2">Free!</div>
+        <div class="content-card-text-3">The most complete API Development environment, for individuals and small projects.</div>
+        <a class="secondary-btn light-btn" href="/postman">Learn More</a>
+        <img class="content-card-image-left" src="/img/v2/homepage/spaceman-left.svg">
+      </div>
+      <div class="content-card">
+        <div class="content-card-title">Postman Pro</div>
+        <div class="content-card-text-1">$8</div>
+        <div class="content-card-text-2">Per user/month billed annually</div>
+        <div class="content-card-text-3">Professional collaboration features, and extended access to advanced features for power users and development teams.</div>
+        <a class="secondary-btn light-btn" href="/pro">Learn More</a>
+        <img class="content-card-image-right" src="/img/v2/homepage/spaceman-right.svg">
+      </div>
+      <div class="content-card">
+        <div class="content-card-title">Postman Enterprise</div>
+        <div class="content-card-text-1">$18</div>
+        <div class="content-card-text-2">Per user/month billed annually</div>
+        <div class="content-card-text-3">Enterprise-only features, including SSO, 10x usage limits for advanced features, and extended support.</div>
+        <a class="secondary-btn light-btn" href="/enterprise">Learn More</a>
+        <img class="content-card-image-left" src="/img/v2/homepage/spaceman-left.svg">
+        <img class="content-card-image-right" src="/img/v2/homepage/spaceman-right.svg">
+      </div>
+    </div>
+  </div>
+
+  <div class="section content-9">
+    <div class="content-shadow-space">
+      <img class="content-image" src="/img/v2/homepage/pick-a-plan.svg">
+      <div class="content-gap"></div>
+      <div class="content-wrapper">
+        <div class="content-title">Explore Postman Plans</div>
+        <div class="content-subtitle">Postman has solutions for everyone, from individuals to teams and enterprises.</div>
+        <a class="primary-btn" href="/pricing">Compare Plans</a>
+      </div>
+    </div>
+    <img class="content-image" src="/img/v2/homepage/pick-a-plan.svg">
+    <div class="content-gap"></div>
+    <div class="content-wrapper">
+      <div class="content-title">Explore Postman Plans</div>
+      <div class="content-subtitle">Postman has solutions for everyone, from individuals to teams and enterprises.</div>
+      <a class="primary-btn" href="/pricing">Compare Plans</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // if the user logged in.
+  if (document.cookie.indexOf('getpostmanlogin') > -1) {
+    document.getElementById('cta-btn-1').innerHTML = 'Learn about Postman';
+    document.getElementById('cta-btn-1').href = 'https://learning.getpostman.com/docs/postman/collections/creating_collections';
+  }
+
+  // content wheel animation.
+  runScript();
+  function runScript() {
+    if( window.$ ) {
+      // wheel hover animation.
+      $(".wheel-tag").hover(
+        function() {
+          var index = $(this).index();
+          if ($(this).parent().hasClass( "wheel-tags-right" )) {
+            index += 3;
+          }
+          var dot = $(".wheel-dot-inner").eq(index);
+          if (dot.is(":visible")) {
+           dot.hide();
+          } else {
+            dot.show();
+          }
+        }
+      );
+
+      // tag carousel animation.
+      $('.tag-carousel-container-mobile').slick({
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3,
+        arrows: false,
+        variableWidth: true,
+        // initialSlide: 5,
+      });
+      // On slick swipe event
+      $('.tag-carousel-container-mobile').on('swipe', function(event, slick, direction){
+        $(".wheel-dot-inner-mobile").hide();
+        $(".wheel-dot-inner-mobile").eq(5 - slick.currentSlide).show();
+      });
+
+      // logo carousel animation.
+      $('.carousel-container').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+        centerMode: true,
+        touchMove: false,
+        swipe: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 460,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    } else {
+      // wait 50 milliseconds and try again.
+      window.setTimeout( runScript, 50 );
+    }
+  }
+</script>	  <footer>
+  <div class="container">
+    <div class="row">
+      <img class="footer__pm-logo" src="/img/v2/logo-mark.svg" />
+      <ul class="column">
+        <li class="column__title">
+          Platform
+        </li>
+        <li>
+          <a href="https://learning.getpostman.com/docs/postman/workspaces/intro_to_workspaces/">Collections & Workspaces</a>
+        </li>
+        <li>
+          <a href="https://learning.getpostman.com/docs/postman/api_documentation/intro_to_api_documentation">Documentation</a>
+        </li>
+        <li>
+          <a href="https://learning.getpostman.com/docs/postman/mock_servers/intro_to_mock_servers">Mock Servers</a>
+        </li>
+        <li>
+          <a href="/monitoring">Monitoring</a>
+        </li>
+        <li>
+          <a href="https://docs.api.getpostman.com">Postman API</a>
+        </li>
+        <li>
+          <a href="/api-network">API Network</a>
+        </li>
+        <li>
+          <a href="/integrations">Integrations</a>
+        </li>
+        <li>
+          <a href="https://learning.getpostman.com/docs/postman/collection_runs/command_line_integration_with_newman">Newman</a>
+        </li>
+      </ul>
+      <ul class="column">
+        <li class="column__title">
+          Plans & Pricing
+        </li>
+        <li>
+          <a href="/pricing">Overview</a>
+        </li>
+        <li>
+          <a href="/postman">Postman</a>
+        </li>
+        <li>
+          <a href="/pro">Postman Pro</a>
+        </li>
+        <li>
+          <a href="/enterprise">Postman Enterprise</a>
+        </li>
+      </ul>
+      <ul class="column">
+        <li class="column__title">
+          Support
+        </li>
+        <li>
+          <a href="https://learning.getpostman.com">Docs</a>
+        </li>
+        <li>
+          <a href="/apps#changelog">Release Notes</a>
+        </li>
+        <li>
+          <a href="https://support.getpostman.com/hc/en-us">Help Center</a>
+        </li>
+        <li>
+          <a href="http://pages.getpostman.com/Resellers-Support.html" target="_blank">Resellers</a>
+        </li>
+        <li>
+          <a href="http://status.getpostman.com/" target="_blank">Status</a>
+        </li>
+      </ul>
+      <ul class="column">
+        <li class="column__title">
+          Company
+        </li>
+        <li>
+          <a href="/company">About</a>
+        </li>
+        <li>
+          <a href="#">Customers</a>
+        </li>
+        <li>
+          <a href="/jobs/">
+            Jobs
+            <span class="highlight-text bold-text reduce-text">
+              We&#39;re Hiring!
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="/resources/press-releases/">Press</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+        <li>
+          <a href="https://store.getpostman.com" target="_blank">Swag Shop</a>
+        </li>
+      </ul>
+      <ul class="column">
+        <li class="column__title">
+          Resources
+        </li>
+        <li>
+          <a href="/apps">Downloads</a>
+        </li>
+        <li>
+          <a href="/community">Community</a>
+        </li>
+        <li>
+          <a href="http://blog.getpostman.com" target="_blank">Blog</a>
+        </li>
+        <li>
+          <a href="/security">Security</a>
+        </li>
+        <li>
+          <a href="/licenses/privacy">Privacy and Terms</a>
+        </li>
+      </ul>
+      <ul class="column column__social">
+        <li>
+          <a href="https://www.facebook.com/getpostman/" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6826 20H1.10385C0.49403 20 0 19.5057 0 18.8961V1.10384C0 0.494104 0.494108 0 1.10385 0H18.8962C19.5058 0 20 0.494104 20 1.10384V18.8961C20 19.5057 19.5057 20 18.8962 20H13.7997V12.2549H16.3994L16.7886 9.23649H13.7997V7.30943C13.7997 6.43554 14.0424 5.84 15.2955 5.84L16.8939 5.83931V3.13962C16.6175 3.10284 15.6687 3.02065 14.5648 3.02065C12.2603 3.02065 10.6826 4.4273 10.6826 7.0105V9.23649H8.0763V12.2549H10.6826V20Z" fill="#ffffff"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/postmanclient" target="_blank" rel="noopener">
+            <svg width="30" height="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25.955 10.483c-.032.25-.097.492-.162.734-.583 2.175-1.647 4.222-2.986 6.01-3.93 5.163-9.79 7.257-15.664 5.683-2.76-.74-5.257-2.334-7.143-4.542.376.138.784.285 1.17.388 2.31.619 4.747.384 6.952-.654-2.141-.61-3.651-2.68-3.733-5.07a4.73 4.73 0 0 0 2.339.516c-2.237-1.156-3.4-3.873-2.643-6.445l.019-.07a5.09 5.09 0 0 0 2.126 1.31C5.063 6.921 4.682 5.005 5.172 3.175c.26-.967.743-1.873 1.414-2.582 1.684 4.115 4.95 7.21 8.961 8.545.015-.44.094-.863.205-1.278.814-3.038 3.75-4.879 6.575-4.122 1.38.37 2.562 1.352 3.229 2.715a10.32 10.32 0 0 0 3.594-.443c-.719 1.14-1.817 2.03-3.052 2.402 1.055.172 2.1.119 3.152-.08a10.71 10.71 0 0 1-3.295 2.151z" fill="#ffffff" fill-rule="evenodd"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/postman-api-tools-" target="_blank" rel="noopener">
+            <svg width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.134 7.363H.537v14.044h4.597zM5.437 3.019C5.407 1.642 4.44.593 2.866.593 1.293.593.265 1.642.265 3.019c0 1.348.998 2.427 2.541 2.427h.03c1.603 0 2.601-1.079 2.601-2.427zM21.714 13.354c0-4.313-2.268-6.32-5.293-6.32-2.44 0-3.534 1.362-4.144 2.319v-1.99H7.68c.06 1.318 0 14.044 0 14.044h4.598v-7.843c0-.42.03-.839.151-1.139.333-.839 1.09-1.707 2.36-1.707 1.664 0 2.329 1.288 2.329 3.175v7.514h4.597v-8.053z" fill="#ffffff" fill-rule="evenodd"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <div class="footer__copyright">
+        <span>&copy; <span id="current-year"></span> Postman, Inc.</span>
+        <span>All Rights Reserved</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+	  <!-- Main Side Menu -->
+<div id="sidebar-toggleable">
+  <ul class="pm-sidebar-main-nav">
+    <li class='sidebar-menu-item'>
+      <a href="/" class="active">Home</a>
+    </li>
+    <li class='sidebar-menu-item'>
+      <a href="/products" class="">Product</a>
+    </li>
+    <li class='sidebar-menu-item'>
+      <input type='checkbox' id='solutions-submenu' class='submenu-input' />
+      <label for='solutions-submenu' class='submenu-label'>Solutions</label>
+      <ul class='sidebar-submenu'>
+        <li><a href='/publishers' class="">Publishers</a></li>
+        <li><a href='/devops' class="">DevOps</a></li>
+        <li><a href='/qa' class="">QA</a>
+        <li><a href='/front-end' class="">Front-end</a>
+        <li><a href='/back-end' class="">Back-end</a>
+      </ul>
+    </li>
+    <li class='sidebar-menu-item'>
+      <a href="/enterprise" class="">Enterprise</a>
+    </li>
+    <li class='sidebar-menu-item'>
+      <a href="/pricing" class="">Plans &amp; Pricing</a>
+    </li>
+    <li class='sidebar-menu-item'>
+      <a href="https://learning.getpostman.com/" class="">Docs</a>
+    </li>
+    <li class='sidebar-menu-item'>
+      <a href="/api-network/" class="">API Network</a>
+    </li>
+    <li class="sidebar-menu-item hide-if-signedin">
+      <a href="https://app.getpostman.com/signup?redirect=web">Sign In</a>
+    </li>
+    <li class="sidebar-menu-item hide-if-signedout">
+      <a href="https://app.getpostman.com/">Dashboard</a>
+    </li>
+  </ul>
+</div>
+
+
+
+	</body>
+	<!-- Injecting script tags-->
+
+<script src='/assets/vendor.js?v=1545854560139' type='application/javascript'></script>
+
+<script src='/assets/platformVendor.js?v=1545854554641' type='application/javascript'></script>
+
+<script src='/assets/main.js?v=1545854560332' type='application/javascript'></script>
+
+<script src='/assets/platformMain.js?v=1545854555158' type='application/javascript'></script>
+
+
+
+
+<script type="text/javascript">
+  var $body = $('body');
+
+  /**
+   * Authentication
+   */
+  $(function () {
+    // Check if the user is signed in and add a class
+    // to the body if so. This will hide elements with the
+    // .hide-if-signedin class and show elements with
+    // the .hide-if-signedout class.
+    if (document.cookie.indexOf('getpostmanlogin') > -1) {
+      $body.addClass('signedin');
+    }
+  });
+
+  /**
+   * Navigation
+   */
+  $(function () {
+    if (document.cookie.indexOf('getpostmanlogin') > -1) {
+      var signInButton = document.getElementsByClassName('navbar-right-item__dashboard')[0];
+      signInButton.href = 'https://app.getpostman.com';
+      signInButton.innerText = 'Dashboard';
+    }
+
+    $(document).on('click', function () {
+      $('.navbar-dropdown-content-wrapper').css('display', 'none');
+      $('.navbar-links-item-active').removeClass('navbar-links-item-active');
+      $('.dropdown-open').removeClass('dropdown-open');
+    });
+
+    $('.navbar-dropdown-content-wrapper').on('click', function (e) {
+      e.stopPropagation();
+    });
+
+    $('.navbar-links-item').on('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      var $this = $(this);
+      var dropdownWrapper = $('.navbar-dropdown-content-wrapper');
+      $('.navbar-links-item-active').removeClass('navbar-links-item-active');
+
+      if ($this.hasClass('dropdown-open')) {
+        dropdownWrapper.css('display', 'none');
+        $this.removeClass('dropdown-open');
+      } else {
+        $('.dropdown-open').removeClass('dropdown-open');
+        $this.addClass('dropdown-open');
+        $this.addClass('navbar-links-item-active');
+        dropdownWrapper.css('display', 'block');
+
+        if ($this.hasClass('dropdown-product')) {
+          $('.navbar-dropdown-content').css('display', 'none');
+          $('.navbar-dropdown-content.dropdown-product').css('display', 'flex');
+        }
+
+        if ($this.hasClass('dropdown-plans')) {
+          $('.navbar-dropdown-content').css('display', 'none');
+          $('.navbar-dropdown-content.dropdown-plans').css('display', 'flex');
+        }
+
+        if ($this.hasClass('dropdown-learning')) {
+          $('.navbar-dropdown-content').css('display', 'none');
+          $('.navbar-dropdown-content.dropdown-learning').css('display', 'flex');
+        }
+      }
+    });
+  });
+
+  $body.on('click', '#menu-toggle', function (e) {
+    $body.addClass('nav-open');
+  });
+
+  $body.on('click touchstart', '#menu-toggle-overlay', function (e) {
+    $body.removeClass('nav-open');
+  });
+
+  $(document).on('touchstart', function (e) {
+    var thisNodeName = e.target.nodeName;
+
+    if (thisNodeName === 'INPUT' || thisNodeName === 'TEXTAREA') {
+      return;
+    }
+
+    document.activeElement.blur();
+    $('input, textarea').blur();
+  });
+
+  /**
+   * AWS Slider
+   */
+  $(function () {
+    var $slideController = $('.slide-controller');
+
+    $slideController.on('click', function () {
+      var $self = $(this),
+        $group = $self.parent().children('.slide-controller'),
+        slideIndex;
+
+      slideIndex = $group.index($self);
+
+      $self.addClass('active').siblings().removeClass('active');
+      $self
+        .parent()
+        .next('.slide-content-wrap')
+        .children('.slide-contents')
+        .css('left', -slideIndex * 100 + '%');
+    });
+  });
+
+  /**
+   * Auto-playing videos
+   *
+   * Just add a pm-auto-video class to the HTML5 video element
+   * and the video will play when visible, and pause when not
+   * visible.
+   */
+  $(function () {
+    var $autoVideos = $('video.pm-auto-video'),
+      scrollWatch,
+      autoVideo = function () {
+        $autoVideos.each(function () {
+          var $this = $(this);
+
+          if ($this.is(':in-viewport')) {
+            $this.get(0).play();
+          } else {
+            $this.get(0).pause();
+          }
+        });
+      };
+
+    $(document).on('scroll', function () {
+      clearTimeout(scrollWatch);
+      scrollWatch = setTimeout(autoVideo, 500);
+    });
+  });
+
+  /**
+   * Collection infographic scroll handler
+   */
+  $(document).ready(function () {
+    var tag,
+      firstScriptTag;
+
+    $('.collection_infographic').length && $('.pm-page-wrap').fullpage({
+      scrollBar: true
+    });
+
+    // Load the YT iFrame API if a video embed exists on the page
+    if ($('.pm-resp-yt-wrap').length) {
+      tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+  });
+
+  function onYouTubeIframeAPIReady() {
+    var aws_player;
+
+    if ($('#aws-gateway-postman-video').length) {
+      aws_player = new YT.Player('aws-gateway-postman-video', {
+        videoId: 'pfoKFaHisbY'
+      });
+    }
+
+    $('[href="#aws-gateway-postman-video-wrap"]').click(function () {
+      aws_player.playVideo();
+    });
+  }
+
+  /**
+   * Show native options by default and hide others on the apps page
+   */
+  $(function () {
+    var os,
+      arch;
+
+    os = function () {
+      var platform = navigator.platform,
+        os = 'windows';
+
+      platform.match('Mac') && (os = 'osx');
+      platform.match('Win') && (os = 'windows');
+      platform.match('Linux') && (os = 'linux');
+
+      return os;
+    };
+
+    // Mark the active tab based on detected os
+    var tab = $(".app-tabs .app-list li[data-platform='changelog-" + os() + "-app']");
+    if (tab.length) {
+      $('.app-tabs .app-list li').removeClass('active');
+      $('.tab-content .tab-pane').removeClass('active');
+
+      $(tab).addClass('active');
+      $('.tab-content #changelog-' + os() + '-app').addClass('active');
+    }
+
+    // Update the link & UI when arch is changed
+    $('[data-architecture]').on('click', function (e) {
+      e.preventDefault();
+
+      var $this = $(this),
+        path = $this.children('a').attr('href'),
+        plat = $this.data('platform'),
+        arch = $this.data('architecture'),
+        $label = $this.parent().siblings('.pm-btn').find('.arch-label'),
+        $trigger = $this.parents('.dropdown').siblings('.pm-btn');
+
+      // Update the CTA href & dropdown label state
+      $trigger.attr('href', path);
+      $label.html(arch);
+    });
+  });
+</script>
+
+</html>

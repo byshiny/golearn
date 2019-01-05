@@ -1,0 +1,1203 @@
+
+<html>
+ <head>
+  <title>留园新闻速递 NEWS </title>
+  <meta http-equiv='Content-Type' content='text/html; charset=gb2312'>
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link href="public/css/main_new.css" rel="stylesheet" type="text/css" />
+  <style type='text/css'>
+		#d_list li{
+			list-style-type:normal;
+		}
+		a:link    { color: #0000ff; text-decoration: none }
+		a:visited { color: #800080; text-decoration: none }
+		a:active  { color: #ff0000; text-decoration: none }
+		a:hover   { color: #ff0000; text-decoration: underline }
+		table     { font-size: 14px; font-family: "宋体" }
+		.14px     { font-size: 14px; font-family: "宋体"; line-height: 130%; word-break: break-all }
+		.td1 {  FONT-SIZE: 14px; LINE-HEIGHT: 158%; FONT-FAMILY: "宋体"; word-break: break-all}
+		.td2 {  FONT-SIZE: 12px; LINE-HEIGHT: 158%; FONT-FAMILY: "宋体"; word-break: break-all}
+		table.dc_bar {border:1px solid #CCCCCC;}
+		table.dc_bar2 {border:1px solid #99C9C9;}
+		#d_list td{line-height:25px;}
+  </style>
+
+ </head>
+ <body>
+<script language='javascript'>
+function bookmark(){
+var title=document.title;
+var url=document.location.href;
+
+	if (window.sidebar) {
+		window.sidebar.addPanel(title, url,"");		
+	}
+	else if( window.opera && window.print ){
+		var mbm = document.createElement('a');
+		mbm.setAttribute('rel','sidebar');
+		mbm.setAttribute('href',url);
+		mbm.setAttribute('title',title);
+		mbm.click();
+	}
+	else{
+		try{
+			 window.external.addFavorite(url,title);
+			}
+		catch (e){				
+			try {
+				window.external.addToFavoritesBar(url,title);  //IE8
+			}
+			catch (e) {
+				var ctrl = (navigator.userAgent.toLowerCase()).indexOf('mac') != -1 ? 'Command/Cmd': 'CTRL';
+				alert('您可以尝试通过快捷键' + ctrl + ' + D 加入到收藏夹~');
+			}				
+		}
+	}
+}
+//设为首页
+function SetHome(obj,vrl){
+        try{	
+                obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        }
+        catch(e){
+                if(window.netscape) {
+                        try {
+                                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                        }
+                        catch (e) {
+                                alert("此操作被浏览器拒绝！请手动将本网站设为主页");
+                        }
+                        var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                        prefs.setCharPref('browser.startup.homepage',vrl);
+                 }else{
+					alert("此操作被浏览器拒绝！请手动将本网站设为主页");
+				 }
+        }
+}
+</script>
+	<script src="index.php?app=news&act=logininfo&3015"></script>
+	<div class="body_center" id="site_map">
+		<style type='text/css'>
+	#site_map_tab td{width:auto;height:24px;}
+	#site_map { height:auto;}
+</style>
+<table width="100%" border="0" cellpadding="2" align="center" bgcolor="#FFCC00" id="site_map_tab">
+	  <tr bgcolor="#ffd850"> 
+		<td><center>
+			<a href="https://www.6park.com/index.php">留园首页</a></center></td>
+		<td><center>
+			<a href="https://news.toutiaoabc.com/newspark/index.php">新闻速递</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/life9/index.php">婚姻家庭</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/life1/index.php">魅力时尚</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/life2/index.php">生活百态</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/life6/index.php">美食厨房</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/fr/index.php" >非常影音</a></center></td>
+		<td><center>
+			<a href="https://mv.6park.com/index.php">在线视频</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/life4/index.php">留学移民</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/enter6/index.php">卡通漫画</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/ghost/index.php">灵异空间</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/page/index.php">法律资讯</a> </center></td>
+		<td><center>
+			<a href="https://www.toutiaoabc.com/index.php" target=_blank>本地新闻</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/kr/index.php">共享频道</a></center></td>
+	  </tr>
+	  <tr bgcolor="#ffd850"> 
+		<td><center>
+			<a href="https://club.6parker.com/enter7/index.php">车迷沙龙</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/enter3/index.php">游戏天地</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/chan10/index.php">女性频道</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/know1/index.php">电脑前线</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/enter5/index.php">体坛纵横</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/life7/index.php">旅游风向</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/chan6/index.php">数码家电</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/chan8/index.php">摄影部落</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/novel/index.php">网络文坛</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/bocai/index.php">留园博彩</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/times/index.php">留情岁月</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/other/index.php">网编ｅ族</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/indexorgposts.php">热门原创</a></center></td>
+		<td><center><a href="https://club.6parker.com/index.php" >热帖导读</a></center></td>
+	  </tr>
+	  <tr bgcolor="#ffd850"> 
+		<td><center>
+			<a href="https://club.6parker.com/enter1/index.php">笑口常开</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/enter8/index.php">娱乐八卦</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/netstar/index.php">吃喝玩乐</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/tea/index.php">闲来茶馆</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/chan1/index.php">史海钩沉</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/life10/index.php">文化长廊</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/chan2/index.php">科技频道</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/chan5/index.php">爱子情怀</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/chan3/index.php">温馨居家</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/life5/index.php" >健康人生</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/chan9/index.php">上班一族</a> </center></td>
+		<td><center>
+			<a href="https://www.6park.com/page/rarea.php">缘聚海外</a></center></td>
+		<td><center>
+			<a href="https://news.toutiaoabc.com/newspark/view.php?app=news&act=replyhotvote&page=1">神评妙论</a></center></td>
+		<td><center>
+			<a href="https://news.toutiaoabc.com/newspark/index.php?act=longview">热度新闻</a></center></td>
+	  </tr>
+	  <tr bgcolor="#ffd850"> 
+		<td><center>
+			<a href="https://club.6parker.com/bolun/index.php">博论天下</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/military/index.php">网际谈兵</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/finance/index.php">经济观察</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/chan4/index.php">谈股论金</a></center></td>
+		<td><center>
+		<a href="https://club.6parker.com/pk/index.php">杂论闲侃</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/gz1/index.php">唯美贴图</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/gz2/index.php">学习园地</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/gz3/index.php">命理玄机</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/life8/index.php">宠物情缘</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/life3/index.php">情感世界</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/chan7/index.php">网络歌坛</a> 
+		  </center></td>
+		<td><center>
+			<a href="https://club.6parker.com/enter4/index.php">音乐殿堂</a></center></td>
+		<td><center>
+			<a href="https://club.6parker.com/nz/index.php" >吐槽爆料</a>
+			</center></td>
+		<td><center>
+			<a href="https://www.6park.com/service.htm">广告联系</a></center></td>
+	  </tr>
+	</table>	</div>
+	
+	<div class="body_center" id="site_info">
+		<table width="948" align="center" bgcolor="#ffffff" border="0">
+			<tr> 
+				<td valign="center" height="48"><b><font color="#663300"><span style="FONT-SIZE: 32px">全球近期地区新闻汇总</span></font></b></td>
+				<td valign="bottom" width=150px>
+					
+				</td>
+				<td align="center">
+				</td>
+				<form style="display:inline;" method="GET" action="https://news.toutiaoabc.com/newspark">
+				<td colspan="2"> 
+				  <div align="right">
+					<input type="hidden" value="newssearch" name="act">
+					<input type="hidden" value="news" name="app">
+					<input type="text" size="10" name="keywords" maxlength="40" value="新闻搜索" onclick='this.value="";'>
+					<input type="submit" value="查询" name="submit">
+				  </div>
+				</td>
+				</form>
+	  </tr> 
+	</table>
+	</div>
+	<div class="body_center hr" id="hr_all"></div>
+	<!--body_content-->
+	<div class="body_center" id="main">
+		<div id="main_right" class="fleft">
+			<div id="d_gold_title"  ><b>
+			<a href="https://news.toutiaoabc.com/newspark/"><font color=990000>◇留园新闻速递首页◇</font></a>
+			 <a href="https://news.toutiaoabc.com/newspark/index.php?act=hotview" ><font color=990000>◇近期热门新闻点击排行榜◇</font></a>  <a href="https://news.toutiaoabc.com/newspark/index.php?act=hotreply"  ><font color=990000>◇近期热评新闻排行榜◇</font></a>  <a href="https://news.toutiaoabc.com/newspark/index.php?act=longview"  ><font color=990000>◇即刻热度新闻排行榜◇</font></a>
+			 </b><br>
+				<b>
+				【<a href="https://news.toutiaoabc.com/newspark/index.php">留园新闻速递首页</a>】
+				【<a href="index.php?type_id=1">美国新闻</a>】
+				【<a href="index.php?type_id=2">加拿大</a>】
+				【<a href="index.php?type_id=5">英国</a>】
+				【<a href="index.php?type_id=6">德国</a>】
+				【<a href="index.php?type_id=7">法国</a>】
+				【<a href="index.php?type_id=3">澳大利亚</a>】
+				【<a href="index.php?type_id=4">新西兰</a>】
+				【<a href="index.php?type_id=8">日本</a>】
+				【<a href="index.php?type_id=9">新加坡</a>】
+				【<a href="index.php?type_id=10">爱尔兰</a>】
+				【<a href="index.php?act=hotview">地区新闻汇总</a>】
+				</b>
+			</div>
+			<div id="d_list"  class="main_right_margin">
+			
+			<table  width="100%" cols="3" align="center" class=dc_bar cellspacing="3" cellpadding="5" bgcolor="#FFFFFF"> 
+				<tr> 
+					   <td width=80><b><font color="#990000">新闻地</font></b> </td>
+						<td width="580"> 
+						  <center>
+							<b><font color="#990000">新闻标题</font></b>
+						  </center>
+						</td>
+												<!--
+
+						<td width="80"> 
+						  <center>
+							<b><font color="#990000">阅读人次</font></b> 
+						  </center>
+						</td>
+						
+						<td width="100"> 
+						  <center>
+							<b><font color="#990000">评论人次</font></b> 
+						  </center>
+						</td>
+						-->
+						<td width="180"> 
+						  <center>
+							<b><font color="#990000">评论</font></b> 
+						  </center>
+						</td>
+				</tr>
+		<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714527" target=_blank>华人店主自曝，自家便利店遭遇抢劫，强悍华人大姐抡起棍子，劫匪吓尿了！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>360 reads</center>
+		<td><center>1 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714527" target=_blank>评论[1]</a></center></td></tr>
+				<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714520" target=_blank>专门欺骗旧金山华裔社区老人!两华女机场落网,被控15重罪</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>576 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714520" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714514" target=_blank>德州“熊孩子“新年闯大祸！扔鸡蛋恶作剧造成1人丧生</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>71 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714514" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714247" target=_blank>两华人捷运站遭50名青少年围殴 华男被打到眼窝骨裂</a> <i>01/01/19</i></td>
+		<!--
+		<td><center>5908 reads</center>
+		<td><center>4 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714247" target=_blank>评论[4]</a></center></td></tr>
+				<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714506" target=_blank>周六千万别去St Kilda！极端右翼和黑人帮派正面对抗</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>553 reads</center>
+		<td><center>1 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714506" target=_blank>评论[1]</a></center></td></tr>
+				<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714486" target=_blank>纽约恐怖袭击引全民恐慌！本拉登继承者出现</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>1099 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714486" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714519" target=_blank>惊喜！$4.25亿巨奖纽约华人商店售出 中奖者或为华裔!快去查查 是不是你!</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>637 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714519" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=713926" target=_blank>不撕了？加拿大拿下中国55亿高铁大单！</a> <i>12/31/18</i></td>
+		<!--
+		<td><center>10275 reads</center>
+		<td><center>14 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=713926" target=_blank>评论[14]</a></center></td></tr>
+				<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714219" target=_blank>美男子买一条钻石手镯送老婆，寄来48条，怎么办？！</a> <i>01/01/19</i></td>
+		<!--
+		<td><center>4235 reads</center>
+		<td><center>3 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714219" target=_blank>评论[3]</a></center></td></tr>
+				<tr ><td><center><b><a href="index.php?type_id=5">英国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714623" target=_blank>先砸一个亿，英国积极备战无协议脱欧</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>147 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714623" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714590" target=_blank>悉尼Chatswood两男子当街被刺伤，一人死亡！16岁少年当场被捕！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>120 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714590" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714443" target=_blank>大温男子一起床，发现院子里多了只正在发嗲的“巨猫”</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>1665 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714443" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=8">日本</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714609" target=_blank>AV女优排行：第一名竟是她</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>114 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714609" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714257" target=_blank>中国式抵制？北京“加拿大鹅“卖翻！零下低温室外排队！说好的抵制呢？</a> <i>01/01/19</i></td>
+		<!--
+		<td><center>1254 reads</center>
+		<td><center>3 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714257" target=_blank>评论[3]</a></center></td></tr>
+				<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=4">新西兰</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714617" target=_blank>新西兰警方正在全国通缉这15人，如果遇到千万别靠近，直接报警！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>72 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714617" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714603" target=_blank>2019年WP、SP、EP、LTVP、PR、公民最新申请攻略拿好不谢~</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>66 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714603" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714624" target=_blank>人类首次！中国成功实现人类探测器首次月背软着陆</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>61 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714624" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714414" target=_blank>57岁奥斯卡黑人影帝与22年的妻子离婚 演过《黑豹》</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>1322 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714414" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=6">德国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714594" target=_blank>德国从圣母到极端有多远？德军又一极端右翼组织被破获</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>50 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714594" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=7">法国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714622" target=_blank>德法诠释纸片兄弟情：关键问题上，法国刚明确对德国说不</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>48 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714622" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714502" target=_blank>“幸好对方不是中国人”澳高速路上惊现逆行车，中国旅游巴士惊险闪避！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>373 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714502" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714418" target=_blank>卡戴珊姐妹雪地里穿比基尼 詹娜被冻得大爆粗口</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>1229 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714418" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=4">新西兰</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714619" target=_blank>他们不可以担保签证！新西兰公布最新黑心雇主名单，这些套路要谨防…</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>40 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714619" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=7">法国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714620" target=_blank>法国8人高空迎新年 有惊无险</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>35 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714620" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=10">爱尔兰</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714621" target=_blank>只要脱欧问题解决好，2019爱尔兰房产价格将再上涨5%</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>34 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714621" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=4">新西兰</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714615" target=_blank>新西兰人体会中国酒桌文化：只能意会，不能言传</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>34 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714615" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=8">日本</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714611" target=_blank>日本AV男优妻子上电视告白：我觉得性爱是他的才能！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>34 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714611" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=7">法国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714618" target=_blank>马克龙形象封面被指影射纳粹希特勒 法国世界报责编道歉</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>31 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714618" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=7">法国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714616" target=_blank>大变局！法国的友谊小船翻了，英国首相大位悬了，德国也摊上事了</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>30 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714616" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=6">德国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714587" target=_blank>在德国男人没有蛋蛋不能当警察？这一奇葩规定刚刚被废弃</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>30 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714587" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=6">德国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714592" target=_blank>男子水烟吧被刺，暴徒袭击救援人员；新年第一位宝宝降生在萨克森；四岁女孩救了一家人</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>29 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714592" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=6">德国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714601" target=_blank>研究：越来越多德国人担心老来受穷</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>28 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714601" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=6">德国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714596" target=_blank>德国跨年夜汽车冲撞路人致5伤 动机疑为仇外</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>28 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714596" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=6">德国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714600" target=_blank>德国大学最新师生比，北威州又垫底，1比91…</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>27 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714600" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=4">新西兰</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714613" target=_blank>假期中巨奖！Taranaki一彩民中得2300万纽币</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>25 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714613" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714484" target=_blank>霉霉和男友现身纽约街头，两人甜蜜牵手，画面十分温馨</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>452 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714484" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714559" target=_blank>刘永好李连杰姚明家在哪儿？看看上海富贵地图的变迁史</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>26 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714559" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=7">法国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714612" target=_blank>刚新年就涨价，英国人都示威抗议了！今年你要多花几百镑？</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>23 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714612" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714605" target=_blank>重磅！新加坡CPF养老金三大新变化！老了以后到底每月能领多少钱？</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>23 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714605" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714411" target=_blank>美国华盛顿特大暴雨后，鱼群游上高速公路汽车难行</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>1122 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714411" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714593" target=_blank>2018年新加坡房市年度KPI总结报告</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>23 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714593" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=7">法国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714607" target=_blank>马克龙新年誓言改革，瞄准失业、退休和精简机构三大难关</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>22 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714607" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=6">德国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714598" target=_blank>德媒看2019年的世界：西方在争吵，中国在崛起，非洲不断在增长……</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>22 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714598" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714489" target=_blank>十几名Opal Tower华人业主接受采访：“还有更多裂缝” “我们很焦虑绝望！”</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>337 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714489" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714606" target=_blank>2019年在新加坡赚大票子，这套发财密码又破译了...</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>19 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714606" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714602" target=_blank>罕见！4个月内4次，新加坡这一男子企图拐走多个小男孩......</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>19 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714602" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714599" target=_blank>27岁，坐拥452辆法拉利，105万粉丝，文莱有位富帅王子</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>19 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714599" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714586" target=_blank>在澳开车遭遇的“潜规则”，新手一定看才能变身澳洲老司机</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>19 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714586" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=7">法国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714583" target=_blank>跨年夜惊魂：法国八人乘过山车被困52米高空九小时</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>19 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714583" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714588" target=_blank>“给你打9折”！近200名Opal Tower华人业主喊话开发商回购公寓！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>18 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714588" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=5">英国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714608" target=_blank>各国领导人上班第一天都说了点啥？中国的这番话真棒！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>16 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714608" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714566" target=_blank>暖心！澳女不慎在海滩弄丢钻戒 陌生男子花90分帮其寻回</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>17 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714566" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=7">法国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714614" target=_blank>法国2019年新年关键词：“团结”与“改革”</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>15 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714614" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=7">法国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714585" target=_blank>里尔又有肉食店遭殃，几个月内第10起！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>16 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714585" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714579" target=_blank>1：4.7024，澳元断崖式暴跌！兑美元创10年来新低，人民币换澳元该出手时就出手！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>16 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714579" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714576" target=_blank>悉尼亚裔女沦为红通嫌犯 涉嫌企图杀女</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>16 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714576" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714575" target=_blank>Ashbury清洁工殴打捅伤雇主，92岁老人在家连喊“救命”！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>16 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714575" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714573" target=_blank>2019年澳洲假期安排已出！居然家全年1/3都在放假！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>16 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714573" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=6">德国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714591" target=_blank>警官还是网红？这是德国最美女警官的励志故事</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>15 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714591" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=8">日本</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714556" target=_blank>日本要变“天”了！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>16 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714556" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714574" target=_blank>Opal Tower更多内部照片曝光！业主一看气炸了，全是支柱，令人胆战心惊！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>13 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714574" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714569" target=_blank>澳夫妻年收入30万澳币 竟觉得活不起 只能买打折商品</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>13 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714569" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=7">法国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714581" target=_blank>93省又双叒叕发生两起火灾！且跨年夜99辆车被烧</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>12 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714581" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=7">法国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714610" target=_blank>法国超市卖斑马肉惹争议；丹麦火车事故造成多人死伤</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>10 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714610" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714562" target=_blank>EOI最快加分项了解一下？最后6轮！再不速度凑分，本财年的移民梦就要凉凉了！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>12 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714562" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714571" target=_blank>澳媒直言“悉尼已经完蛋”！细数悉尼七宗罪，闪耀都市变鬼城！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>11 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714571" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714568" target=_blank>5年内 墨尔本这座公寓里发生了两起玻璃爆炸事件</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>11 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714568" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714565" target=_blank>澳元汇率跌至近3年来最低点！专家：中国经济数据不及预期 澳元汇率应声下挫</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>11 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714565" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714597" target=_blank>新加坡又+罚单了，开柴油车也要懂“四分之三缸”</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>9 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714597" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714557" target=_blank>澳洲房价创十年最大降幅 全球楼市或持续降温</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>10 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714557" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714572" target=_blank>高级or高危？悉尼Opal Tower超高27米还要建！政府：这设计简直卓越！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>9 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714572" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714595" target=_blank>坡岛版“潘金莲”演绎史上最乱的婚外情大戏！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>7 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714595" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714563" target=_blank>超市里都能买到的产品竟然“有毒”？澳政府曝光大批不合格产品！小心中枪！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>8 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714563" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714584" target=_blank>紧急！澳洲又一个州关闭大批类别申请！PR越来越难拿，移民政策又震荡！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>4 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714584" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714561" target=_blank>钱没了？澳洲刷卡手续费正悄悄偷走你的钱 一年$2亿！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>5 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714561" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714577" target=_blank>澳大利亚成为中国婚纱照圣地……</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>4 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714577" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714582" target=_blank>200米人龙等公交！轨道施工 悉尼部分火车沿线延误！乘客被困数小时</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>2 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714582" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714564" target=_blank>Woolworths再现藏针葡萄 临产孕妇险吞针</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>3 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714564" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714604" target=_blank>新加坡元旦有点扯淡！烟民围城乌节路、出租半夜狂飙费...</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>0 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714604" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=6">德国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714589" target=_blank>德国步入“后默克尔时代”：党内、国内和欧盟内危机重重</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>0 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714589" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714580" target=_blank>女儿捡贝壳竟掉出2只“蓝环章鱼”可杀52人！父：我差点死在孩子面前</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>0 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714580" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=8">日本</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714560" target=_blank>日本住房免费送背后，人口老龄化究竟有多严重？</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>1 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714560" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714578" target=_blank>忍了两年！澳男向捷星航空索赔22万 因在机舱厕所滑了一跤！</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>0 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714578" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714570" target=_blank>本来想露个营，这个悉尼网友被谷歌带着，开始了一段奇怪的旅程</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>0 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714570" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714567" target=_blank>紧急！悉尼华人家宅正遭一群中东年轻人滋扰！之前曾遭恶意碰瓷</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>0 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714567" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714558" target=_blank>代购之死:一次出国净赚一万元的日子没了!</a> <i>01/03/19</i></td>
+		<!--
+		<td><center>0 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714558" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714553" target=_blank>在新加坡过年，人们靠这个篮子吃出了富贵！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>42 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714553" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=8">日本</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714542" target=_blank>日本首富是谁？他真实的“富可敌国”！日本十大富豪排名出炉！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>41 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714542" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714248" target=_blank>无证妈妈遭遣返,美国公民子女回美独自生活</a> <i>01/01/19</i></td>
+		<!--
+		<td><center>2454 reads</center>
+		<td><center>2 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714248" target=_blank>评论[2]</a></center></td></tr>
+				<tr ><td><center><b><a href="index.php?type_id=8">日本</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714555" target=_blank>日本测试｜第一眼看到什么动物，就是什么样的性格</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>31 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714555" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714552" target=_blank>新加坡中小学开学，最抢镜还看爹妈</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>27 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714552" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714551" target=_blank>中国法律一出手，全球代购都发抖！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>22 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714551" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=8">日本</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714539" target=_blank>日本77岁老奶奶想对年轻的自己说的一番话，感动了全日本……</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>22 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714539" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714549" target=_blank>为了让中国游客享用美味的榴莲，泰国推出超严新法令！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>17 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714549" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=8">日本</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714540" target=_blank>日本网友下雪天忘记关车窗，然后他的车成了这样……</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>17 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714540" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=8">日本</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714544" target=_blank>日本铲屎官给狗主子做的晚餐，网友：狗都比我吃的好……</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>15 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714544" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=8">日本</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714543" target=_blank>知名男艺人半夜约会陌生妹子，老婆发现后竟然这样回应……</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>15 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714543" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714554" target=_blank>新加坡网红零食半包下肚，吃出了炸壁虎？！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>14 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714554" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714547" target=_blank>新加坡和马来西亚史上最狠禁烟令今日生效！烟民们可要小心了～</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>14 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714547" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714536" target=_blank>不分乌皂白！加拿大军机跑中国周边瞎溜达，中国霸气回应！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>60 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714536" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=8">日本</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714541" target=_blank>想不到，这个算不上很美的33岁女星获得了2018日本最美面孔……</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>14 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714541" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=8">日本</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714546" target=_blank>日本的“初梦”到底是指哪天做的梦？</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>13 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714546" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714218" target=_blank>加州女警官赌城仅健身不赌博 局长很感动 将其逮捕</a> <i>01/01/19</i></td>
+		<!--
+		<td><center>4374 reads</center>
+		<td><center>2 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714218" target=_blank>评论[2]</a></center></td></tr>
+				<tr ><td><center><b><a href="index.php?type_id=8">日本</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714545" target=_blank>东京原宿1月1日车辆暴走事件致8人受伤！21岁犯罪男性：这是对死刑的报复……</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>9 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714545" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714537" target=_blank>不甘遭惩罚! 加拿大派军舰赴亚太施压, 看到大批054A军舰不敢靠近</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>53 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714537" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=5">英国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714425" target=_blank>孤独驱散，英国政府要花 1150 万英镑缓解国民孤独感</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>907 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714425" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714535" target=_blank>堪比中国皇上选妃！我在加拿大捐精子坏了身体，无人问津！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>46 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714535" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714550" target=_blank>中国女哭诉：嫁给新加坡男人不是为了绿卡！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>0 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714550" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=9">新加坡</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714548" target=_blank>全球海外中国人注意：史上最大的护照政策调整来了！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>0 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714548" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714526" target=_blank>加拿大移民部突发重要信息！1月将重开重要移民项目！要抢！！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>163 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714526" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714533" target=_blank>震惊！加拿大外交部被通知：又一名加国公民在海外被捕</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>33 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714533" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714534" target=_blank>加拿大叫板中国后, 又惹上俄罗斯, 北约: 送死不要连累我们!</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>31 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714534" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714494" target=_blank>墨市华裔屋主砍自家后院大树请求遭驳回！仲裁庭表示：植被覆盖率会受影响</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>228 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714494" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=5">英国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714427" target=_blank>播放成龙大哥床戏 这家电视台高管被革职</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>835 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714427" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714531" target=_blank>加拿大小省份有哪些大学？这些大学都怎么样呢？</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>20 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714531" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714501" target=_blank>天呐！未来墨尔本又要大变，政府总计投了1057个亿！最早的只需再等3年</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>212 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714501" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714538" target=_blank>最高检披露两名加拿大公民在华被捕最新进展</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>14 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714538" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714518" target=_blank>不能让AI人工智慧取代我们!美国疯狂民众开车攻击Google自驾车</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>183 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714518" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714496" target=_blank>亚裔女被骑警揪着头发直接撂倒！跨年夜南澳114人被捕...</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>200 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714496" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=6">德国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714463" target=_blank>150张绝妙照片，一口气看完惊心动魄诡异荒唐的2018！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>709 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714463" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714521" target=_blank>动人时刻！美国航空一地勤为逗机上失控孩童在停机坪跳街舞</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>169 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714521" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714532" target=_blank>加拿大为什么摆脱不了对美国依赖？四大经济生命线已被牢牢控制！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>0 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714532" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=6">德国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714404" target=_blank>2019年德国假期预览出炉！明年所有假日都不在周末，大家鼓掌！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>1122 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714404" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714512" target=_blank>凶杀案知多少? 纽约降了,美国的这个城市却暴增</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>143 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714512" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714500" target=_blank>速度自查！悉尼又确诊一例麻疹病例！患者曾去过这些地方！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>162 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714500" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714485" target=_blank>直击纽约跨年：旧房维修继续拖 政府在伤口上撒盐</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>251 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714485" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714529" target=_blank>必看！2019年加国各项最新政策！涉及移民、税务、护照、签证、生活成本等各个方面！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>88 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714529" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714524" target=_blank>中国制造的新型毒品首现加国！具剧毒且不受联邦监管！留学生千万要小心。</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>88 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714524" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714511" target=_blank>最新报告：美房价下降 2019开始成为买方市场</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>132 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714511" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714422" target=_blank>突发！多伦多华人区商场突发恶性劫案，现场大量视频照片流出，人们四处逃命…</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>732 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714422" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714469" target=_blank>18岁华裔少女爆红 网曝背景:上海富二代留学美国!</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>243 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714469" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714523" target=_blank>心惊！只因一个汉堡，年轻母亲痛失爱子，我们每天吃的食物里竟然藏着这些？</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>82 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714523" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714509" target=_blank>婆媳即将开战？ 小布老妈恨裘莉 毁掉儿子人生</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>127 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714509" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714516" target=_blank>跨年聚会传悲剧，美青少年玩枪误击友人后开枪自尽</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>125 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714516" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714517" target=_blank>华盛顿州新法1日生效!禁止21岁以下购买半自动步枪</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>124 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714517" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714449" target=_blank>美国会众议院将表决“无隔离墙开支”拨款法案</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>700 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714449" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714525" target=_blank>切勿模仿！加国小哥竟用这种方式庆圣诞，从70层高楼一跃而下...</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>67 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714525" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714515" target=_blank>骇人听闻,旧金山华埠北平园99岁华裔老妇惨遭性侵</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>112 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714515" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714528" target=_blank>节后第一个工作日，大家都还好么？不好不好，怀念美食聚会葛优躺…</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>64 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714528" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=5">英国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714424" target=_blank>被英国女王授勋封爵的无上荣耀，A妹说拒绝就拒绝了</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>693 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714424" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714503" target=_blank>庆祝节日千万别做这事！19岁年轻妈妈为此付出惨痛代价</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>131 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714503" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=5">英国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714522" target=_blank>范丞丞是范冰冰私生子一案正式宣判，造谣者被罚款6万！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>99 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714522" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714479" target=_blank>窝里斗？加拿大刚硬气一把，就被美国抓住小辫子，直接开撕了？</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>209 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714479" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=2">加拿大</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714530" target=_blank>加媒：加拿大外交部称一加公民从事间谍活动在俄被捕</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>51 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714530" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714495" target=_blank>“亚洲人都是娘们！”著名喜剧演员狂飙大尺度脏话种歧亚洲人！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>115 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714495" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714451" target=_blank>盘点2018年美国零售商激战：除了沃尔玛，还有谁是赢家？</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>642 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714451" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714475" target=_blank>美国又一盟友反水，国防部长怒怼五角大楼，多次拒绝访美邀请</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>194 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714475" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714510" target=_blank>六个月后纽约小吃或许要涨价,因为...</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>76 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714510" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714488" target=_blank>“我现在就退休！” 澳洲老太网上找工作 意外发现自己中得百万大奖</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>91 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714488" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714513" target=_blank>7岁女儿被枪杀 德州妈妈呼吁凶手自首</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>63 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714513" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714508" target=_blank>2019麻州多项新法,今起上路!</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>63 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714508" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714478" target=_blank>“美国前总统”奥巴马，重新上台执政的可能吗？</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>169 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714478" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=6">德国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714459" target=_blank>金融黑幕：德意志银行是德国最大的犯罪企业？！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>541 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714459" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714483" target=_blank>美国从叙利亚撤军，却在伊叙边境建立基地展开了新的布局</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>163 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714483" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714505" target=_blank>新州“裸体海滩”游客创纪录 引安全担忧</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>77 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714505" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714507" target=_blank>纽约市出生证明书,今起可选选第三性别“X”</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>48 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714507" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=7">法国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714319" target=_blank>中国年轻女游客在德国国王湖附近坠山！重伤下拨急救电话终脱险</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>1520 reads</center>
+		<td><center>1 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714319" target=_blank>评论[1]</a></center></td></tr>
+				<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714498" target=_blank>亚洲诈骗团伙瞄准澳人 有人被骗光积蓄</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>62 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714498" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714504" target=_blank>Uber跨年夜狂宰人！5倍价格把珀斯市民给气疯了</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>60 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714504" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714439" target=_blank>特斯拉Model 3美国库存超过3000</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>549 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714439" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714481" target=_blank>又出新花样？美国海军计划明年大变样，最强战舰也将服役</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>126 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714481" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714492" target=_blank>谁来为Opal大厦事故负责？各个相关单位开始“踢皮球”了！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>46 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714492" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714490" target=_blank>悉尼机场几万人滞留 49年来最惨！更糟的是 一场超大雷暴马上来了……</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>46 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714490" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714482" target=_blank>2019年新年：美国军方为炸弹推特道歉</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>121 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714482" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714491" target=_blank>惊！南澳Victor Harbor的标志 马拉电车停运了！</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>41 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714491" target=_blank>评论</a></center></td></tr>
+			<tr ><td><center><b><a href="index.php?type_id=3">澳大利亚</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714497" target=_blank>免费跨年烟花竟成谋财工具？悉尼歌剧院外修“长城</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>39 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714497" target=_blank>评论</a></center></td></tr>
+			<tr bgcolor=#EDEDED><td><center><b><a href="index.php?type_id=1">美国</a></b></center></td><td><a href="index.php?app=news&act=view&nid=714468" target=_blank>2018年全国最安全大都市 纽约竟然卫冕</a> <i>01/02/19</i></td>
+		<!--
+		<td><center>113 reads</center>
+		<td><center>0 次</center></td>-->
+				<td><center><a href="index.php?act=newsreply&nid=714468" target=_blank>评论</a></center></td></tr>
+	
+
+</table>
+			</div>
+						<div id="d_gold_title"  style='height:30px;'>
+				<b>
+				【<a href="http://news.6parker.com/newspark/">留园新闻速递首页</a>】
+				【<a href="index.php?type_id=1">美国新闻</a>】
+				【<a href="index.php?type_id=2">加拿大</a>】
+				【<a href="index.php?type_id=5">英国</a>】
+				【<a href="index.php?type_id=6">德国</a>】
+				【<a href="index.php?type_id=7">法国</a>】
+				【<a href="index.php?type_id=3">澳大利亚</a>】
+				【<a href="index.php?type_id=4">新西兰</a>】
+				【<a href="index.php?type_id=8">日本</a>】
+				【<a href="index.php?type_id=9">新加坡</a>】
+				【<a href="index.php?type_id=10">爱尔兰</a>】
+				【<a href="index.php?act=hotview">地区新闻汇总</a>】
+				</b>
+				
+			</div>
+			<div id="d_list_foot" class="main_right_margin">
+				<span style="float:left;margin-left:200px;">((敬请注意: 本网新闻取自各大新闻媒体，新闻内容并不代表本网立场))</span>
+				<span style="float:right;">[&nbsp;<a href="https://news.toutiaoabc.com/newspark/index.php">- 留园新闻速递首页 -</a>&nbsp;]&nbsp;&nbsp;[&nbsp;<a href="http://www.6park.com">- 留园网首页 -</a>&nbsp;]&nbsp;&nbsp;</span>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!--body_content_end-->
+	<div class="body_center" id="footer_map" style='height:auto;margin-bottom:15px;background:white;'>
+				<div class="foot_white"></div>
+				<div id='foot_ad' style='text-align:center;'>
+				<br>
+									<br>
+				</div>
+	</div>
+	<div class="body_center" id="footer_link">
+		[<a href="http://www.6park.com/parks/claim.htm#term">  留园条例  </a>]
+		[<a href="http://www.6park.com/service.htm">  广告服务  </a>] 
+		[<a href="http://www.6park.com/contact/con2.htm">  联系我们  </a>] 
+		[<a href="http://home.6park.com/index.php">  个人帐户  </a>]
+		[<a href="http://home.6park.com/index.php?app=member&act=reg">  笔名注册  </a>]
+		[<a href="http://home.6park.com/index.php?app=home&act=askforbz">  版主申请  </a>]
+		[<a href="http://m.6park.com"> 留园手机网页版 </a>]
+[<a href="http://home.6park.com/client/"> 留园手机客户端下载 </a>]
+		<br>
+			<font color="#660000">Copyright (C) 2003-2018 6park.com All rights Reserved.</font> 
+	</div>
+	<link href="public/css/detail.css" rel="stylesheet" type="text/css" />
+	<script src="./public/js/jquery.js"></script>
+	<link href="/pub/prompt.css" rel="stylesheet" type="text/css" />
+<script src="/pub/gdpr.js" type="text/javascript"></script>
+<script type='text/javascript' src='wordex.js'></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119976071-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119976071-2');
+</script>
+
+<!-- Default Statcounter code for localnews
+https://www.toutiaoabc.com/ -->
+<script type="text/javascript">
+var sc_project=11799067; 
+var sc_invisible=1; 
+var sc_security="db311753"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11799067/0/db311753/1/" alt="Web
+Analytics"></a></div></noscript>
+<!-- End of Statcounter Code -->
+
+
+
+ </body>
+</html>
