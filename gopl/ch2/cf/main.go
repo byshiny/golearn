@@ -12,7 +12,7 @@ import (
 	"os"
 	"strconv"
 
-	"gopl.io/ch2/tempconv"
+	"github.com/byshiny/golearn/gopl/ch2/tempconv"
 )
 
 func main() {
@@ -26,6 +26,7 @@ func main() {
 		c := tempconv.Celsius(t)
 		fmt.Printf("%s = %s, %s = %s\n",
 			f, tempconv.FToC(f), c, tempconv.CToF(c))
+		fmt.Print("%s = %s", c, tempconv.CToK(c))
 	}
 }
 

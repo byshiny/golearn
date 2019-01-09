@@ -5,6 +5,7 @@
 //!+
 
 // Surface computes an SVG rendering of a 3-D surface function.
+// Need to pipe this as an html file to see the actual picture ./surface > surface.xml
 package main
 
 import (
@@ -33,11 +34,43 @@ func main() {
 			bx, by := corner(i, j)
 			cx, cy := corner(i, j+1)
 			dx, dy := corner(i+1, j+1)
-			fmt.Printf("<polygon points='%g,%g %g,%g %g,%g %g,%g'/>\n",
-				ax, ay, bx, by, cx, cy, dx, dy)
+			if areParametersValid(ax, ay, bx, by, cx, cy, dx, dy) {
+				fmt.Printf("<polygon points='%g,%g %g,%g %g,%g %g,%g'/>\n",
+					ax, ay, bx, by, cx, cy, dx, dy)
+			}
+
 		}
 	}
 	fmt.Println("</svg>")
+}
+
+func areParametersValid(ax float64, ay float64, bx float64, by float64, cx float64, cy float64, dx float64, dy float64) bool {
+
+	if math.IsNaN(ax) {
+		return false
+	}
+	if math.IsNaN(ay) {
+		return false
+	}
+	if math.IsNaN(bx) {
+		return false
+	}
+	if math.IsNaN(by) {
+		return false
+	}
+	if math.IsNaN(cx) {
+		return false
+	}
+	if math.IsNaN(cy) {
+		return false
+	}
+	if math.IsNaN(dx) {
+		return false
+	}
+	if math.IsNaN(dy) {
+		return false
+	}
+	return true
 }
 
 func corner(i, j int) (float64, float64) {

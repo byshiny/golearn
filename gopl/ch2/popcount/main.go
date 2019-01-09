@@ -28,4 +28,16 @@ func PopCount(x uint64) int {
 		pc[byte(x>>(7*8))])
 }
 
+// PopCount returns the population count (number of set bits) of x.
+func PopCountLoop(x uint64) uint64 {
+
+	var temp uint64
+	for x > 0 {
+		temp = x & 1
+		x = x >> 1
+	}
+	return temp
+
+}
+
 //!-
