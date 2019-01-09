@@ -13,7 +13,9 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"math"
+	"net/http"
 )
 
 type point struct {
@@ -34,7 +36,17 @@ const (
 var sin30, cos30 = math.Sin(angle), math.Cos(angle) // sin(30°), cos(30°)
 
 func main() {
-	fmt.Printf("<svg xmlns='http://www.w3.org/2000/svg' "+
+
+	svdHandler := func(w http.ResponseWriter, r *http.Request) {
+		writeSVD(w)
+	}
+	http.HandleFunc("/svd", svdHandler)
+	log.Fatal(http.ListenAndServe("localhost:8000", nil))
+}
+
+func writeSVD(w http.ResponseWriter) {
+	w.Header().Set("Content-Type", "image/svg+xml")
+	fmt.Fprintf(w, "<svg xmlns='http://www.w3.org/2000/svg' "+
 		"style='stroke: grey; fill: white; stroke-width: 0.7' "+
 		"width='%d' height='%d'>", width, height)
 	for i := 0; i < cells; i++ {
@@ -51,20 +63,21 @@ func main() {
 			ptList := []point{ptA, ptB, ptC, ptD}
 			ctrPt := findCentroid(&ptList)
 
-			fmt.Println("%g, %g, %g, %g", az, bz, cz, dz)
+			fmt.Fprintf(w, "%g, %g, %g, %g", az, bz, cz, dz)
 			if areParametersValid(ax, ay, bx, by, cx, cy, dx, dy) {
 				if ctrPt.z < 0 {
-					fmt.Printf("<polygon points='%g,%g %g,%g %g,%g %g,%g' stroke='blue'/>\n",
+					fmt.Fprintf(w, "<polygon points='%g,%g %g,%g %g,%g %g,%g' stroke='blue'/>\n",
 						ax, ay, bx, by, cx, cy, dx, dy)
 				} else {
-					fmt.Printf("<polygon points='%g,%g %g,%g %g,%g %g,%g' stroke='red'/>\n",
+					fmt.Fprintf(w, "<polygon points='%g,%g %g,%g %g,%g %g,%g' stroke='red'/>\n",
 						ax, ay, bx, by, cx, cy, dx, dy)
 				}
 			}
 
 		}
 	}
-	fmt.Println("</svg>")
+	fmt.Fprintln(w, "</svg>")
+
 }
 
 func findCentroid(ptListPtr *[]point) point {

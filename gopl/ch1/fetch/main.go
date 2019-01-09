@@ -33,7 +33,7 @@ func main() {
 		statusReader := strings.NewReader(resp.Status)
 		_, err = io.Copy(os.Stdout, statusReader)
 		// b, err := ioutil.ReadAll(resp.Body)
-		resp.Body.Close()c
+		resp.Body.Close()
 		// if err != nil {
 		// 	fmt.Fprintf(os.Stderr, "fetch: reading %s: %v\n", url, err)
 		// 	os.Exit(1)
